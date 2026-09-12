@@ -15,8 +15,8 @@ import {
   Activity, 
   Check, 
   ArrowRight,
-  UserCheck,
-  Target
+  Crosshair,
+  UserCheck
 } from "lucide-react";
 
 interface ModalitiesGridProps {
@@ -32,54 +32,74 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
     ? MODALITIES
     : MODALITIES.filter((m) => m.category === activeCategory);
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -8;
+    const rotateY = ((x - centerX) / centerX) * 8;
+
+    e.currentTarget.style.setProperty("--rotate-x", `${rotateX}deg`);
+    e.currentTarget.style.setProperty("--rotate-y", `${rotateY}deg`);
+    e.currentTarget.style.setProperty("--mouse-x", `${x}px`);
+    e.currentTarget.style.setProperty("--mouse-y", `${y}px`);
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.currentTarget.style.setProperty("--rotate-x", "0deg");
+    e.currentTarget.style.setProperty("--rotate-y", "0deg");
+  };
+
   const renderIcon = (iconName: Modality["iconName"]) => {
     switch (iconName) {
       case "Flame":
-        return <Flame className="w-6 h-6 text-red-500" />;
+        return <Flame className="w-5 h-5 text-blood-500" />;
       case "Zap":
-        return <Zap className="w-6 h-6 text-amber-500" />;
+        return <Zap className="w-5 h-5 text-hazard-400" />;
       case "Swords":
-        return <Swords className="w-6 h-6 text-blue-400" />;
+        return <Swords className="w-5 h-5 text-blue-400" />;
       case "Shield":
-        return <Shield className="w-6 h-6 text-red-500" />;
+        return <Shield className="w-5 h-5 text-blood-500" />;
       case "Sparkles":
-        return <Sparkles className="w-6 h-6 text-emerald-400" />;
+        return <Sparkles className="w-5 h-5 text-emerald-400" />;
       default:
-        return <Activity className="w-6 h-6 text-red-500" />;
+        return <Activity className="w-5 h-5 text-blood-500" />;
     }
   };
 
   return (
-    <section id="modalidades" className="py-20 bg-combat-950 relative">
+    <section id="modalidades" className="py-20 sm:py-28 bg-[#050505] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/10 border border-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider">
-            <Target className="w-3.5 h-3.5" />
-            <span>Modalidades & Programas Oficiais</span>
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+            <Crosshair className="w-3.5 h-3.5 text-blood-500" />
+            <span>ARSENAL DE COMBATE OFICIAL</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase text-white tracking-tight">
-            Escolha sua Luta. <br className="hidden sm:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">
-              Conquiste o seu Melhor Físico.
+          <h2 className="font-combat text-5xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
+            ESCOLHA O SEU ESTILO. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blood-500 via-blood-600 to-amber-500">
+              DOMINE O TATAME.
             </span>
           </h2>
 
-          <p className="text-zinc-400 text-base sm:text-lg">
-            Do alto gasto calórico à autodefesa pura. Todas as turmas contam com turmas exclusivas para iniciantes e acompanhamento próximo dos instrutores.
+          <p className="font-sans text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto">
+            Metodologias consagradas mundialmente adaptadas para a sua evolução física, segurança e queima calórica. Turmas exclusivas para quem nunca pisou num ringue.
           </p>
 
-          {/* Interactive Category Filter Pills */}
+          {/* Tactical Filter Pills */}
           <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
             {MODALITIES_CATEGORIES.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
+                className={`px-4 py-2 text-xs sm:text-sm font-tactical uppercase tracking-wider font-bold transition-all clip-tag ${
                   activeCategory === cat.id
-                    ? "bg-red-600 text-white shadow-combat-glow border border-red-500"
-                    : "bg-zinc-900/90 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-zinc-800"
+                    ? "bg-blood-600 text-white shadow-spotlight-sharp border-b-2 border-hazard-400"
+                    : "bg-asphalt-900 text-zinc-400 hover:text-white hover:bg-asphalt-850 border border-zinc-800"
                 }`}
               >
                 {cat.label}
@@ -88,80 +108,99 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
           </div>
         </div>
 
-        {/* Modalities Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 3D Tilt Modalities Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 tilt-perspective">
           {filteredModalities.map((item) => (
             <div
               key={item.id}
-              className="rounded-2xl bg-zinc-900/90 border border-zinc-800/90 hover:border-red-500/50 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-red-950/20 group relative overflow-hidden"
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                transform: "perspective(1000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg))",
+                transition: "transform 0.15s ease-out, box-shadow 0.2s ease",
+              }}
+              className="tilt-card relative bg-[#0a0a0d] border border-zinc-800 hover:border-blood-600/80 clip-chamfer-top p-6 sm:p-7 flex flex-col justify-between overflow-hidden group shadow-combat-plate"
             >
-              {/* Top ambient color aura */}
-              <div className={`absolute top-0 right-0 w-36 h-36 bg-gradient-to-bl ${item.accentColor} rounded-full blur-2xl pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity`} />
+              {/* Dynamic Specular Glare Layer */}
+              <div className="tilt-glare" />
 
-              <div>
-                {/* Header of the card */}
-                <div className="flex items-start justify-between gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-zinc-800/90 border border-zinc-700/60 flex items-center justify-center group-hover:scale-105 transition-transform">
+              {/* Background Fighter Photo with Heavy Dark Overlay */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center opacity-25 group-hover:opacity-35 transition-opacity duration-500 scale-105 pointer-events-none"
+                style={{ backgroundImage: `url('${item.imageUrl}')` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0d] via-[#0a0a0d]/90 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-b from-blood-950/20 via-transparent to-black pointer-events-none" />
+
+              {/* Content Header */}
+              <div className="relative z-10">
+                <div className="flex items-start justify-between gap-3 mb-5">
+                  <div className="w-11 h-11 bg-asphalt-900 border border-zinc-700/80 flex items-center justify-center clip-tag group-hover:border-blood-500 transition-colors">
                     {renderIcon(item.iconName)}
                   </div>
                   {item.badge && (
-                    <span className="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-red-600/20 border border-red-500/30 text-red-400">
+                    <span className="px-2.5 py-1 text-[10px] font-tactical font-bold tracking-wider uppercase bg-blood-600/20 border border-blood-500/40 text-blood-400 clip-tag">
                       {item.badge}
                     </span>
                   )}
                 </div>
 
-                {/* Modality Title & Tagline */}
-                <h3 className="text-xl font-black text-white group-hover:text-red-400 transition-colors">
+                {/* Title and Tagline */}
+                <h3 className="font-combat text-3xl sm:text-4xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-none">
                   {item.name}
                 </h3>
-                <p className="text-xs font-semibold text-zinc-400 mt-1 mb-3 italic">
+                
+                <p className="font-tactical text-xs text-zinc-400 mt-2 mb-4 uppercase tracking-wider italic">
                   &ldquo;{item.tagline}&rdquo;
                 </p>
 
                 {/* Description */}
-                <p className="text-sm text-zinc-300 line-clamp-3 mb-5 leading-relaxed">
+                <p className="font-sans text-xs sm:text-sm text-zinc-300 leading-relaxed line-clamp-3 mb-6">
                   {item.description}
                 </p>
 
-                {/* Metric Pills (Intensity & Calories) */}
-                <div className="grid grid-cols-2 gap-2 mb-5 p-3 rounded-xl bg-zinc-950/70 border border-zinc-800/80 text-xs">
+                {/* Tactical Metrics: Burn & Intensity */}
+                <div className="grid grid-cols-2 gap-2 mb-6 p-3 bg-black/80 border border-zinc-800 clip-tag">
                   <div>
-                    <span className="text-[10px] uppercase text-zinc-500 font-bold block">Gasto Estimado</span>
-                    <span className="font-bold text-amber-400 flex items-center gap-1 mt-0.5">
-                      <Flame className="w-3.5 h-3.5 text-amber-400" />
+                    <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-500 font-bold block">
+                      GASTO CALÓRICO
+                    </span>
+                    <span className="font-tactical text-xs font-bold text-hazard-400 flex items-center gap-1 mt-0.5">
+                      <Flame className="w-3.5 h-3.5 text-hazard-400" />
                       {item.caloriesBurn}
                     </span>
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase text-zinc-500 font-bold block">Intensidade</span>
-                    <span className="font-bold text-red-400 flex items-center gap-1 mt-0.5">
-                      <Activity className="w-3.5 h-3.5 text-red-400" />
+                    <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-500 font-bold block">
+                      INTENSIDADE
+                    </span>
+                    <span className="font-tactical text-xs font-bold text-blood-400 flex items-center gap-1 mt-0.5">
+                      <Activity className="w-3.5 h-3.5 text-blood-400" />
                       {item.intensity}
                     </span>
                   </div>
                 </div>
 
-                {/* Benefits List */}
-                <div className="space-y-2 mb-5">
-                  <span className="text-xs uppercase font-bold text-zinc-400 block tracking-wider">
-                    Principais Benefícios:
+                {/* Benefits checklist */}
+                <div className="space-y-2 mb-6">
+                  <span className="font-tactical text-[10px] uppercase tracking-wider text-zinc-400 font-bold block">
+                    VANTAGENS IMEDIATAS:
                   </span>
-                  {item.benefits.slice(0, 3).map((benefit, i) => (
-                    <div key={i} className="flex items-start gap-2 text-xs text-zinc-300">
-                      <Check className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                      <span>{benefit}</span>
+                  {item.benefits.slice(0, 3).map((b, i) => (
+                    <div key={i} className="flex items-start gap-2 text-xs text-zinc-300 font-sans">
+                      <Check className="w-3.5 h-3.5 text-blood-500 shrink-0 mt-0.5" />
+                      <span>{b}</span>
                     </div>
                   ))}
                 </div>
 
-                {/* Target Audience */}
+                {/* Audience */}
                 <div className="border-t border-zinc-800/80 pt-3 mb-6">
-                  <span className="text-[11px] uppercase font-semibold text-zinc-500 block mb-1 flex items-center gap-1">
-                    <UserCheck className="w-3 h-3 text-red-400" />
-                    Indicado para:
-                  </span>
-                  <p className="text-xs text-zinc-400">
+                  <div className="flex items-center gap-1.5 font-tactical text-[10px] uppercase tracking-wider text-zinc-400 mb-1">
+                    <UserCheck className="w-3 h-3 text-blood-400" />
+                    <span>PERFIL DO ALUNO:</span>
+                  </div>
+                  <p className="text-xs text-zinc-400 font-sans">
                     {item.targetAudience.join(" • ")}
                   </p>
                 </div>
@@ -170,9 +209,9 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
               {/* Action Button */}
               <button
                 onClick={() => onSelectModality(item.name)}
-                className="w-full py-3 px-4 rounded-xl bg-zinc-800/90 hover:bg-gradient-to-r hover:from-red-600 hover:to-red-700 text-white text-xs sm:text-sm font-bold border border-zinc-700/80 hover:border-red-500/80 flex items-center justify-center gap-2 transition-all duration-200 group-hover:shadow-combat-glow"
+                className="relative z-10 w-full py-3.5 px-4 bg-asphalt-850 hover:bg-blood-600 text-zinc-200 hover:text-white font-combat uppercase tracking-wider text-lg font-bold border border-zinc-800 hover:border-blood-500 clip-chamfer-top flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-spotlight-sharp"
               >
-                <span>Quero treinar essa modalidade</span>
+                <span>QUERO TREINAR ESSA MODALIDADE</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>

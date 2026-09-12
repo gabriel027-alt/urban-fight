@@ -14,6 +14,7 @@ export interface Modality {
   instructor: string;
   iconName: "Swords" | "Flame" | "Shield" | "Zap" | "Sparkles" | "Activity";
   accentColor: string;
+  imageUrl: string;
 }
 
 export const MODALITIES_CATEGORIES = [
@@ -50,7 +51,8 @@ export const MODALITIES: Modality[] = [
     equipmentNeeded: ["Luvas de boxe (14 ou 16oz)", "Bandagens", "Protetor bucal"],
     instructor: "Mestre André & Equipe Nobre Arte",
     iconName: "Flame",
-    accentColor: "from-red-500/20 to-red-600/5",
+    accentColor: "from-red-600/30 to-blood-950/80",
+    imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "kickboxing-muaythai",
@@ -77,7 +79,8 @@ export const MODALITIES: Modality[] = [
     equipmentNeeded: ["Luvas", "Bandagem", "Caneleiras", "Protetor bucal"],
     instructor: "Mestre André & Treinadores Certificados",
     iconName: "Zap",
-    accentColor: "from-orange-500/20 to-red-600/5",
+    accentColor: "from-orange-600/30 to-blood-950/80",
+    imageUrl: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "jiu-jitsu",
@@ -104,11 +107,12 @@ export const MODALITIES: Modality[] = [
     equipmentNeeded: ["Kimono trançado oficial", "Faixa", "Rashguard (opcional)"],
     instructor: "Professores Faixas Pretas sob supervisão do Mestre André",
     iconName: "Swords",
-    accentColor: "from-blue-500/20 to-red-600/5",
+    accentColor: "from-blue-600/30 to-blood-950/80",
+    imageUrl: "https://images.unsplash.com/photo-1564415315949-7a0c4c73aab4?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "jeet-kune-do-defesa",
-    name: "Jeet Kune Do & Defesa Pessoal Urbana",
+    name: "Jeet Kune Do & Defesa Urbana",
     category: "defense",
     categoryLabel: "Defesa Pessoal & Tática",
     tagline: "A essência de Bruce Lee: economia de movimento e eficácia letal.",
@@ -131,7 +135,8 @@ export const MODALITIES: Modality[] = [
     equipmentNeeded: ["Roupas confortáveis de treino", "Tênis limpo de tatame"],
     instructor: "Mestre André (Especialista em Combate Prático)",
     iconName: "Shield",
-    accentColor: "from-red-600/25 to-zinc-900/40",
+    accentColor: "from-amber-600/30 to-blood-950/80",
+    imageUrl: "https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "taekwondo-kids",
@@ -158,6 +163,7 @@ export const MODALITIES: Modality[] = [
     equipmentNeeded: ["Dobok (uniforme de Taekwondo) ou camiseta oficial Urban Fight Kids"],
     instructor: "Professores Pedagógicos e Mestre André",
     iconName: "Sparkles",
-    accentColor: "from-emerald-500/20 to-red-600/5",
+    accentColor: "from-emerald-600/30 to-blood-950/80",
+    imageUrl: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1000&auto=format&fit=crop",
   },
 ];

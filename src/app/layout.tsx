@@ -1,29 +1,38 @@
 import type { Metadata, Viewport } from "next";
-import localFont from "next/font/local";
+import { Bebas_Neue, Chakra_Petch, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bebas",
+  display: "swap",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const chakraPetch = Chakra_Petch({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-chakra",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#080808",
+  themeColor: "#050505",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
 
 export const metadata: Metadata = {
-  title: "URBAN FIGHT | Centro de Artes Marciais & Alta Performance - Montes Claros MG",
+  title: "URBAN FIGHT | Centro de Treinamento de Artes Marciais & Alta Performance - Montes Claros",
   description:
-    "Transforme sua mente e seu corpo no maior centro de artes marciais de Montes Claros. Boxe Tradicional, Muay Thai, Jiu-Jitsu, Jeet Kune Do, Defesa Pessoal e Turmas Kids sob a liderança do Mestre André. Av. Cula Mangabeira, 1497 - Santo Expedito.",
+    "O maior centro de combate e evolução atlética do Norte de Minas. Boxe Tradicional, Muay Thai, Jiu-Jitsu, Jeet Kune Do e Turmas Kids sob a liderança do Mestre André. Av. Cula Mangabeira, 1497 - Santo Expedito, Montes Claros - MG.",
   keywords: [
     "artes marciais Montes Claros",
     "boxe Montes Claros",
@@ -33,15 +42,15 @@ export const metadata: Metadata = {
     "taekwondo kids Montes Claros",
     "Mestre André",
     "Urban Fight Santo Expedito",
-    "academia de luta Montes Claros",
+    "fight club Montes Claros",
   ],
   authors: [{ name: "Urban Fight Montes Claros" }],
   openGraph: {
-    title: "URBAN FIGHT | Artes Marciais de Elite em Montes Claros",
+    title: "URBAN FIGHT | Centro de Artes Marciais & Alta Performance - Montes Claros",
     description:
-      "Agende sua Aula Experimental Gratuita. Boxe, Muay Thai, Jiu-Jitsu, Jeet Kune Do e Turmas Kids. Santo Expedito, Montes Claros - MG.",
+      "Transforme sua mente e seu corpo. Agende sua Aula Experimental Gratuita na Av. Cula Mangabeira, 1497 - Santo Expedito.",
     url: "https://urbanfight.com.br",
-    siteName: "Urban Fight",
+    siteName: "Urban Fight Montes Claros",
     locale: "pt_BR",
     type: "website",
   },
@@ -57,10 +66,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="dark scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans bg-combat-950 text-zinc-100 antialiased selection:bg-red-600 selection:text-white min-h-screen flex flex-col`}
-      >
+    <html
+      lang="pt-BR"
+      className={`dark scroll-smooth ${bebasNeue.variable} ${chakraPetch.variable} ${inter.variable}`}
+    >
+      <body className="font-sans bg-[#050505] text-zinc-100 antialiased selection:bg-red-600 selection:text-white min-h-screen flex flex-col overflow-x-hidden">
         {children}
       </body>
     </html>

@@ -26,95 +26,95 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
     switch (shift) {
       case "morning":
         return {
-          label: "Manhã",
+          label: "MANHÃ",
           icon: Sun,
-          className: "text-amber-400 bg-amber-400/10 border-amber-400/20",
+          className: "text-hazard-400 bg-hazard-400/10 border-hazard-400/30",
         };
       case "afternoon":
         return {
-          label: "Tarde / Kids",
+          label: "TARDE / KIDS",
           icon: Sunset,
-          className: "text-orange-400 bg-orange-400/10 border-orange-400/20",
+          className: "text-orange-400 bg-orange-400/10 border-orange-400/30",
         };
       case "evening":
         return {
-          label: "Noite",
+          label: "NOITE",
           icon: Moon,
-          className: "text-red-400 bg-red-400/10 border-red-400/20",
+          className: "text-blood-400 bg-blood-600/10 border-blood-500/30",
         };
     }
   };
 
   return (
-    <section id="horarios" className="py-20 bg-combat-900/40 relative border-t border-zinc-800/80">
+    <section id="horarios" className="py-20 sm:py-28 bg-[#070709] relative border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/10 border border-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider">
-            <Calendar className="w-3.5 h-3.5" />
-            <span>Grade Flexível de Horários</span>
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+            <Calendar className="w-3.5 h-3.5 text-blood-500" />
+            <span>GRADE OPERACIONAL DE TREINOS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase text-white tracking-tight">
-            Horários para Caber na Sua{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">
-              Rotina Mais Ocupada.
+          <h2 className="font-combat text-5xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
+            HORÁRIOS DE COMBATE. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blood-500 via-blood-600 to-amber-500">
+              DAS 06:30 ÀS 22:00.
             </span>
           </h2>
 
-          <p className="text-zinc-400 text-base sm:text-lg">
-            Aulas das 06:30 da manhã às 22:00 da noite. Escolha o melhor turno para treinar antes do trabalho, à tarde com seus filhos ou para descarregar o estresse no final do dia.
+          <p className="font-sans text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto">
+            Encaixe o treino antes de ir para o trabalho, no turno da tarde com seus filhos ou para descarregar toda a adrenalina à noite.
           </p>
 
-          {/* Shift Filter Buttons */}
+          {/* Shift Filter Buttons with Tactical Pill Style */}
           <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
             <button
               onClick={() => setFilterShift("all")}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+              className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag transition-all ${
                 filterShift === "all"
-                  ? "bg-red-600 text-white shadow-combat-glow"
-                  : "bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800"
+                  ? "bg-blood-600 text-white shadow-spotlight-sharp"
+                  : "bg-asphalt-900 text-zinc-400 hover:text-white border border-zinc-800"
               }`}
             >
-              Todos os Turnos
+              TODOS OS TURNOS
             </button>
             <button
               onClick={() => setFilterShift("morning")}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-1.5 transition-all ${
+              className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag flex items-center gap-1.5 transition-all ${
                 filterShift === "morning"
-                  ? "bg-red-600 text-white shadow-combat-glow"
-                  : "bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800"
+                  ? "bg-blood-600 text-white shadow-spotlight-sharp"
+                  : "bg-asphalt-900 text-zinc-400 hover:text-white border border-zinc-800"
               }`}
             >
-              <Sun className="w-3.5 h-3.5 text-amber-400" />
-              <span>Manhã (06:30 - 10:15)</span>
+              <Sun className="w-3.5 h-3.5 text-hazard-400" />
+              <span>MANHÃ (06:30 - 10:15)</span>
             </button>
             <button
               onClick={() => setFilterShift("afternoon")}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-1.5 transition-all ${
+              className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag flex items-center gap-1.5 transition-all ${
                 filterShift === "afternoon"
-                  ? "bg-red-600 text-white shadow-combat-glow"
-                  : "bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800"
+                  ? "bg-blood-600 text-white shadow-spotlight-sharp"
+                  : "bg-asphalt-900 text-zinc-400 hover:text-white border border-zinc-800"
               }`}
             >
               <Sunset className="w-3.5 h-3.5 text-orange-400" />
-              <span>Tarde & Kids (15:00 - 18:30)</span>
+              <span>TARDE & KIDS (15:00 - 18:30)</span>
             </button>
             <button
               onClick={() => setFilterShift("evening")}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-1.5 transition-all ${
+              className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag flex items-center gap-1.5 transition-all ${
                 filterShift === "evening"
-                  ? "bg-red-600 text-white shadow-combat-glow"
-                  : "bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800"
+                  ? "bg-blood-600 text-white shadow-spotlight-sharp"
+                  : "bg-asphalt-900 text-zinc-400 hover:text-white border border-zinc-800"
               }`}
             >
-              <Moon className="w-3.5 h-3.5 text-red-400" />
-              <span>Noite (18:30 - 22:00)</span>
+              <Moon className="w-3.5 h-3.5 text-blood-400" />
+              <span>NOITE (18:30 - 22:00)</span>
             </button>
           </div>
         </div>
 
-        {/* Schedule Grid */}
+        {/* Schedule Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredSlots.map((slot, index) => {
             const badge = getShiftBadge(slot.shift);
@@ -122,43 +122,43 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
             return (
               <div
                 key={index}
-                className="p-5 rounded-2xl bg-zinc-950/80 border border-zinc-800/80 hover:border-red-500/50 transition-all duration-200 flex flex-col justify-between group"
+                className="p-5 bg-asphalt-900/90 border border-zinc-800/90 hover:border-blood-600/70 clip-chamfer-top flex flex-col justify-between group transition-all shadow-combat-plate"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="flex items-center gap-1 text-red-400 font-bold text-sm bg-red-600/10 px-3 py-1 rounded-lg border border-red-500/20">
-                      <Clock className="w-3.5 h-3.5" />
+                    <span className="font-tactical text-sm font-bold text-blood-400 flex items-center gap-1.5 bg-black/90 px-3 py-1 border border-blood-700/40 clip-tag">
+                      <Clock className="w-3.5 h-3.5 text-blood-500" />
                       {slot.time}
                     </span>
 
-                    <span className={`inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-0.5 rounded-full border ${badge.className}`}>
+                    <span className={`inline-flex items-center gap-1 font-tactical text-[10px] font-bold tracking-wider px-2.5 py-0.5 border clip-tag ${badge.className}`}>
                       <BadgeIcon className="w-3 h-3" />
                       {badge.label}
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-white group-hover:text-red-400 transition-colors">
+                  <h3 className="font-combat text-2xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-tight">
                     {slot.modality}
                   </h3>
 
-                  <div className="text-xs text-zinc-400 mt-2 space-y-1">
+                  <div className="text-xs font-sans text-zinc-400 mt-3 space-y-1">
                     <div className="flex items-center gap-1.5">
-                      <span className="text-zinc-500">Dias:</span>
+                      <span className="font-tactical uppercase text-[10px] text-zinc-500 font-bold">Dias:</span>
                       <span className="text-zinc-200 font-medium">{slot.days}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
-                      <span className="text-zinc-500">Nível:</span>
+                      <span className="font-tactical uppercase text-[10px] text-zinc-500 font-bold">Nível:</span>
                       <span className="text-zinc-300">{slot.level}</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-zinc-900">
+                <div className="pt-4 mt-4 border-t border-zinc-800/80">
                   <button
                     onClick={() => onScheduleSlot(slot.modality)}
-                    className="w-full py-2 px-3 rounded-lg bg-zinc-900 hover:bg-red-600 text-zinc-300 hover:text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors"
+                    className="w-full py-2.5 px-3 bg-asphalt-800 hover:bg-blood-600 text-zinc-300 hover:text-white font-tactical uppercase text-xs font-bold tracking-wider flex items-center justify-center gap-1.5 transition-colors clip-tag"
                   >
-                    <span>Agendar este horário</span>
+                    <span>AGENDAR ESTE HORÁRIO</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>

@@ -3,11 +3,12 @@
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { MarqueeTicker } from "@/components/MarqueeTicker";
 import { ModalitiesGrid } from "@/components/ModalitiesGrid";
-import { MethodSection } from "@/components/MethodSection";
+import { MasterAndreSection } from "@/components/MasterAndreSection";
+import { LocationAndStructure } from "@/components/LocationAndStructure";
 import { ScheduleSection } from "@/components/ScheduleSection";
 import { TrialTriage } from "@/components/TrialTriage";
-import { LocationAndStructure } from "@/components/LocationAndStructure";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
@@ -35,40 +36,46 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-combat-950 text-zinc-100 selection:bg-red-600 selection:text-white">
-      {/* 1. Header with Montes Claros badge and navigation */}
+    <div className="min-h-screen flex flex-col bg-[#050505] text-zinc-100 selection:bg-blood-600 selection:text-white">
+      {/* 1. Tactical Combat Header */}
       <Header onOpenTriage={() => scrollToTriage()} />
 
       <main className="flex-1">
-        {/* 2. Hero with high impact, value proposition & authority badges */}
+        {/* 2. Hero Arena with Crossed Spotlights & UFC Impact */}
         <Hero
           onStartTriage={() => scrollToTriage()}
           onExploreModalities={scrollToModalities}
         />
 
-        {/* 3. Interactive Modalities Grid with filters */}
+        {/* 3. Athletic Continuous Marquee (Tilted Red Combat Tape) */}
+        <MarqueeTicker angle="-rotate-1 sm:-rotate-2" theme="red" />
+
+        {/* 4. 3D Tilt Modalities Grid with Specular Glare & Fighter Photos */}
         <ModalitiesGrid onSelectModality={(modality) => scrollToTriage(modality)} />
 
-        {/* 4. Method Section (Mestre André's philosophy & beginner-friendly culture) */}
-        <MethodSection onStartTriage={() => scrollToTriage()} />
+        {/* 5. Reverse Hazard Tape Marquee */}
+        <MarqueeTicker reverse angle="rotate-1 sm:rotate-1.5" theme="hazard" />
 
-        {/* 5. Schedule Section (Shifts: Morning, Afternoon, Night) */}
-        <ScheduleSection onScheduleSlot={(modality) => scrollToTriage(modality)} />
+        {/* 6. Asymmetric Editorial Poster of Mestre André (Lineage & Manifesto) */}
+        <MasterAndreSection onStartTriage={() => scrollToTriage()} />
 
-        {/* 6. Trial Triage (3-step interactive booking funnel) */}
-        <TrialTriage initialModality={selectedModalityForTriage} />
-
-        {/* 7. Location and Structure (Av. Cula Mangabeira, 1497 + Dark Map Embed) */}
+        {/* 7. Fight Gym Tour Photographic Mosaic & Dark Map */}
         <LocationAndStructure />
 
-        {/* 8. FAQ (Objection breaking accordion) */}
+        {/* 8. Operational Class Schedule (Shifts & Times) */}
+        <ScheduleSection onScheduleSlot={(modality) => scrollToTriage(modality)} />
+
+        {/* 9. 3-Step Tactical Triage Funnel directly to WhatsApp */}
+        <TrialTriage initialModality={selectedModalityForTriage} />
+
+        {/* 10. Objection Breaker FAQ */}
         <FAQ onStartTriage={() => scrollToTriage()} />
       </main>
 
-      {/* 9. Full Footer */}
+      {/* 11. Full Footer */}
       <Footer />
 
-      {/* 10. Sticky Mobile CTA for high mobile conversion */}
+      {/* 12. Persistent Mobile Conversion CTA */}
       <StickyMobileCTA onTriggerTriage={() => scrollToTriage()} />
     </div>
   );

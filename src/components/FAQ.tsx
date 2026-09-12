@@ -15,45 +15,45 @@ interface FAQProps {
 }
 
 export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0); // First open by default
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleAccordion = (idx: number) => {
     setOpenIndex((current) => (current === idx ? null : idx));
   };
 
   return (
-    <section id="duvidas" className="py-20 bg-combat-900/50 relative border-t border-zinc-800/80">
+    <section id="duvidas" className="py-20 sm:py-28 bg-[#070709] relative border-t border-zinc-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/10 border border-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider">
-            <HelpCircle className="w-3.5 h-3.5" />
-            <span>Tire Todas as Suas Dúvidas</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+            <HelpCircle className="w-3.5 h-3.5 text-blood-500" />
+            <span>QUEBRA DE OBJEÇÕES & DÚVIDAS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase text-white tracking-tight">
-            Perguntas Frequentes de{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">
-              Novos Alunos.
+          <h2 className="font-combat text-5xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
+            PERGUNTAS FREQUENTES DE <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blood-500 via-blood-600 to-amber-500">
+              NOVOS ATLETAS.
             </span>
           </h2>
 
-          <p className="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto">
-            É normal sentir insegurança antes do primeiro treino. Veja como garantimos acolhimento e respeito desde o minuto em que você pisa na academia.
+          <p className="font-sans text-zinc-400 text-sm sm:text-base max-w-xl mx-auto">
+            Sentir apreensão antes de pisar no tatame é normal. Veja como nossa metodologia garante acolhimento, respeito e proteção à sua integridade física.
           </p>
         </div>
 
         {/* Accordion List */}
-        <div className="space-y-3.5">
+        <div className="space-y-3">
           {FAQS_DATA.map((item, index) => {
             const isOpen = openIndex === index;
             return (
               <div
                 key={index}
-                className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
+                className={`border transition-all duration-200 clip-chamfer-top ${
                   isOpen
-                    ? "bg-zinc-950 border-red-500/60 shadow-lg shadow-red-950/20"
-                    : "bg-zinc-900/80 border-zinc-800 hover:border-zinc-700"
+                    ? "bg-black border-blood-600 shadow-spotlight-sharp"
+                    : "bg-asphalt-900/90 border-zinc-800 hover:border-zinc-700"
                 }`}
               >
                 <button
@@ -61,14 +61,14 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
                   className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-bold text-sm sm:text-base text-white">
+                  <span className="font-combat text-xl sm:text-2xl uppercase tracking-wide text-white">
                     {item.question}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 ${
+                    className={`w-8 h-8 flex items-center justify-center shrink-0 clip-tag transition-transform duration-200 ${
                       isOpen
-                        ? "bg-red-600 text-white rotate-180"
-                        : "bg-zinc-800 text-zinc-400"
+                        ? "bg-blood-600 text-white rotate-180"
+                        : "bg-asphalt-800 text-zinc-400"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -76,7 +76,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm text-zinc-300 leading-relaxed border-t border-zinc-900 animate-in fade-in duration-150">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm text-zinc-300 font-sans leading-relaxed border-t border-zinc-900 animate-in fade-in duration-150">
                     <p>{item.answer}</p>
                   </div>
                 )}
@@ -86,20 +86,20 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
         </div>
 
         {/* Objection Breaker Footer CTA */}
-        <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border border-zinc-800 text-center space-y-4">
-          <h3 className="text-lg sm:text-xl font-black text-white">
-            Ainda tem alguma dúvida específica?
+        <div className="mt-12 p-6 sm:p-8 bg-asphalt-900 border border-zinc-800 clip-chamfer-top text-center space-y-4 shadow-combat-plate">
+          <h3 className="font-combat text-3xl sm:text-4xl uppercase text-white tracking-wide leading-none">
+            AINDA TEM DÚVIDAS SOBRE O SEU PRIMEIRO TREINO?
           </h3>
-          <p className="text-xs sm:text-sm text-zinc-400 max-w-md mx-auto">
-            Fale diretamente com nossa recepção ou venha tomar um café conosco na Av. Cula Mangabeira, 1497.
+          <p className="font-sans text-xs sm:text-sm text-zinc-400 max-w-md mx-auto">
+            Fale diretamente com o Mestre André e equipe da recepção na Av. Cula Mangabeira, 1497.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <button
               onClick={onStartTriage}
-              className="px-6 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-combat-glow transition-all"
+              className="px-7 py-3.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-black clip-chamfer-top flex items-center gap-2 shadow-spotlight-sharp transition-all"
             >
-              <span>Agendar Minha Aula Experimental</span>
+              <span>AGENDAR MINHA AULA EXPERIMENTAL</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 
@@ -109,10 +109,10 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-semibold text-xs sm:text-sm flex items-center gap-2 border border-zinc-700 transition-colors"
+              className="px-6 py-3.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider clip-tag flex items-center gap-2 border border-zinc-700 transition-colors"
             >
               <MessageCircle className="w-4 h-4 text-emerald-400" />
-              <span>Chamar no WhatsApp</span>
+              <span>CHAMAR NO WHATSAPP</span>
             </a>
           </div>
         </div>

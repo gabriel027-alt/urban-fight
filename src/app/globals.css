@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #080808;
+  --background: #050505;
   --foreground: #f4f4f5;
 }
 
@@ -17,55 +17,129 @@ body {
   background: var(--background);
   font-feature-settings: "rlig" 1, "calt" 1;
   overflow-x: hidden;
-  selection-background-color: #ef4444;
-  selection-color: #ffffff;
+  background-color: #050505;
 }
 
+/* Custom Tactical Selection */
 ::selection {
-  background-color: #ef4444;
+  background-color: #dc2626;
   color: #ffffff;
 }
 
-/* Custom combat scrollbar */
+/* Tactical Combat Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0c0c0e;
+  background: #09090b;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #27272a;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ef4444;
+  background: #dc2626;
 }
 
-/* Custom Combat Card Border Glow */
-.combat-card-glow {
+/* Tactical Chamfered Cuts (Military / Fight Club aesthetic) */
+.clip-chamfer {
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 20px) 0%,
+    100% 20px,
+    100% 100%,
+    20px 100%,
+    0% calc(100% - 20px)
+  );
+}
+
+.clip-chamfer-top {
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 28px) 0%,
+    100% 28px,
+    100% 100%,
+    0% 100%
+  );
+}
+
+.clip-chamfer-bottom {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0% 100%
+  );
+}
+
+.clip-tag {
+  clip-path: polygon(
+    10px 0%,
+    100% 0%,
+    calc(100% - 10px) 100%,
+    0% 100%
+  );
+}
+
+/* Tactical Border with chamfer cut */
+.chamfer-border {
   position: relative;
 }
 
-.combat-card-glow::before {
+.chamfer-border::after {
   content: "";
   position: absolute;
   inset: -1px;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.4), rgba(255, 255, 255, 0.05), transparent 70%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.7), rgba(255, 255, 255, 0.1), transparent 60%);
+  clip-path: inherit;
+  z-index: -1;
 }
 
-/* Grid overlay background effect */
-.combat-grid-bg {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 32px 32px;
+/* 3D Tilt Card Perspective */
+.tilt-perspective {
+  perspective: 1200px;
+}
+
+.tilt-card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+
+.tilt-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.18) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 20;
+}
+
+.tilt-card:hover .tilt-glare {
+  opacity: 1;
+}
+
+/* Carbon fiber / Dark metal texture */
+.bg-carbon {
+  background-color: #08080a;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.95));
+  background-size: 16px 16px, 100% 100%;
+}
+
+/* Ring spotlight flare beam */
+.spotlight-beam-left {
+  background: conic-gradient(from 120deg at 0% 0%, rgba(220, 38, 38, 0.3) 0deg, transparent 60deg);
+}
+
+.spotlight-beam-right {
+  background: conic-gradient(from 240deg at 100% 0%, rgba(220, 38, 38, 0.3) 0deg, transparent 60deg);
 }
 
 @layer utilities {
