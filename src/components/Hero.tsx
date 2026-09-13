@@ -9,8 +9,7 @@ import {
   ShieldCheck, 
   Activity, 
   Trophy,
-  Crosshair,
-  Sparkles
+  Crosshair
 } from "lucide-react";
 
 interface HeroProps {
@@ -23,7 +22,7 @@ export const Hero: React.FC<HeroProps> = ({
   onExploreModalities,
 }) => {
   return (
-    <section className="relative overflow-hidden pt-8 pb-16 sm:pt-14 sm:pb-24 border-b border-zinc-900 bg-[#050505]">
+    <section className="relative overflow-hidden pt-8 pb-16 sm:pt-14 sm:pb-24 border-b border-zinc-900 bg-[#030303]">
       {/* 1. Dramatic Ring Spotlights (Crossed angular beams) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] bg-ring-spotlight pointer-events-none opacity-90 animate-spotlight-pulse" />
       <div className="absolute -top-10 left-0 w-96 h-96 spotlight-beam-left opacity-40 pointer-events-none" />
@@ -46,7 +45,7 @@ export const Hero: React.FC<HeroProps> = ({
 
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-asphalt-900/80 border border-zinc-800 clip-tag text-xs font-tactical text-zinc-400">
             <MapPin className="w-3.5 h-3.5 text-blood-500" />
-            <span className="tracking-wide">SANTO EXPEDITO • MONTES CLAROS - MG</span>
+            <span className="tracking-wide text-zinc-300">SANTO EXPEDITO • MONTES CLAROS - MG</span>
           </div>
         </div>
 
@@ -55,12 +54,12 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Left Column: Massive Headline & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <div>
-              <span className="font-tactical text-xs sm:text-sm uppercase tracking-[0.3em] text-hazard-400 font-bold block mb-2">
+              <span className="font-tactical text-xs sm:text-sm uppercase tracking-[0.3em] text-blood-500 font-bold block mb-2">
                 [ CENTRO DE ALTO RENDIMENTO MARCIAL ]
               </span>
               <h1 className="font-combat text-5xl sm:text-7xl md:text-8xl xl:text-9xl uppercase font-black text-white tracking-tight leading-[0.88] drop-shadow-2xl">
                 FORJE SEU CORPO. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blood-500 via-blood-600 to-amber-500">
+                <span className="text-blood-600">
                   BLINDE SUA MENTE.
                 </span>
               </h1>
@@ -95,7 +94,7 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Micro-guarantees */}
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-tactical uppercase tracking-wider text-zinc-400 pt-2">
               <span className="flex items-center gap-1.5 text-zinc-300">
-                <span className="w-1.5 h-1.5 bg-hazard-400 rounded-full" />
+                <span className="w-1.5 h-1.5 bg-blood-500 rounded-full" />
                 1ª AULA 100% CORTESIA
               </span>
               <span className="flex items-center gap-1.5 text-zinc-300">
@@ -115,7 +114,6 @@ export const Hero: React.FC<HeroProps> = ({
               {/* Red LED Glow Halos in multiple layers */}
               <div className="absolute inset-0 bg-blood-600/35 rounded-full blur-[90px] animate-pulse pointer-events-none" />
               <div className="absolute w-72 h-72 bg-blood-700/40 rounded-full blur-[60px] pointer-events-none" />
-              <div className="absolute w-84 h-84 border-2 border-dashed border-blood-500/30 rounded-full animate-spin [animation-duration:40s] pointer-events-none" />
               
               {/* Outer Combat Ring with Chamfered Tag Accents */}
               <div className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 rounded-full p-2 bg-gradient-to-b from-blood-600 via-blood-900 to-black shadow-spotlight-red border-2 border-blood-500/70 flex items-center justify-center group">
@@ -143,10 +141,10 @@ export const Hero: React.FC<HeroProps> = ({
                 </span>
               </div>
 
-              <div className="absolute -bottom-2 right-4 z-20 bg-asphalt-900/95 border border-hazard-400 px-3 py-1 clip-tag shadow-hazard-glow">
-                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider text-hazard-400 flex items-center gap-1">
-                  <Sparkles className="w-3 h-3 text-hazard-400" />
-                  CENTRO DE ALTA PERFORMANCE
+              <div className="absolute -bottom-2 right-4 z-20 bg-[#09090b] border border-blood-600/80 px-3 py-1 clip-tag shadow-spotlight-sharp">
+                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider text-zinc-200 flex items-center gap-1">
+                  <ShieldCheck className="w-3 h-3 text-blood-500" />
+                  ALTA PERFORMANCE
                 </span>
               </div>
             </div>
@@ -170,10 +168,10 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* Card 2 */}
-          <div className="p-5 bg-asphalt-900/90 border-l-2 border-hazard-400 border-t border-r border-b border-zinc-800/80 shadow-combat-plate clip-chamfer-top hover:border-hazard-400 transition-all group">
+          <div className="p-5 bg-asphalt-900/90 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate clip-chamfer-top hover:border-blood-500 transition-all group">
             <div className="flex items-center justify-between mb-2">
               <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-500">INTENSIDADE</span>
-              <Activity className="w-4 h-4 text-hazard-400 group-hover:scale-110 transition-transform" />
+              <Activity className="w-4 h-4 text-blood-500 group-hover:scale-110 transition-transform" />
             </div>
             <div className="font-combat text-4xl sm:text-5xl font-black text-white leading-none">
               1000 KCAL/H

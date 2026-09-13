@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#050505] text-zinc-100 selection:bg-blood-600 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#030303] text-zinc-100 selection:bg-blood-600 selection:text-white">
       {/* 1. Tactical Combat Header */}
       <Header onOpenTriage={() => scrollToTriage()} />
 
@@ -53,8 +53,8 @@ export default function Home() {
         {/* 4. 3D Tilt Modalities Grid with Specular Glare & Fighter Photos */}
         <ModalitiesGrid onSelectModality={(modality) => scrollToTriage(modality)} />
 
-        {/* 5. Reverse Hazard Tape Marquee */}
-        <MarqueeTicker reverse angle="rotate-1 sm:rotate-1.5" theme="hazard" />
+        {/* 5. Reverse Asphalt Combat Tape Marquee */}
+        <MarqueeTicker reverse angle="rotate-1 sm:rotate-1.5" theme="asphalt" />
 
         {/* 6. Asymmetric Editorial Poster of Mestre André (Lineage & Manifesto) */}
         <MasterAndreSection onStartTriage={() => scrollToTriage()} />

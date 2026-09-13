@@ -22,7 +22,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
   };
 
   return (
-    <section id="duvidas" className="py-20 sm:py-28 bg-[#070709] relative border-t border-zinc-900">
+    <section id="duvidas" className="py-20 sm:py-28 bg-[#030303] relative border-t border-zinc-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-14">
@@ -33,7 +33,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
 
           <h2 className="font-combat text-5xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
             PERGUNTAS FREQUENTES DE <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blood-500 via-blood-600 to-amber-500">
+            <span className="text-blood-600">
               NOVOS ATLETAS.
             </span>
           </h2>

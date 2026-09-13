@@ -29,13 +29,13 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
         return {
           label: "MANHÃ",
           icon: Sun,
-          className: "text-hazard-400 bg-hazard-400/10 border-hazard-400/30",
+          className: "text-zinc-200 bg-zinc-800 border-zinc-700",
         };
       case "afternoon":
         return {
           label: "TARDE / KIDS",
           icon: Sunset,
-          className: "text-orange-400 bg-orange-400/10 border-orange-400/30",
+          className: "text-zinc-200 bg-zinc-800 border-zinc-700",
         };
       case "evening":
         return {
@@ -47,7 +47,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
   };
 
   return (
-    <section id="horarios" className="py-20 sm:py-28 bg-[#070709] relative border-t border-zinc-900">
+    <section id="horarios" className="py-20 sm:py-28 bg-[#030303] relative border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
@@ -58,7 +58,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
 
           <h2 className="font-combat text-5xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
             HORÁRIOS DE COMBATE. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blood-500 via-blood-600 to-amber-500">
+            <span className="text-blood-600">
               DAS 06:30 ÀS 22:00.
             </span>
           </h2>
@@ -74,7 +74,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag transition-all ${
                 filterShift === "all"
                   ? "bg-blood-600 text-white shadow-spotlight-sharp"
-                  : "bg-asphalt-900 text-zinc-400 hover:text-white border border-zinc-800"
+                  : "bg-[#09090b] text-zinc-400 hover:text-white border border-zinc-800"
               }`}
             >
               TODOS OS TURNOS
@@ -84,10 +84,10 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag flex items-center gap-1.5 transition-all ${
                 filterShift === "morning"
                   ? "bg-blood-600 text-white shadow-spotlight-sharp"
-                  : "bg-asphalt-900 text-zinc-400 hover:text-white border border-zinc-800"
+                  : "bg-[#09090b] text-zinc-400 hover:text-white border border-zinc-800"
               }`}
             >
-              <Sun className="w-3.5 h-3.5 text-hazard-400" />
+              <Sun className="w-3.5 h-3.5 text-zinc-300" />
               <span>MANHÃ (06:30 - 10:15)</span>
             </button>
             <button
@@ -95,10 +95,10 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag flex items-center gap-1.5 transition-all ${
                 filterShift === "afternoon"
                   ? "bg-blood-600 text-white shadow-spotlight-sharp"
-                  : "bg-asphalt-900 text-zinc-400 hover:text-white border border-zinc-800"
+                  : "bg-[#09090b] text-zinc-400 hover:text-white border border-zinc-800"
               }`}
             >
-              <Sunset className="w-3.5 h-3.5 text-orange-400" />
+              <Sunset className="w-3.5 h-3.5 text-zinc-300" />
               <span>TARDE & KIDS (15:00 - 18:30)</span>
             </button>
             <button

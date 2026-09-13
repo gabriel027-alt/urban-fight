@@ -48,7 +48,7 @@ export const LocationAndStructure: React.FC = () => {
   ];
 
   return (
-    <section id="estrutura" className="py-20 sm:py-28 bg-[#050505] relative border-t border-zinc-900">
+    <section id="estrutura" className="py-20 sm:py-28 bg-[#030303] relative border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -59,7 +59,7 @@ export const LocationAndStructure: React.FC = () => {
 
           <h2 className="font-combat text-5xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
             A ARENA ONDE SEUS LIMITES <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blood-500 via-blood-600 to-amber-500">
+            <span className="text-blood-600">
               SÃO REESCRITOS.
             </span>
           </h2>
@@ -82,12 +82,12 @@ export const LocationAndStructure: React.FC = () => {
                 style={{ backgroundImage: `url('${space.imageUrl}')` }}
               />
               {/* Moody overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/75 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/80 to-transparent pointer-events-none" />
               <div className="absolute inset-0 bg-blood-950/20 mix-blend-color pointer-events-none" />
 
               {/* Tactical Badge */}
               <div className="absolute top-4 right-4 z-10">
-                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-black/80 border border-hazard-400/40 text-hazard-400 clip-tag">
+                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-black/90 border border-blood-600/50 text-white clip-tag">
                   {space.badge}
                 </span>
               </div>

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #050505;
-  --foreground: #f4f4f5;
+  --background: #030303;
+  --foreground: #ffffff;
 }
 
 html {
@@ -17,7 +17,7 @@ body {
   background: var(--background);
   font-feature-settings: "rlig" 1, "calt" 1;
   overflow-x: hidden;
-  background-color: #050505;
+  background-color: #030303;
 }
 
 /* Custom Tactical Selection */

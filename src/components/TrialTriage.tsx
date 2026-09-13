@@ -114,10 +114,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
   };
 
   return (
-    <section id="triagem-experimental" className="py-20 sm:py-28 bg-[#050505] relative border-t border-b border-zinc-900">
-      {/* Background Ambience */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blood-700/10 rounded-full blur-[160px] pointer-events-none" />
-
+    <section id="triagem-experimental" className="py-20 sm:py-28 bg-[#030303] relative border-t border-b border-zinc-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
         <div className="text-center space-y-3 mb-12">
@@ -136,7 +133,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
         </div>
 
         {/* Funnel Box */}
-        <div className="bg-asphalt-900/95 border border-zinc-800 clip-chamfer-top p-6 sm:p-10 shadow-combat-plate backdrop-blur-xl">
+        <div className="bg-[#09090b] border border-zinc-800 clip-chamfer-top p-6 sm:p-10 shadow-combat-plate">
           {/* Step Progress Bar */}
           <div className="mb-8 pb-4 border-b border-zinc-800">
             <div className="flex items-center justify-between font-tactical text-xs uppercase tracking-wider text-zinc-400 mb-2">
@@ -146,7 +143,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                 </span>
                 ETAPA {currentStep} DE 3
               </span>
-              <span className="text-hazard-400 font-bold">
+              <span className="text-blood-400 font-bold">
                 {currentStep === 1 && "1. OBJETIVO PRIORITÁRIO"}
                 {currentStep === 2 && "2. GRAU DE CONTATO MARCIAL"}
                 {currentStep === 3 && "3. MODALIDADE & HORÁRIO"}
@@ -155,7 +152,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
 
             <div className="w-full bg-zinc-800 h-1.5 overflow-hidden">
               <div
-                className="bg-gradient-to-r from-blood-700 via-blood-500 to-hazard-400 h-full transition-all duration-300"
+                className="bg-gradient-to-r from-blood-700 to-blood-500 h-full transition-all duration-300"
                 style={{ width: `${(currentStep / 3) * 100}%` }}
               />
             </div>
