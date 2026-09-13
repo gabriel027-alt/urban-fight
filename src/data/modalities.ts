@@ -53,7 +53,7 @@ export const MODALITIES: Modality[] = [
     instructor: "Mestre André & Equipe Nobre Arte",
     iconName: "Flame",
     accentColor: "from-red-600/30 to-blood-950/80",
-    imageUrl: "https://images.unsplash.com/photo-1517438476312-10d79c077509?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "kickboxing-muaythai",
@@ -111,7 +111,7 @@ export const MODALITIES: Modality[] = [
     instructor: "Professores Faixas Pretas sob supervisão do Mestre André",
     iconName: "Swords",
     accentColor: "from-blue-600/30 to-blood-950/80",
-    imageUrl: "https://images.unsplash.com/photo-1564415315949-7a0c4c73aab4?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1564419320461-6870880221ad?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "jeet-kune-do-defesa",
@@ -140,7 +140,7 @@ export const MODALITIES: Modality[] = [
     instructor: "Mestre André (Especialista em Combate Prático)",
     iconName: "Shield",
     accentColor: "from-amber-600/30 to-blood-950/80",
-    imageUrl: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "taekwondo-kids",
@@ -169,6 +169,6 @@ export const MODALITIES: Modality[] = [
     instructor: "Professores Pedagógicos e Mestre André",
     iconName: "Sparkles",
     accentColor: "from-emerald-600/30 to-blood-950/80",
-    imageUrl: "https://images.unsplash.com/photo-1616279969856-759f316a5ac1?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?q=80&w=1000&auto=format&fit=crop",
   },
 ];

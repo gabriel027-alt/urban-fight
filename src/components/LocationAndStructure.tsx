@@ -18,7 +18,7 @@ export const LocationAndStructure: React.FC = () => {
       subtitle: "Amortecimento Profundo & Proteção Articular",
       desc: "Superfície contínua de alta densidade desenvolvida para rolamentos, projeções de Jiu-Jitsu e movimentação de solo sem sobrecarga articular, com sanitização diária rigorosa.",
       badge: "TATAME PROFISSIONAL",
-      imageUrl: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop",
+      imageUrl: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1000&auto=format&fit=crop",
       highlights: ["Absorção de Impacto", "Higienização Diária", "Solo e Quedas"],
       colSpan: "lg:col-span-8",
     },
@@ -27,7 +27,7 @@ export const LocationAndStructure: React.FC = () => {
       subtitle: "Estação de Potência & Golpeio Contínuo",
       desc: "Bolsas de pancada profissionais de 60kg a 100kg em couro reforçado para calejamento, chutes e combinações no Muay Thai e Boxe, além de ringue e área para manoplas.",
       badge: "POTÊNCIA & IMPACTO",
-      imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1000&auto=format&fit=crop",
+      imageUrl: "https://images.unsplash.com/photo-1517438322307-e67111335449?q=80&w=1000&auto=format&fit=crop",
       highlights: ["Bolsas de 60 a 100kg", "Muay Thai & Boxe", "Área de Ringue"],
       colSpan: "lg:col-span-4",
     },
@@ -36,7 +36,7 @@ export const LocationAndStructure: React.FC = () => {
       subtitle: "Cones, Aparadores e Escadinha de Tatame",
       desc: "Estação focada na preparação física de luta: cones de agilidade, escadinha de coordenação no tatame, aparadores tailandeses (paus), manoplas de foco e barras funcionais.",
       badge: "AGILIDADE & PREPARO",
-      imageUrl: "https://images.unsplash.com/photo-1495555687398-3f50d6e79e1e?q=80&w=1000&auto=format&fit=crop",
+      imageUrl: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop",
       highlights: ["Cones de Agilidade", "Escadinha de Tatame", "Manoplas & Aparadores"],
       colSpan: "lg:col-span-4",
     },
@@ -45,7 +45,7 @@ export const LocationAndStructure: React.FC = () => {
       subtitle: "Ponto de Encontro & Acolhimento Familiar",
       desc: "Área de circulação e recepção na Av. Cula Mangabeira, 1497: acolhimento pelo Mestre André, hidratação e espaço para alunos e familiares acompanharem os treinos com tranquilidade.",
       badge: "SANTO EXPEDITO",
-      imageUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
+      imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop",
       highlights: ["Ponto de Encontro", "Hidratação & Recepção", "Ambiente Familiar"],
       colSpan: "lg:col-span-8",
     },
@@ -78,15 +78,15 @@ export const LocationAndStructure: React.FC = () => {
           {gymSpaces.map((space, idx) => (
             <div
               key={idx}
-              className={`${space.colSpan} relative min-h-[320px] sm:min-h-[360px] bg-asphalt-900 border border-zinc-800 hover:border-blood-600/70 clip-chamfer-top overflow-hidden group shadow-combat-plate flex flex-col justify-end p-6 sm:p-8`}
+              className={`${space.colSpan} relative min-h-[320px] sm:min-h-[360px] bg-zinc-900 border border-zinc-800 hover:border-blood-600/70 clip-chamfer-top overflow-hidden group shadow-combat-plate flex flex-col justify-end p-6 sm:p-8`}
             >
-              {/* Photo background - Vivid, sharp and clearly visible without harsh grayscale */}
+              {/* Photo background - Vivid, sharp and 100% visible */}
               <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-95"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                 style={{ backgroundImage: `url('${space.imageUrl}')` }}
               />
-              {/* Gentle directional dark gradient: dark at base for text legibility, crystal clear through center and top */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none" />
+              {/* Light protective overlay: bg-black/40 a bg-black/65 no máximo */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/20 pointer-events-none" />
 
               {/* Tactical Badge */}
               <div className="absolute top-4 right-4 z-10">

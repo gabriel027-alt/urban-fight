@@ -120,18 +120,18 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 transform: "perspective(1000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg))",
                 transition: "transform 0.15s ease-out, box-shadow 0.2s ease",
               }}
-              className="tilt-card relative bg-zinc-900/95 border border-zinc-700 hover:border-blood-500 clip-chamfer-top p-6 sm:p-7 flex flex-col justify-between overflow-hidden group shadow-2xl transition-all"
+              className="tilt-card relative bg-zinc-900 border border-zinc-700 hover:border-blood-500 clip-chamfer-top p-6 sm:p-7 flex flex-col justify-between overflow-hidden group shadow-2xl transition-all"
             >
               {/* Dynamic Specular Glare Layer */}
               <div className="tilt-glare" />
 
-              {/* Background Athlete Photo with Smart Lighting - 80%-95% Clarity & Vivid Combat Tone */}
+              {/* Background Athlete Photo - High Quality, Crisp, 100% visible */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-95 transition-all duration-500 scale-105 pointer-events-none"
+                className="absolute inset-0 bg-cover bg-center transition-all duration-500 scale-105 group-hover:scale-110 pointer-events-none"
                 style={{ backgroundImage: `url('${item.imageUrl}')` }}
               />
-              {/* Smart Lighting: gentle directional gradient (dark only at base for text legibility, clear and crisp through center and top) */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none" />
+              {/* Light protective overlay: bg-black/40 a bg-black/65 no máximo */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/20 pointer-events-none" />
 
               {/* Content Header */}
               <div className="relative z-10">
