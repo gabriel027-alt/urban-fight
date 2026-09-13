@@ -30,6 +30,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://urbanfight.com.br"),
   title: "URBAN FIGHT | Centro de Treinamento de Artes Marciais & Alta Performance - Montes Claros",
   description:
     "O maior centro de combate e evolução atlética do Norte de Minas. Boxe Tradicional, Muay Thai, Jiu-Jitsu, Jeet Kune Do e Turmas Kids sob a liderança do Mestre André. Av. Cula Mangabeira, 1497 - Santo Expedito, Montes Claros - MG.",
@@ -45,12 +46,25 @@ export const metadata: Metadata = {
     "fight club Montes Claros",
   ],
   authors: [{ name: "Urban Fight Montes Claros" }],
+  icons: {
+    icon: "/logo-urban-fight.jpg",
+    shortcut: "/logo-urban-fight.jpg",
+    apple: "/logo-urban-fight.jpg",
+  },
   openGraph: {
     title: "URBAN FIGHT | Centro de Artes Marciais & Alta Performance - Montes Claros",
     description:
       "Transforme sua mente e seu corpo. Agende sua Aula Experimental Gratuita na Av. Cula Mangabeira, 1497 - Santo Expedito.",
     url: "https://urbanfight.com.br",
     siteName: "Urban Fight Montes Claros",
+    images: [
+      {
+        url: "/logo-urban-fight.jpg",
+        width: 800,
+        height: 800,
+        alt: "Logo Oficial Urban Fight Montes Claros",
+      },
+    ],
     locale: "pt_BR",
     type: "website",
   },

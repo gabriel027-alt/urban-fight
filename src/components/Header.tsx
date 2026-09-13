@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { URBAN_FIGHT_CONFIG } from "@/lib/utils";
 import { 
-  Flame, 
   MapPin, 
   Menu, 
   X, 
@@ -107,13 +107,20 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Brand Logo with Fight Club / Athletic Cut */}
+          {/* Brand Logo with Official Emblem */}
           <a
             href="#"
             className="flex items-center gap-3 group focus:outline-none"
           >
-            <div className="w-10 h-10 bg-blood-700 clip-tag flex items-center justify-center shadow-spotlight-sharp border border-blood-500 group-hover:bg-blood-600 transition-colors">
-              <Flame className="w-6 h-6 text-white" />
+            <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-blood-500 shadow-spotlight-sharp group-hover:scale-105 transition-transform bg-black flex-shrink-0">
+              <Image
+                src="/logo-urban-fight.jpg"
+                alt="Logo Oficial Urban Fight"
+                width={44}
+                height={44}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
             <div>
               <div className="flex items-center">

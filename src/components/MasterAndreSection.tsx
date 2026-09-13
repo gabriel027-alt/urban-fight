@@ -1,10 +1,12 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { 
   ArrowRight, 
   Flame, 
-  MapPin
+  MapPin,
+  Play
 } from "lucide-react";
 
 interface MasterAndreSectionProps {
@@ -68,60 +70,84 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
         </div>
 
         {/* Asymmetric Editorial Poster Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
-          {/* Visual Column: Atmospheric Fighter / Master Portrait */}
-          <div className="lg:col-span-5 flex flex-col">
-            <div className="relative flex-1 rounded-none clip-chamfer-top bg-gradient-to-b from-zinc-800/80 via-asphalt-900 to-black p-1 border-2 border-zinc-800 group shadow-spotlight-sharp">
-              {/* Inner frame */}
-              <div className="relative h-full min-h-[480px] sm:min-h-[560px] w-full overflow-hidden bg-[#0a0a0d] flex flex-col justify-end p-6 sm:p-8">
-                {/* Background Fighter Photography Treatment */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1000&auto=format&fit=crop')`,
-                  }}
-                />
-
-                {/* Dramatic Vignette and Red Grading Overlays */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#070709] via-[#070709]/70 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#070709]/80 via-transparent to-blood-950/40 mix-blend-multiply" />
-                
-                {/* Corner Tactical Mark */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="font-tactical text-[10px] tracking-widest text-hazard-400 font-bold bg-black/90 border border-hazard-400/40 px-2 py-1">
-                    URBAN FIGHT • MOC/MG
-                  </span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+          {/* Column 1: Real Photo of Mestre André + Main Interactive Video Player */}
+          <div className="lg:col-span-6 flex flex-col space-y-6">
+            {/* Card 1: Official Real Photo of Mestre André with Illuminated Tactical Frame */}
+            <div className="relative rounded-none clip-chamfer-top bg-gradient-to-b from-zinc-800 via-asphalt-900 to-black p-1 border-2 border-blood-600 shadow-spotlight-sharp group">
+              <div className="relative overflow-hidden bg-[#0a0a0d] p-5 flex flex-col sm:flex-row items-center gap-6">
+                {/* Real Photo Thumbnail / Avatar */}
+                <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-2 border-blood-500 shadow-spotlight-red shrink-0 bg-black">
+                  <Image
+                    src="/mestre-andre.jpg"
+                    alt="Foto Real do Mestre André"
+                    width={176}
+                    height={176}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    priority
+                  />
                 </div>
 
-                {/* Poster Content on the bottom of the photo */}
-                <div className="relative z-10 space-y-3">
-                  <div className="inline-block px-3 py-1 bg-blood-600 text-white font-tactical text-xs font-bold uppercase tracking-wider">
-                    DIRETOR GERAL & HEAD COACH
+                {/* Profile Details */}
+                <div className="space-y-2 text-center sm:text-left">
+                  <div className="inline-block px-2.5 py-0.5 bg-blood-600 text-white font-tactical text-[10px] font-bold uppercase tracking-wider clip-tag">
+                    FUNDADOR & HEAD COACH
                   </div>
-
-                  <h3 className="font-combat text-4xl sm:text-5xl font-black text-white uppercase tracking-wider leading-none">
+                  <h3 className="font-combat text-3xl sm:text-4xl font-black text-white uppercase tracking-wider leading-none">
                     MESTRE ANDRÉ
                   </h3>
-
-                  <p className="font-sans text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                    Referência no ensino de artes marciais no Norte de Minas. Mentor técnico de atletas profissionais e pioneiro no método de acolhimento ao iniciante sem ego.
+                  <p className="font-sans text-xs text-zinc-300 leading-relaxed">
+                    Referência absoluta no ensino de artes marciais no Norte de Minas. Formador de atletas e pioneiro no acolhimento ao iniciante sem ego.
                   </p>
-
-                  <div className="pt-2 flex items-center gap-3 text-xs font-tactical text-zinc-400">
-                    <span className="flex items-center gap-1">
+                  <div className="pt-1 flex flex-wrap items-center justify-center sm:justify-start gap-2 text-xs font-tactical text-zinc-400">
+                    <span className="flex items-center gap-1 text-blood-400">
                       <MapPin className="w-3.5 h-3.5 text-blood-500" />
-                      Santo Expedito
+                      Santo Expedito • Montes Claros
                     </span>
                     <span>•</span>
-                    <span className="text-zinc-300 font-bold">Faixa Preta 4º Grau BJJ</span>
+                    <span className="text-hazard-400 font-bold">Faixa Preta 4º Grau BJJ</span>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* Card 2: Main Interactive Video Player of Mestre André */}
+            <div className="relative rounded-none clip-chamfer-top bg-gradient-to-b from-zinc-800 via-asphalt-900 to-black p-1 border-2 border-blood-600/80 shadow-spotlight-sharp">
+              <div className="relative w-full overflow-hidden bg-[#050508] p-4 sm:p-5 flex flex-col justify-between space-y-3">
+                <div className="flex items-center justify-between gap-2 z-10">
+                  <span className="font-tactical text-[10px] tracking-widest text-hazard-400 font-bold bg-black/90 border border-hazard-400/40 px-2.5 py-1 clip-tag flex items-center gap-1.5">
+                    <Play className="w-3 h-3 text-hazard-400 fill-hazard-400" />
+                    VÍDEO PRINCIPAL • PALAVRA DO MESTRE
+                  </span>
+                  <span className="font-tactical text-[10px] tracking-wider text-blood-400 bg-blood-950/80 border border-blood-600/50 px-2 py-0.5 clip-tag flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse" />
+                    ASSISTA AO VÍDEO
+                  </span>
+                </div>
+
+                {/* Video Player */}
+                <div className="relative w-full overflow-hidden bg-black border-2 border-zinc-800 shadow-2xl flex items-center justify-center aspect-video sm:aspect-[4/3] max-h-[380px]">
+                  <video
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster="/mestre-andre.jpg"
+                    className="w-full h-full object-cover bg-black"
+                  >
+                    <source src="/video-urban2-mestre.mp4" type="video/mp4" />
+                    Seu navegador não suporta a reprodução deste vídeo.
+                  </video>
+                </div>
+
+                <p className="font-sans text-xs text-zinc-400 text-center sm:text-left">
+                  Dê o play para ouvir diretamente do Mestre André sobre a metodologia e acolhimento da Urban Fight.
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Lineage & Manifesto Editorial Column */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-8">
+          {/* Column 2: Lineage & Manifesto Editorial Column */}
+          <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
             {/* Engraved Manifesto Box */}
             <div className="p-6 sm:p-8 bg-asphalt-900/90 border-l-4 border-blood-600 border-y border-r border-zinc-800 clip-chamfer-top shadow-combat-plate relative">
               <span className="font-tactical text-xs uppercase tracking-[0.25em] text-blood-500 font-bold block mb-2">

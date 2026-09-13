@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { URBAN_FIGHT_CONFIG } from "@/lib/utils";
 import { 
-  Flame, 
   MapPin, 
   Phone, 
   Clock, 
@@ -39,8 +39,14 @@ export const Footer: React.FC = () => {
           {/* Brand & Manifesto */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-blood-700 clip-tag flex items-center justify-center shadow-spotlight-sharp border border-blood-500">
-                <Flame className="w-6 h-6 text-white" />
+              <div className="relative w-10 h-10 rounded-full overflow-hidden border border-blood-500 shadow-spotlight-sharp flex-shrink-0 bg-black">
+                <Image
+                  src="/logo-urban-fight.jpg"
+                  alt="Logo Oficial Urban Fight"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <span className="font-combat text-2xl font-black uppercase text-white tracking-wider leading-none">

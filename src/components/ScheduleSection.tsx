@@ -8,7 +8,8 @@ import {
   Sun, 
   Sunset, 
   Moon, 
-  ArrowRight
+  ArrowRight,
+  Flame
 } from "lucide-react";
 
 interface ScheduleSectionProps {
@@ -165,6 +166,54 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               </div>
             );
           })}
+        </div>
+
+        {/* Featured Presentation Video: Gym Atmosphere & Dynamics */}
+        <div className="mt-16 bg-asphalt-900 border border-zinc-800 clip-chamfer-top p-6 sm:p-8 shadow-combat-plate relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-blood-600/10 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-800 pb-4">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-black border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag mb-1.5">
+                  <Flame className="w-3.5 h-3.5 text-blood-500" />
+                  <span>VÍDEO DE APRESENTAÇÃO • ENERGIA DO TATAME</span>
+                </div>
+                <h3 className="font-combat text-3xl sm:text-4xl uppercase tracking-wide text-white leading-none">
+                  SINTA A VIBRAÇÃO DOS TREINOS NA URBAN FIGHT
+                </h3>
+              </div>
+              <span className="font-tactical text-xs text-zinc-400 uppercase tracking-wider">
+                GRAVADO AO VIVO NA SEDE SANTO EXPEDITO
+              </span>
+            </div>
+
+            {/* Video Player */}
+            <div className="relative w-full rounded-none overflow-hidden bg-black border-2 border-zinc-800 shadow-spotlight-sharp aspect-video flex items-center justify-center">
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster="/logo-urban-fight.jpg"
+                className="w-full h-full object-cover bg-black"
+              >
+                <source src="/video-urban1-apresentacao.mp4" type="video/mp4" />
+                Seu navegador não suporta a reprodução deste vídeo.
+              </video>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-zinc-400">
+              <p>
+                Confira como nossos alunos se preparam, a intensidade dos exercícios aeróbicos e o suporte técnico em cada golpe.
+              </p>
+              <button
+                onClick={() => onScheduleSlot("Aula Experimental")}
+                className="shrink-0 px-6 py-3 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold clip-chamfer-top transition-all shadow-spotlight-sharp"
+              >
+                EXPERIMENTAR ESTE TREINO
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
