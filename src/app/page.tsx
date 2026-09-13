@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { MarqueeTicker } from "@/components/MarqueeTicker";
 import { ModalitiesGrid } from "@/components/ModalitiesGrid";
+import { ModalitiesGuidanceVideo } from "@/components/ModalitiesGuidanceVideo";
 import { MasterAndreSection } from "@/components/MasterAndreSection";
 import { LocationAndStructure } from "@/components/LocationAndStructure";
 import { EquipmentSection } from "@/components/EquipmentSection";
@@ -53,6 +54,9 @@ export default function Home() {
 
         {/* 4. 3D Tilt Modalities Grid with Specular Glare & Fighter Photos */}
         <ModalitiesGrid onSelectModality={(modality) => scrollToTriage(modality)} />
+
+        {/* 4.1. Modalities Guidance Video by Mestre André */}
+        <ModalitiesGuidanceVideo onStartTriage={() => scrollToTriage()} />
 
         {/* 5. Reverse Asphalt Combat Tape Marquee */}
         <MarqueeTicker reverse angle="rotate-1 sm:rotate-1.5" theme="asphalt" />
