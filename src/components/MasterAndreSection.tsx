@@ -284,7 +284,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                 </div>
 
                 <span className="text-blood-400 font-tactical text-[11px] font-bold uppercase tracking-wider">
-                  HD 1080p • ÁUDIO ORIGINAL
+                  VÍDEO OFICIAL URBAN FIGHT
                 </span>
               </div>
             </div>

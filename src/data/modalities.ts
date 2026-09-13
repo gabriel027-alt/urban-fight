@@ -82,7 +82,7 @@ export const MODALITIES: Modality[] = [
     instructor: "Mestre André & Treinadores Certificados",
     iconName: "Zap",
     accentColor: "from-orange-600/30 to-blood-950/80",
-    imageUrl: "/modalidade-muaythai.jpg",
+    imageUrl: "/modalidade-muaythai1.jpg",
   },
   {
     id: "jiu-jitsu",
@@ -111,7 +111,7 @@ export const MODALITIES: Modality[] = [
     instructor: "Professores Faixas Pretas sob supervisão do Mestre André",
     iconName: "Swords",
     accentColor: "from-blue-600/30 to-blood-950/80",
-    imageUrl: "/jiujitsu.jpg",
+    imageUrl: "/jiujitsu1.jpg",
   },
   {
     id: "jeet-kune-do-defesa",
@@ -141,6 +141,35 @@ export const MODALITIES: Modality[] = [
     iconName: "Shield",
     accentColor: "from-amber-600/30 to-blood-950/80",
     imageUrl: "/jeetkunedo.jpg",
+  },
+  {
+    id: "krav-maga",
+    name: "Krav Maga (Defesa Pessoal)",
+    category: "defense",
+    categoryLabel: "Defesa Pessoal & Tática",
+    tagline: "Defesa pessoal israelense: respostas rápidas e autoproteção real.",
+    description:
+      "Sistema prático e direto desenvolvido para situações reais de perigo. Aprenda a se defender contra agarrões, estrangulamentos, ameaças e agressões urbanas de forma eficiente, sem regras de competição esportiva.",
+    intensity: "Alta",
+    caloriesBurn: "Até 800 kcal/h",
+    badge: "Defesa Real",
+    legendTribute: "Defesa Militar • Eficácia Urbana",
+    benefits: [
+      "Técnicas diretas para escapar de agressões e situações de risco",
+      "Defesa contra agarramentos, socos, chutes e estrangulamentos",
+      "Aumento imediato da autoconfiança e controle do estresse",
+      "Treino acessível para homens e mulheres de qualquer porte físico",
+    ],
+    targetAudience: [
+      "Pessoas que buscam segurança pessoal e autodefesa prática",
+      "Quem não procura regras esportivas, mas proteção real no dia a dia",
+      "Iniciantes sem histórico esportivo",
+    ],
+    equipmentNeeded: ["Roupas confortáveis de treino", "Tênis limpo de tatame"],
+    instructor: "Instrutores Especializados sob supervisão do Mestre André",
+    iconName: "Shield",
+    accentColor: "from-red-700/30 to-blood-950/80",
+    imageUrl: "/krav-maga.jpg",
   },
   {
     id: "taekwondo-kids",

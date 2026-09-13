@@ -132,6 +132,7 @@ export const Footer: React.FC = () => {
               <li>Boxe Tradicional (Nobre Arte)</li>
               <li>Muay Thai & Kickboxing</li>
               <li>Jiu-Jitsu Brasileiro (BJJ)</li>
+              <li>Krav Maga & Defesa Pessoal</li>
               <li>Jeet Kune Do & Defesa Urbana</li>
               <li>Taekwondo & Turmas Kids</li>
             </ul>

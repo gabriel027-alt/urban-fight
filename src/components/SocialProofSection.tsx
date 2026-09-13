@@ -92,16 +92,16 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
             </div>
           </div>
 
-          {/* Video 2: Depoimento Igor & Equipe */}
+          {/* Video 2: Depoimento do Igor */}
           <div className="relative bg-[#08080a] border-2 border-zinc-800 hover:border-blood-600/80 transition-all duration-300 clip-chamfer-top shadow-spotlight-sharp overflow-hidden group flex flex-col justify-between">
             {/* Video Header Bar */}
             <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
               <div className="flex items-center gap-2 text-zinc-300">
                 <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse" />
-                <span className="font-bold uppercase tracking-wider">DEPOIMENTO IGOR & EQUIPE</span>
+                <span className="font-bold uppercase tracking-wider">DEPOIMENTO DO IGOR</span>
               </div>
               <span className="text-blood-400 uppercase tracking-widest text-[11px] font-bold">
-                ESPÍRITO DE EQUIPE
+                ALUNO URBAN FIGHT
               </span>
             </div>
 

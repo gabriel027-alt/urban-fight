@@ -89,7 +89,7 @@ export const ModalitiesGuidanceVideo: React.FC<ModalitiesGuidanceVideoProps> = (
             </div>
 
             <span className="text-blood-400 font-tactical text-[11px] font-bold uppercase tracking-wider">
-              Áudio e Imagem em HD
+              PALAVRA DO MESTRE ANDRÉ
             </span>
           </div>
         </div>

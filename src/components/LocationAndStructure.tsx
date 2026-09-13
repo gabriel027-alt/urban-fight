@@ -15,9 +15,9 @@ import {
 export const LocationAndStructure: React.FC = () => {
   const gymSpaces = [
     {
-      title: "Tatame de Alta Densidade",
-      subtitle: "Amortecimento Profundo & Proteção Articular",
-      desc: "Superfície contínua de alta densidade desenvolvida para rolamentos, projeções de Jiu-Jitsu e movimentação de solo sem sobrecarga articular, com sanitização diária rigorosa.",
+      title: "Tatame Profissional",
+      subtitle: "Amortecimento & Treino Seguro",
+      desc: "Tatame amplo, firme e higienizado diariamente para treinos seguros de quedas, rolamentos e luta de solo no Jiu-Jitsu, Taekwondo e Krav Maga.",
       badge: "TATAME PROFISSIONAL",
       imageUrl: "/estrutura-tatame.jpg",
       highlights: ["Absorção de Impacto", "Higienização Diária", "Solo e Quedas"],
@@ -25,17 +25,17 @@ export const LocationAndStructure: React.FC = () => {
     },
     {
       title: "Ringue & Sacos Pesados",
-      subtitle: "Estação de Potência & Golpeio Contínuo",
-      desc: "Bolsas de pancada profissionais de 60kg a 100kg em couro reforçado para calejamento, chutes e combinações no Muay Thai e Boxe, além de ringue e área para manoplas.",
+      subtitle: "Treino de Potência & Golpeio",
+      desc: "Sacos de pancada pesados para treino contínuo de socos e chutes no Muay Thai, Kickboxing e Boxe, além de área de ringue e espaço para manoplas.",
       badge: "POTÊNCIA & IMPACTO",
       imageUrl: "/estrutura-sacos.jpg",
-      highlights: ["Bolsas de 60 a 100kg", "Muay Thai & Boxe", "Área de Ringue"],
+      highlights: ["Sacos Pesados", "Muay Thai & Boxe", "Área de Ringue"],
       colSpan: "lg:col-span-4",
     },
     {
-      title: "Área de Equipamentos Funcionais",
-      subtitle: "Cones, Aparadores e Escadinha de Tatame",
-      desc: "Estação focada na preparação física de luta: cones de agilidade, escadinha de coordenação no tatame, aparadores tailandeses (paus), manoplas de foco e barras funcionais.",
+      title: "Equipamentos Funcionais",
+      subtitle: "Agilidade & Condicionamento de Luta",
+      desc: "Estrutura completa para preparação física no tatame: cones de agilidade, escadinha de coordenação, aparadores tailandeses e manoplas de foco.",
       badge: "AGILIDADE & PREPARO",
       imageUrl: "/estrutura-equipamentos.jpg",
       highlights: ["Cones de Agilidade", "Escadinha de Tatame", "Manoplas & Aparadores"],
@@ -43,8 +43,8 @@ export const LocationAndStructure: React.FC = () => {
     },
     {
       title: "Recepção & Convivência",
-      subtitle: "Ponto de Encontro & Acolhimento Familiar",
-      desc: "Área de circulação e recepção na Av. Cula Mangabeira, 1497: acolhimento pelo Mestre André, hidratação e espaço para alunos e familiares acompanharem os treinos com tranquilidade.",
+      subtitle: "Ponto de Encontro & Acolhimento",
+      desc: "Espaço acolhedor na Av. Cula Mangabeira, 1497: recepção pelo Mestre André, hidratação e ambiente familiar para acompanhar os treinos.",
       badge: "SANTO EXPEDITO",
       imageUrl: "/estrutura-recepcao.jpg",
       highlights: ["Ponto de Encontro", "Hidratação & Recepção", "Ambiente Familiar"],

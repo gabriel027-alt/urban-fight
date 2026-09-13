@@ -88,6 +88,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
     "Muay Thai & Kickboxing",
     "Boxe Tradicional (Nobre Arte)",
     "Jiu-Jitsu Brasileiro (BJJ)",
+    "Krav Maga (Defesa Pessoal)",
     "Jeet Kune Do & Defesa Urbana",
     "Taekwondo & Kids (4 a 14 anos)",
     "Indicação do Mestre André",
