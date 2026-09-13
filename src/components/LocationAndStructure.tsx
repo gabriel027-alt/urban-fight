@@ -18,7 +18,7 @@ export const LocationAndStructure: React.FC = () => {
       subtitle: "Amortecimento Profundo & Proteção Articular",
       desc: "Superfície contínua de alta densidade desenvolvida para rolamentos, projeções de Jiu-Jitsu e movimentação de solo sem sobrecarga articular, com sanitização diária rigorosa.",
       badge: "TATAME PROFISSIONAL",
-      imageUrl: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1000&auto=format&fit=crop",
+      imageUrl: "/estrutura-tatame.jpg",
       highlights: ["Absorção de Impacto", "Higienização Diária", "Solo e Quedas"],
       colSpan: "lg:col-span-8",
     },
@@ -27,7 +27,7 @@ export const LocationAndStructure: React.FC = () => {
       subtitle: "Estação de Potência & Golpeio Contínuo",
       desc: "Bolsas de pancada profissionais de 60kg a 100kg em couro reforçado para calejamento, chutes e combinações no Muay Thai e Boxe, além de ringue e área para manoplas.",
       badge: "POTÊNCIA & IMPACTO",
-      imageUrl: "https://images.unsplash.com/photo-1517438322307-e67111335449?q=80&w=1000&auto=format&fit=crop",
+      imageUrl: "/estrutura-sacos.jpg",
       highlights: ["Bolsas de 60 a 100kg", "Muay Thai & Boxe", "Área de Ringue"],
       colSpan: "lg:col-span-4",
     },
@@ -36,7 +36,7 @@ export const LocationAndStructure: React.FC = () => {
       subtitle: "Cones, Aparadores e Escadinha de Tatame",
       desc: "Estação focada na preparação física de luta: cones de agilidade, escadinha de coordenação no tatame, aparadores tailandeses (paus), manoplas de foco e barras funcionais.",
       badge: "AGILIDADE & PREPARO",
-      imageUrl: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop",
+      imageUrl: "/estrutura-equipamentos.jpg",
       highlights: ["Cones de Agilidade", "Escadinha de Tatame", "Manoplas & Aparadores"],
       colSpan: "lg:col-span-4",
     },
@@ -45,7 +45,7 @@ export const LocationAndStructure: React.FC = () => {
       subtitle: "Ponto de Encontro & Acolhimento Familiar",
       desc: "Área de circulação e recepção na Av. Cula Mangabeira, 1497: acolhimento pelo Mestre André, hidratação e espaço para alunos e familiares acompanharem os treinos com tranquilidade.",
       badge: "SANTO EXPEDITO",
-      imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop",
+      imageUrl: "/estrutura-recepcao.jpg",
       highlights: ["Ponto de Encontro", "Hidratação & Recepção", "Ambiente Familiar"],
       colSpan: "lg:col-span-8",
     },
@@ -221,3 +221,5 @@ export const LocationAndStructure: React.FC = () => {
     </section>
   );
 };
+
+export const StructureSection = LocationAndStructure;
