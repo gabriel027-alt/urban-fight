@@ -124,12 +124,14 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
               {/* Dynamic Specular Glare Layer */}
               <div className="tilt-glare" />
 
-              {/* Background Fighter Photo with Heavy Dark Overlay */}
+              {/* Background Fighter Photo with Dramatic High-Contrast Dark Treatment */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-45 transition-opacity duration-500 scale-105 pointer-events-none"
+                className="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-55 transition-opacity duration-500 scale-105 filter grayscale contrast-125 brightness-80 pointer-events-none"
                 style={{ backgroundImage: `url('${item.imageUrl}')` }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/85 to-transparent pointer-events-none" />
+              {/* Uniform Dark Combat Luxury Overlay */}
+              <div className="absolute inset-0 bg-black/80 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/75 to-transparent pointer-events-none" />
               <div className="absolute inset-0 bg-gradient-to-b from-blood-950/20 via-transparent to-black pointer-events-none" />
 
               {/* Content Header */}

@@ -18,8 +18,8 @@ export const LocationAndStructure: React.FC = () => {
       subtitle: "Amortecimento Profundo & Proteção Articular",
       desc: "Superfície contínua de alta densidade desenvolvida para rolamentos, projeções de Jiu-Jitsu e movimentação de solo sem sobrecarga articular, com sanitização diária rigorosa.",
       badge: "TATAME PROFISSIONAL",
-      imageUrl: "https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=1200&auto=format&fit=crop",
-      highlights: ["Absorção de Impacto", "Higiene Hospitalar", "Solo e Quedas"],
+      imageUrl: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop",
+      highlights: ["Absorção de Impacto", "Higienização Diária", "Solo e Quedas"],
       colSpan: "lg:col-span-8",
     },
     {
@@ -36,7 +36,7 @@ export const LocationAndStructure: React.FC = () => {
       subtitle: "Cones, Aparadores e Escadinha de Tatame",
       desc: "Estação focada na preparação física de luta: cones de agilidade, escadinha de coordenação no tatame, aparadores tailandeses (paus), manoplas de foco e barras funcionais.",
       badge: "AGILIDADE & PREPARO",
-      imageUrl: "https://images.unsplash.com/photo-1517438476312-10d79c077509?q=80&w=1000&auto=format&fit=crop",
+      imageUrl: "https://images.unsplash.com/photo-1495555687398-3f50d6e79e1e?q=80&w=1000&auto=format&fit=crop",
       highlights: ["Cones de Agilidade", "Escadinha de Tatame", "Manoplas & Aparadores"],
       colSpan: "lg:col-span-4",
     },
@@ -45,7 +45,7 @@ export const LocationAndStructure: React.FC = () => {
       subtitle: "Ponto de Encontro & Acolhimento Familiar",
       desc: "Área de circulação e recepção na Av. Cula Mangabeira, 1497: acolhimento pelo Mestre André, hidratação e espaço para alunos e familiares acompanharem os treinos com tranquilidade.",
       badge: "SANTO EXPEDITO",
-      imageUrl: "https://images.unsplash.com/photo-1517438322307-e67111335449?q=80&w=1200&auto=format&fit=crop",
+      imageUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
       highlights: ["Ponto de Encontro", "Hidratação & Recepção", "Ambiente Familiar"],
       colSpan: "lg:col-span-8",
     },
@@ -80,14 +80,15 @@ export const LocationAndStructure: React.FC = () => {
               key={idx}
               className={`${space.colSpan} relative min-h-[320px] sm:min-h-[360px] bg-asphalt-900 border border-zinc-800 hover:border-blood-600/70 clip-chamfer-top overflow-hidden group shadow-combat-plate flex flex-col justify-end p-6 sm:p-8`}
             >
-              {/* Photo background with dramatic lighting */}
+              {/* Photo background with dramatic lighting and high-contrast dark treatment */}
               <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 filter grayscale contrast-125 brightness-75"
                 style={{ backgroundImage: `url('${space.imageUrl}')` }}
               />
-              {/* Moody overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/85 to-transparent pointer-events-none" />
-              <div className="absolute inset-0 bg-blood-950/20 mix-blend-color pointer-events-none" />
+              {/* Uniform Dark Combat Luxury Overlays */}
+              <div className="absolute inset-0 bg-black/85 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/80 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-blood-950/25 mix-blend-overlay pointer-events-none" />
 
               {/* Tactical Badge */}
               <div className="absolute top-4 right-4 z-10">

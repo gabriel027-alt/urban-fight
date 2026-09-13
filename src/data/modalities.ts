@@ -124,7 +124,7 @@ export const MODALITIES: Modality[] = [
     intensity: "Média",
     caloriesBurn: "Até 650 kcal/h",
     badge: "Sobrevivência Urbana",
-    legendTribute: "Filosofia Bruce Lee • Silhueta & Foco Tático",
+    legendTribute: "Filosofia Bruce Lee • Guarda & Defesa Tática",
     benefits: [
       "Controle do pânico situacional e expansão da atenção periférica",
       "Golpes em pontos vulneráveis para neutralização em segundos",
@@ -140,7 +140,7 @@ export const MODALITIES: Modality[] = [
     instructor: "Mestre André (Especialista em Combate Prático)",
     iconName: "Shield",
     accentColor: "from-amber-600/30 to-blood-950/80",
-    imageUrl: "https://images.unsplash.com/photo-1552072805-2a9039d00e57?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "taekwondo-kids",
@@ -153,7 +153,7 @@ export const MODALITIES: Modality[] = [
     intensity: "Média",
     caloriesBurn: "Até 600 kcal/h",
     badge: "Família & Futuro",
-    legendTribute: "Disciplina & Respeito • Foco Infantil no Tatame",
+    legendTribute: "Disciplina & Respeito • Jovens no Tatame",
     benefits: [
       "Melhora comprovada no foco, disciplina escolar e tempo de tela reduzido",
       "Coordenação motora bilateral, agilidade e postura correta",
@@ -169,6 +169,6 @@ export const MODALITIES: Modality[] = [
     instructor: "Professores Pedagógicos e Mestre André",
     iconName: "Sparkles",
     accentColor: "from-emerald-600/30 to-blood-950/80",
-    imageUrl: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1616279969856-759f316a5ac1?q=80&w=1000&auto=format&fit=crop",
   },
 ];
