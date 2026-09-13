@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#030304] border-t border-zinc-900 pt-16 pb-24 sm:pb-16 text-zinc-400 text-sm">
+    <footer className="bg-[#030304] border-t border-zinc-900 pt-16 pb-24 sm:pb-16 text-zinc-400 text-sm overflow-hidden w-full max-w-[100vw]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-zinc-900">
           {/* Brand & Manifesto */}

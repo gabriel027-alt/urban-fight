@@ -37,11 +37,11 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#030303] text-zinc-100 selection:bg-blood-600 selection:text-white">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden flex flex-col bg-[#030303] text-zinc-100 selection:bg-blood-600 selection:text-white relative">
       {/* 1. Tactical Combat Header */}
       <Header onOpenTriage={() => scrollToTriage()} />
 
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-[100vw] overflow-x-hidden">
         {/* 2. Hero Arena with Crossed Spotlights & UFC Impact */}
         <Hero
           onStartTriage={() => scrollToTriage()}

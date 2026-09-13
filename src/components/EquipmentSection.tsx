@@ -54,7 +54,7 @@ export const EquipmentSection: React.FC = () => {
   )}`;
 
   return (
-    <section id="equipamentos" className="py-20 sm:py-28 bg-[#030303] relative border-t border-zinc-900">
+    <section id="equipamentos" className="py-20 sm:py-28 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-zinc-900">
       {/* Background Combat Radial Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blood-600/10 rounded-full blur-[140px] pointer-events-none" />
 

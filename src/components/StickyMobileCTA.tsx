@@ -24,7 +24,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
   if (!isVisible) return null;
 
   return (
-    <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-[#050505]/98 backdrop-blur-xl border-t border-zinc-800 shadow-2xl animate-in slide-in-from-bottom duration-300">
+    <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-[#050505]/98 backdrop-blur-xl border-t border-zinc-800 shadow-2xl animate-in slide-in-from-bottom duration-300 w-full max-w-[100vw] overflow-hidden">
       <div className="flex items-center gap-2">
         <button
           onClick={onTriggerTriage}

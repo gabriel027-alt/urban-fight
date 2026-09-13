@@ -101,7 +101,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
   };
 
   return (
-    <section id="horarios" className="py-20 sm:py-28 bg-[#030303] relative border-t border-zinc-900">
+    <section id="horarios" className="py-20 sm:py-28 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">

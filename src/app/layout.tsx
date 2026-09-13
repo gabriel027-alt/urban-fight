@@ -89,9 +89,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`dark scroll-smooth ${bebasNeue.variable} ${chakraPetch.variable} ${inter.variable}`}
+      className={`dark scroll-smooth overflow-x-hidden max-w-[100vw] w-full ${bebasNeue.variable} ${chakraPetch.variable} ${inter.variable}`}
     >
-      <body className="font-sans bg-[#050505] text-zinc-100 antialiased selection:bg-red-600 selection:text-white min-h-screen flex flex-col overflow-x-hidden">
+      <body className="font-sans bg-[#050505] text-zinc-100 antialiased selection:bg-red-600 selection:text-white min-h-screen flex flex-col overflow-x-hidden max-w-[100vw] w-full relative">
         {children}
       </body>
     </html>

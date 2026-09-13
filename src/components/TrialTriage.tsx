@@ -114,7 +114,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
   };
 
   return (
-    <section id="triagem-experimental" className="py-20 sm:py-28 bg-[#030303] relative border-t border-b border-zinc-900">
+    <section id="triagem-experimental" className="py-20 sm:py-28 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-b border-zinc-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
         <div className="text-center space-y-3 mb-12">
