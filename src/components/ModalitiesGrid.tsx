@@ -130,8 +130,8 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 className="absolute inset-0 bg-cover bg-center transition-all duration-500 scale-105 group-hover:scale-110 pointer-events-none"
                 style={{ backgroundImage: `url('${item.imageUrl}')` }}
               />
-              {/* Light protective overlay: bg-black/40 a bg-black/65 no máximo */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/20 pointer-events-none" />
+              {/* Light protective overlay: suave apenas na base para leitura perfeita do texto, centro e topo totalmente nítidos */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none" />
 
               {/* Content Header */}
               <div className="relative z-10">

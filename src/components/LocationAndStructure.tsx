@@ -85,8 +85,8 @@ export const LocationAndStructure: React.FC = () => {
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                 style={{ backgroundImage: `url('${space.imageUrl}')` }}
               />
-              {/* Light protective overlay: bg-black/40 a bg-black/65 no máximo */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/20 pointer-events-none" />
+              {/* Light protective overlay: suave apenas na base para leitura, topo e centro 100% nítidos */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent pointer-events-none" />
 
               {/* Tactical Badge */}
               <div className="absolute top-4 right-4 z-10">
