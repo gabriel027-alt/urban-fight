@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { URBAN_FIGHT_CONFIG } from "@/lib/utils";
 import { 
   MapPin, 
@@ -80,13 +81,20 @@ export const LocationAndStructure: React.FC = () => {
               key={idx}
               className={`${space.colSpan} relative min-h-[320px] sm:min-h-[360px] bg-zinc-900 border border-zinc-800 hover:border-blood-600/70 clip-chamfer-top overflow-hidden group shadow-combat-plate flex flex-col justify-end p-6 sm:p-8`}
             >
-              {/* Photo background - Vivid, sharp and 100% visible */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: `url('${space.imageUrl}')` }}
-              />
-              {/* Light protective overlay: suave apenas na base para leitura, topo e centro 100% nítidos */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent pointer-events-none" />
+              {/* Photo background - Next.js HD Optimized (Quality 100) */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <Image
+                  src={space.imageUrl}
+                  alt={space.title}
+                  fill
+                  quality={100}
+                  sizes="(max-width: 1024px) 100vw, 66vw"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  priority={idx < 2}
+                />
+              </div>
+              {/* Gradiente suave e inteligente na base para máxima nitidez das fotos e leitura absoluta do texto */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none" />
 
               {/* Tactical Badge */}
               <div className="absolute top-4 right-4 z-10">

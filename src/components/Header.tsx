@@ -32,6 +32,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
     { name: "MESTRE ANDRÉ", href: "#metodo" },
     { name: "ESTRUTURA", href: "#estrutura" },
     { name: "HORÁRIOS", href: "#horarios" },
+    { name: "EQUIPAMENTOS", href: "#equipamentos" },
     { name: "DÚVIDAS", href: "#duvidas" },
   ];
 

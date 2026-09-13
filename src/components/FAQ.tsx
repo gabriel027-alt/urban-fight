@@ -57,9 +57,11 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
                 }`}
               >
                 <button
+                  id={`faq-question-${index}`}
                   onClick={() => toggleAccordion(index)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-blood-500"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
                 >
                   <span className="font-combat text-xl sm:text-2xl uppercase tracking-wide text-white">
                     {item.question}
@@ -76,7 +78,12 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm text-zinc-300 font-sans leading-relaxed border-t border-zinc-900 animate-in fade-in duration-150">
+                  <div 
+                    id={`faq-answer-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-question-${index}`}
+                    className="px-5 sm:px-6 pb-6 pt-1 text-sm text-zinc-300 font-sans leading-relaxed border-t border-zinc-900 animate-in fade-in duration-150"
+                  >
                     <p>{item.answer}</p>
                   </div>
                 )}
@@ -120,3 +127,5 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
     </section>
   );
 };
+
+export const DuvidasSection = FAQ;

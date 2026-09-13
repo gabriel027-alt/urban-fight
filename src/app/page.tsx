@@ -7,6 +7,7 @@ import { MarqueeTicker } from "@/components/MarqueeTicker";
 import { ModalitiesGrid } from "@/components/ModalitiesGrid";
 import { MasterAndreSection } from "@/components/MasterAndreSection";
 import { LocationAndStructure } from "@/components/LocationAndStructure";
+import { EquipmentSection } from "@/components/EquipmentSection";
 import { ScheduleSection } from "@/components/ScheduleSection";
 import { TrialTriage } from "@/components/TrialTriage";
 import { FAQ } from "@/components/FAQ";
@@ -65,7 +66,10 @@ export default function Home() {
         {/* 8. Operational Class Schedule (Shifts & Times) */}
         <ScheduleSection onScheduleSlot={(modality) => scrollToTriage(modality)} />
 
-        {/* 9. 3-Step Tactical Triage Funnel directly to WhatsApp */}
+        {/* 9. Tactical Combat Gear & Official Supplies */}
+        <EquipmentSection />
+
+        {/* 10. 3-Step Tactical Triage Funnel directly to WhatsApp */}
         <TrialTriage initialModality={selectedModalityForTriage} />
 
         {/* 10. Objection Breaker FAQ */}

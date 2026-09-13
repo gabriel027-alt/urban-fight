@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { 
   MODALITIES, 
   MODALITIES_CATEGORIES, 
@@ -125,13 +126,20 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
               {/* Dynamic Specular Glare Layer */}
               <div className="tilt-glare" />
 
-              {/* Background Athlete Photo - High Quality, Crisp, 100% visible */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-all duration-500 scale-105 group-hover:scale-110 pointer-events-none"
-                style={{ backgroundImage: `url('${item.imageUrl}')` }}
-              />
-              {/* Light protective overlay: suave apenas na base para leitura perfeita do texto, centro e topo totalmente nítidos */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none" />
+              {/* Background Athlete Photo - Next.js HD Optimized (Quality 100) */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <Image
+                  src={item.imageUrl}
+                  alt={item.name}
+                  fill
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  priority={item.id === "boxe-tradicional" || item.id === "kickboxing-muaythai"}
+                />
+              </div>
+              {/* Gradiente suave e inteligente na base para máxima nitidez das fotos e leitura absoluta do texto */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none" />
 
               {/* Content Header */}
               <div className="relative z-10">

@@ -68,6 +68,13 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "URBAN FIGHT | Centro de Artes Marciais & Alta Performance - Montes Claros",
+    description:
+      "Transforme sua mente e seu corpo. Agende sua Aula Experimental Gratuita na Av. Cula Mangabeira, 1497 - Santo Expedito.",
+    images: ["/logo-urban-fight.jpg"],
+  },
   robots: {
     index: true,
     follow: true,
