@@ -6,7 +6,9 @@ import {
   ArrowRight, 
   Flame, 
   MapPin,
-  Play
+  Play,
+  Film,
+  CheckCircle2
 } from "lucide-react";
 
 interface MasterAndreSectionProps {
@@ -48,7 +50,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
   ];
 
   return (
-    <section id="metodo" className="py-20 sm:py-28 bg-[#030303] relative overflow-hidden border-t border-b border-zinc-900">
+    <section id="metodo" className="py-20 sm:py-28 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-b border-zinc-900">
       {/* Background Lighting */}
       <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] bg-blood-600/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 -left-32 w-[500px] h-[500px] bg-blood-800/10 rounded-full blur-[140px] pointer-events-none" />
@@ -208,6 +210,93 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
               >
                 <span>TREINAR COM O MESTRE ANDRÉ</span>
                 <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bloco Secundário: A HISTÓRIA DA URBAN FIGHT */}
+        <div id="historia-urban-fight" className="mt-16 sm:mt-24 pt-12 sm:pt-16 border-t border-zinc-900 w-full max-w-[100vw]">
+          <div className="max-w-4xl mx-auto">
+            {/* Header do Bloco Secundário */}
+            <div className="text-center space-y-4 mb-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+                <Film className="w-3.5 h-3.5 text-blood-500" />
+                <span>VÍDEO INSTITUCIONAL • O LEGADO DA ACADEMIA</span>
+              </div>
+
+              <h3 className="font-combat text-4xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
+                A HISTÓRIA DA <span className="text-blood-600">URBAN FIGHT</span>
+              </h3>
+
+              <div className="relative max-w-2xl mx-auto py-2">
+                <p className="font-sans text-base sm:text-lg text-zinc-300 italic leading-relaxed border-l-2 sm:border-l-0 border-blood-600 pl-4 sm:pl-0">
+                  &ldquo;Toda história forte começa com decisão. A Urban Fight não nasceu pronta. Foi construída com esforço, disciplina e constância.&rdquo;
+                </p>
+                <span className="block font-tactical text-xs text-blood-500 uppercase tracking-widest mt-2">
+                  — MESTRE ANDRÉ // FUNDADOR
+                </span>
+              </div>
+            </div>
+
+            {/* Player de Vídeo 16:9 Cinema Dark Combat Luxury */}
+            <div className="relative bg-black border-2 border-zinc-800 hover:border-blood-600/80 transition-colors duration-300 clip-chamfer-top shadow-2xl overflow-hidden group">
+              {/* Top Video Header Tag */}
+              <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
+                <div className="flex items-center gap-2 text-zinc-300">
+                  <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse" />
+                  <span className="font-bold uppercase tracking-wider">DOCUMENTÁRIO INSTITUCIONAL</span>
+                </div>
+                <span className="text-zinc-500 hidden sm:inline-block uppercase tracking-widest text-[11px]">
+                  ORIGENS & DISCIPLINA • MONTES CLAROS
+                </span>
+              </div>
+
+              {/* Video Player: aspect-video, object-contain, solid black, controls */}
+              <div className="relative aspect-video w-full bg-black flex items-center justify-center">
+                <video
+                  src="/video-mestre-historia.mp4"
+                  poster="/mestre-andre.jpg"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-full object-contain bg-black"
+                >
+                  Seu navegador não suporta a reprodução deste vídeo.
+                </video>
+              </div>
+
+              {/* Bottom Video Highlights Bar */}
+              <div className="p-4 sm:p-5 bg-zinc-950 border-t border-zinc-800/80 flex flex-wrap items-center justify-between gap-3 text-xs">
+                <div className="flex flex-wrap items-center gap-4 text-zinc-300 font-tactical">
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blood-500" />
+                    <span>Construída com Esforço & Disciplina</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blood-500" />
+                    <span>Mais de Duas Décadas de Tatame</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blood-500" />
+                    <span>Cultura de Superação sem Ego</span>
+                  </div>
+                </div>
+
+                <span className="text-blood-400 font-tactical text-[11px] font-bold uppercase tracking-wider">
+                  HD 1080p • ÁUDIO ORIGINAL
+                </span>
+              </div>
+            </div>
+
+            {/* Bottom Callout / Secondary Action */}
+            <div className="mt-8 text-center">
+              <button
+                onClick={onStartTriage}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 bg-zinc-900 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-xl font-bold border border-zinc-700 hover:border-blood-500 clip-chamfer-top transition-all duration-300 shadow-combat-plate group"
+              >
+                <span>FAZER PARTE DESSA HISTÓRIA</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
               </button>
             </div>
           </div>
