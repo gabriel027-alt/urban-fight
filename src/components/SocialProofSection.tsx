@@ -71,7 +71,6 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
             <div className="relative aspect-video w-full bg-black flex items-center justify-center">
               <video
                 src="/provasocial-urban1.mp4"
-                poster="/estrutura-tatame.jpg"
                 controls
                 playsInline
                 preload="metadata"
@@ -110,7 +109,6 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
             <div className="relative aspect-video w-full bg-black flex items-center justify-center">
               <video
                 src="/provasocial-urban2.mp4"
-                poster="/estrutura-sacos.jpg"
                 controls
                 playsInline
                 preload="metadata"
