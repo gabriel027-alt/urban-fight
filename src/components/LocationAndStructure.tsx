@@ -14,35 +14,39 @@ import {
 export const LocationAndStructure: React.FC = () => {
   const gymSpaces = [
     {
-      title: "Tatame Olímpico de Alta Densidade",
-      subtitle: "Área Ampla de Amortecimento Biomédico",
-      desc: "Tatame antibacteriano de padrão internacional com absorção de impacto profunda para quedas e rolamentos sem sobrecarga articular.",
-      badge: "PADRÃO OLÍMPICO",
-      imageUrl: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop",
+      title: "Tatame de Alta Densidade",
+      subtitle: "Amortecimento Profundo & Proteção Articular",
+      desc: "Superfície contínua de alta densidade desenvolvida para rolamentos, projeções de Jiu-Jitsu e movimentação de solo sem sobrecarga articular, com sanitização diária rigorosa.",
+      badge: "TATAME PROFISSIONAL",
+      imageUrl: "https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=1200&auto=format&fit=crop",
+      highlights: ["Absorção de Impacto", "Higiene Hospitalar", "Solo e Quedas"],
       colSpan: "lg:col-span-8",
     },
     {
       title: "Ringue & Sacos Pesados",
-      subtitle: "Linha de Boxe & Muay Thai",
-      desc: "Bolsas de pancada profissionais de 60kg a 100kg em couro reforçado, ringue elevado e espaço dedicado a manoplas.",
-      badge: "FORÇA & IMPACTO",
-      imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=800&auto=format&fit=crop",
+      subtitle: "Estação de Potência & Golpeio Contínuo",
+      desc: "Bolsas de pancada profissionais de 60kg a 100kg em couro reforçado para calejamento, chutes e combinações no Muay Thai e Boxe, além de ringue e área para manoplas.",
+      badge: "POTÊNCIA & IMPACTO",
+      imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1000&auto=format&fit=crop",
+      highlights: ["Bolsas de 60 a 100kg", "Muay Thai & Boxe", "Área de Ringue"],
       colSpan: "lg:col-span-4",
     },
     {
-      title: "Vestiários Premium & Duchas",
-      subtitle: "Higiene Hospitalar Contínua",
-      desc: "Chuveiros quentes pressurizados, armários individuais e sanitização diária rigorosa.",
-      badge: "CONFORTO MÁXIMO",
-      imageUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+      title: "Área de Equipamentos Funcionais",
+      subtitle: "Cones, Aparadores e Escadinha de Tatame",
+      desc: "Estação focada na preparação física de luta: cones de agilidade, escadinha de coordenação no tatame, aparadores tailandeses (paus), manoplas de foco e barras funcionais.",
+      badge: "AGILIDADE & PREPARO",
+      imageUrl: "https://images.unsplash.com/photo-1517438476312-10d79c077509?q=80&w=1000&auto=format&fit=crop",
+      highlights: ["Cones de Agilidade", "Escadinha de Tatame", "Manoplas & Aparadores"],
       colSpan: "lg:col-span-4",
     },
     {
-      title: "Recepção & Lounge dos Alunos",
-      subtitle: "Convivência & Estacionamento",
-      desc: "Ambiente climatizado para recepção de familiares, hidratação e acompanhamento das aulas em segurança.",
+      title: "Vestiários & Apoio",
+      subtitle: "Higiene Hospitalar, Duchas & Convivência",
+      desc: "Vestiários higienizados com duchas aquecidas, armários individuais, sanitização contínua e espaço de recepção acolhedor para alunos e familiares acompanharem as aulas.",
       badge: "SANTO EXPEDITO",
-      imageUrl: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop",
+      imageUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop",
+      highlights: ["Duchas Aquecidas", "Sanitização Diária", "Acolhimento Familiar"],
       colSpan: "lg:col-span-8",
     },
   ];
@@ -65,7 +69,7 @@ export const LocationAndStructure: React.FC = () => {
           </h2>
 
           <p className="font-sans text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto">
-            Projetada para atletas de alto calibre e acolhedora para famílias e iniciantes. Conheça as áreas especializadas da sede Santo Expedito.
+            Projetada para atletas de combate e acolhedora para famílias e iniciantes. Conheça as áreas especializadas da sede Santo Expedito: tatame, sacos pesados e circuito funcional marcial.
           </p>
         </div>
 
@@ -74,7 +78,7 @@ export const LocationAndStructure: React.FC = () => {
           {gymSpaces.map((space, idx) => (
             <div
               key={idx}
-              className={`${space.colSpan} relative min-h-[300px] sm:min-h-[340px] bg-asphalt-900 border border-zinc-800 hover:border-blood-600/70 clip-chamfer-top overflow-hidden group shadow-combat-plate flex flex-col justify-end p-6 sm:p-8`}
+              className={`${space.colSpan} relative min-h-[320px] sm:min-h-[360px] bg-asphalt-900 border border-zinc-800 hover:border-blood-600/70 clip-chamfer-top overflow-hidden group shadow-combat-plate flex flex-col justify-end p-6 sm:p-8`}
             >
               {/* Photo background with dramatic lighting */}
               <div 
@@ -82,7 +86,7 @@ export const LocationAndStructure: React.FC = () => {
                 style={{ backgroundImage: `url('${space.imageUrl}')` }}
               />
               {/* Moody overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/80 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/85 to-transparent pointer-events-none" />
               <div className="absolute inset-0 bg-blood-950/20 mix-blend-color pointer-events-none" />
 
               {/* Tactical Badge */}
@@ -93,7 +97,7 @@ export const LocationAndStructure: React.FC = () => {
               </div>
 
               {/* Text content over photo */}
-              <div className="relative z-10 space-y-1.5">
+              <div className="relative z-10 space-y-2">
                 <span className="font-tactical text-[10px] uppercase tracking-widest text-blood-400 font-bold block">
                   {space.subtitle}
                 </span>
@@ -103,6 +107,17 @@ export const LocationAndStructure: React.FC = () => {
                 <p className="font-sans text-xs sm:text-sm text-zinc-300 max-w-xl leading-relaxed">
                   {space.desc}
                 </p>
+                {/* Equipment Highlights */}
+                <div className="flex flex-wrap items-center gap-1.5 pt-1.5">
+                  {space.highlights.map((h, i) => (
+                    <span
+                      key={i}
+                      className="font-tactical text-[9px] uppercase tracking-wider px-2 py-0.5 bg-black/80 border border-zinc-700/80 text-zinc-300 clip-tag"
+                    >
+                      {h}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

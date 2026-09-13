@@ -188,14 +188,15 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               </span>
             </div>
 
-            {/* Video Player */}
-            <div className="relative w-full rounded-none overflow-hidden bg-black border-2 border-zinc-800 shadow-spotlight-sharp aspect-video flex items-center justify-center">
+            {/* Video Player: Container adjusted to display full video fluidly and centered with object-contain */}
+            <div className="relative w-full max-w-4xl mx-auto rounded-none overflow-hidden bg-black border-2 border-zinc-800 shadow-spotlight-sharp aspect-video flex items-center justify-center">
               <video
                 controls
                 playsInline
                 preload="metadata"
                 poster="/logo-urban-fight.jpg"
-                className="w-full h-full object-cover bg-black"
+                className="w-full h-full object-contain bg-black"
+                style={{ objectFit: "contain" }}
               >
                 <source src="/video-urban1-apresentacao.mp4" type="video/mp4" />
                 Seu navegador não suporta a reprodução deste vídeo.

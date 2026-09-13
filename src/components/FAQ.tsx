@@ -105,7 +105,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
 
             <a
               href={`https://wa.me/${URBAN_FIGHT_CONFIG.whatsappRaw}?text=${encodeURIComponent(
-                "Olá! Tenho uma dúvida sobre os planos e treinos da Urban Fight."
+                "Olá! Gostaria de agendar uma aula experimental gratuita e tirar dúvidas sobre os treinos da Urban Fight."
               )}`}
               target="_blank"
               rel="noopener noreferrer"

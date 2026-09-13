@@ -131,8 +131,9 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                     controls
                     playsInline
                     preload="metadata"
-                    poster="/mestre-andre.jpg"
+                    poster="/logo-urban-fight.jpg"
                     className="w-full h-full object-contain bg-black"
+                    style={{ objectFit: "contain" }}
                   >
                     <source src="/video-urban2-mestre.mp4" type="video/mp4" />
                     Seu navegador não suporta a reprodução deste vídeo.
