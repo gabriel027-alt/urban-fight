@@ -34,9 +34,9 @@ export const ModalitiesGuidanceVideo: React.FC<ModalitiesGuidanceVideoProps> = (
             <span>QUAL MODALIDADE ESCOLHER? • ORIENTAÇÃO DO MESTRE</span>
           </div>
 
-          <h2 className="font-combat text-4xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
-            NÃO SABE QUAL MODALIDADE <br />
-            <span className="text-blood-600">ESCOLHER?</span>
+          <h2 className="font-combat text-3xl sm:text-5xl md:text-6xl uppercase font-black text-white tracking-tight leading-[0.95]">
+            NÃO SABE QUAL MODALIDADE ESCOLHER? <br className="hidden sm:inline" />
+            <span className="text-blood-600">ASSISTA À ORIENTAÇÃO DO MESTRE</span>
           </h2>
 
           <p className="font-sans text-zinc-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">

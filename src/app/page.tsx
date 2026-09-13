@@ -8,6 +8,7 @@ import { ModalitiesGrid } from "@/components/ModalitiesGrid";
 import { ModalitiesGuidanceVideo } from "@/components/ModalitiesGuidanceVideo";
 import { MasterAndreSection } from "@/components/MasterAndreSection";
 import { LocationAndStructure } from "@/components/LocationAndStructure";
+import { SocialProofSection } from "@/components/SocialProofSection";
 import { EquipmentSection } from "@/components/EquipmentSection";
 import { ScheduleSection } from "@/components/ScheduleSection";
 import { TrialTriage } from "@/components/TrialTriage";
@@ -66,6 +67,9 @@ export default function Home() {
 
         {/* 7. Fight Gym Tour Photographic Mosaic & Dark Map */}
         <LocationAndStructure />
+
+        {/* 7.1. Tactical Social Proof & Student Validation Card */}
+        <SocialProofSection />
 
         {/* 8. Operational Class Schedule (Shifts & Times) */}
         <ScheduleSection onScheduleSlot={(modality) => scrollToTriage(modality)} />
