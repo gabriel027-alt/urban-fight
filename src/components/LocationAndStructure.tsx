@@ -41,12 +41,12 @@ export const LocationAndStructure: React.FC = () => {
       colSpan: "lg:col-span-4",
     },
     {
-      title: "Vestiários & Apoio",
-      subtitle: "Higiene Hospitalar, Duchas & Convivência",
-      desc: "Vestiários higienizados com duchas aquecidas, armários individuais, sanitização contínua e espaço de recepção acolhedor para alunos e familiares acompanharem as aulas.",
+      title: "Recepção & Convivência",
+      subtitle: "Ponto de Encontro & Acolhimento Familiar",
+      desc: "Área de circulação e recepção na Av. Cula Mangabeira, 1497: acolhimento pelo Mestre André, hidratação e espaço para alunos e familiares acompanharem os treinos com tranquilidade.",
       badge: "SANTO EXPEDITO",
-      imageUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop",
-      highlights: ["Duchas Aquecidas", "Sanitização Diária", "Acolhimento Familiar"],
+      imageUrl: "https://images.unsplash.com/photo-1517438322307-e67111335449?q=80&w=1200&auto=format&fit=crop",
+      highlights: ["Ponto de Encontro", "Hidratação & Recepção", "Ambiente Familiar"],
       colSpan: "lg:col-span-8",
     },
   ];

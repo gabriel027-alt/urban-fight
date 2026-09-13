@@ -76,7 +76,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
             <Crosshair className="w-3.5 h-3.5 text-blood-500" />
-            <span>ARSENAL DE COMBATE OFICIAL</span>
+            <span>ARSENAL DE COMBATE & LINHAGEM LENDÁRIA</span>
           </div>
 
           <h2 className="font-combat text-5xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
@@ -87,7 +87,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
           </h2>
 
           <p className="font-sans text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto">
-            Metodologias consagradas mundialmente adaptadas para a sua evolução física, segurança e queima calórica. Turmas exclusivas para quem nunca pisou num ringue.
+            Da nobreza clássica de Muhammad Ali à filosofia direta de Bruce Lee: metodologias consagradas adaptadas pelo Mestre André para a sua evolução física, autodefesa e queima extrema.
           </p>
 
           {/* Tactical Filter Pills */}
@@ -126,10 +126,10 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
 
               {/* Background Fighter Photo with Heavy Dark Overlay */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-25 group-hover:opacity-35 transition-opacity duration-500 scale-105 pointer-events-none"
+                className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-45 transition-opacity duration-500 scale-105 pointer-events-none"
                 style={{ backgroundImage: `url('${item.imageUrl}')` }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/90 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/85 to-transparent pointer-events-none" />
               <div className="absolute inset-0 bg-gradient-to-b from-blood-950/20 via-transparent to-black pointer-events-none" />
 
               {/* Content Header */}
@@ -146,13 +146,20 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 </div>
 
                 {/* Title and Tagline */}
-                <h3 className="font-combat text-3xl sm:text-4xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-none">
-                  {item.name}
-                </h3>
-                
-                <p className="font-tactical text-xs text-zinc-400 mt-2 mb-4 uppercase tracking-wider italic">
-                  &ldquo;{item.tagline}&rdquo;
-                </p>
+                <div className="space-y-1 mb-4">
+                  {item.legendTribute && (
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 mb-1 bg-black/90 border border-blood-600/40 text-[10px] font-tactical uppercase tracking-wider text-blood-400 clip-tag">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse" />
+                      <span>{item.legendTribute}</span>
+                    </div>
+                  )}
+                  <h3 className="font-combat text-3xl sm:text-4xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-none">
+                    {item.name}
+                  </h3>
+                  <p className="font-tactical text-xs text-zinc-400 uppercase tracking-wider italic pt-1">
+                    &ldquo;{item.tagline}&rdquo;
+                  </p>
+                </div>
 
                 {/* Description */}
                 <p className="font-sans text-xs sm:text-sm text-zinc-300 leading-relaxed line-clamp-3 mb-6">

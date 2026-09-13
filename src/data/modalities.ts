@@ -6,8 +6,8 @@ export interface Modality {
   tagline: string;
   description: string;
   intensity: "Média" | "Alta" | "Muito Alta";
-  caloriesBurn: string;
-  badge?: string;
+  caloriesBurn: string;  badge?: string;
+  legendTribute?: string;
   benefits: string[];
   targetAudience: string[];
   equipmentNeeded: string[];
@@ -37,6 +37,7 @@ export const MODALITIES: Modality[] = [
     intensity: "Alta",
     caloriesBurn: "Até 900 kcal/h",
     badge: "Alta Queima Calórica",
+    legendTribute: "Inspiração Muhammad Ali • P&B Clássico",
     benefits: [
       "Queima extrema de gordura e definição de braços, core e ombros",
       "Coordenação motora, tempo de reação e agilidade rápida",
@@ -52,7 +53,7 @@ export const MODALITIES: Modality[] = [
     instructor: "Mestre André & Equipe Nobre Arte",
     iconName: "Flame",
     accentColor: "from-red-600/30 to-blood-950/80",
-    imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1509563268479-0f004cf3f58b?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "kickboxing-muaythai",
@@ -65,6 +66,7 @@ export const MODALITIES: Modality[] = [
     intensity: "Muito Alta",
     caloriesBurn: "Até 1000 kcal/h",
     badge: "Mais Procurada",
+    legendTribute: "Tradição Tailandesa • Chutes Altos & 8 Armas",
     benefits: [
       "Condicionamento aeróbico extremo e queima muscular uniforme",
       "Aumento drástico de flexibilidade e mobilidade de quadril",
@@ -80,7 +82,7 @@ export const MODALITIES: Modality[] = [
     instructor: "Mestre André & Treinadores Certificados",
     iconName: "Zap",
     accentColor: "from-orange-600/30 to-blood-950/80",
-    imageUrl: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "jiu-jitsu",
@@ -93,6 +95,7 @@ export const MODALITIES: Modality[] = [
     intensity: "Alta",
     caloriesBurn: "Até 800 kcal/h",
     badge: "Estratégia Pura",
+    legendTribute: "Arte Suave • Finalização Técnica no Solo",
     benefits: [
       "Capacidade real de neutralizar agressores maiores sem desferir socos",
       "Desenvolvimento de raciocínio rápido sob pressão extrema",
@@ -121,6 +124,7 @@ export const MODALITIES: Modality[] = [
     intensity: "Média",
     caloriesBurn: "Até 650 kcal/h",
     badge: "Sobrevivência Urbana",
+    legendTribute: "Filosofia Bruce Lee • Silhueta & Foco Tático",
     benefits: [
       "Controle do pânico situacional e expansão da atenção periférica",
       "Golpes em pontos vulneráveis para neutralização em segundos",
@@ -136,7 +140,7 @@ export const MODALITIES: Modality[] = [
     instructor: "Mestre André (Especialista em Combate Prático)",
     iconName: "Shield",
     accentColor: "from-amber-600/30 to-blood-950/80",
-    imageUrl: "https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1552072805-2a9039d00e57?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "taekwondo-kids",
@@ -149,6 +153,7 @@ export const MODALITIES: Modality[] = [
     intensity: "Média",
     caloriesBurn: "Até 600 kcal/h",
     badge: "Família & Futuro",
+    legendTribute: "Disciplina & Respeito • Foco Infantil no Tatame",
     benefits: [
       "Melhora comprovada no foco, disciplina escolar e tempo de tela reduzido",
       "Coordenação motora bilateral, agilidade e postura correta",
