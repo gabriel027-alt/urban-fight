@@ -80,15 +80,13 @@ export const LocationAndStructure: React.FC = () => {
               key={idx}
               className={`${space.colSpan} relative min-h-[320px] sm:min-h-[360px] bg-asphalt-900 border border-zinc-800 hover:border-blood-600/70 clip-chamfer-top overflow-hidden group shadow-combat-plate flex flex-col justify-end p-6 sm:p-8`}
             >
-              {/* Photo background with dramatic lighting and high-contrast dark treatment */}
+              {/* Photo background - Vivid, sharp and clearly visible without harsh grayscale */}
               <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 filter grayscale contrast-125 brightness-75"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-95"
                 style={{ backgroundImage: `url('${space.imageUrl}')` }}
               />
-              {/* Uniform Dark Combat Luxury Overlays */}
-              <div className="absolute inset-0 bg-black/85 pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/80 to-transparent pointer-events-none" />
-              <div className="absolute inset-0 bg-blood-950/25 mix-blend-overlay pointer-events-none" />
+              {/* Gentle directional dark gradient: dark at base for text legibility, crystal clear through center and top */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none" />
 
               {/* Tactical Badge */}
               <div className="absolute top-4 right-4 z-10">
@@ -102,10 +100,10 @@ export const LocationAndStructure: React.FC = () => {
                 <span className="font-tactical text-[10px] uppercase tracking-widest text-blood-400 font-bold block">
                   {space.subtitle}
                 </span>
-                <h3 className="font-combat text-3xl sm:text-4xl text-white uppercase tracking-wide leading-none">
+                <h3 className="font-combat text-3xl sm:text-4xl text-white uppercase tracking-wide leading-none drop-shadow-md">
                   {space.title}
                 </h3>
-                <p className="font-sans text-xs sm:text-sm text-zinc-300 max-w-xl leading-relaxed">
+                <p className="font-sans text-xs sm:text-sm text-zinc-200 max-w-xl leading-relaxed drop-shadow-sm">
                   {space.desc}
                 </p>
                 {/* Equipment Highlights */}
@@ -113,7 +111,7 @@ export const LocationAndStructure: React.FC = () => {
                   {space.highlights.map((h, i) => (
                     <span
                       key={i}
-                      className="font-tactical text-[9px] uppercase tracking-wider px-2 py-0.5 bg-black/80 border border-zinc-700/80 text-zinc-300 clip-tag"
+                      className="font-tactical text-[9px] uppercase tracking-wider px-2 py-0.5 bg-black/90 border border-zinc-700/90 text-zinc-200 clip-tag shadow-sm"
                     >
                       {h}
                     </span>

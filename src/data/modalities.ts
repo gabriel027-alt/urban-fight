@@ -53,7 +53,7 @@ export const MODALITIES: Modality[] = [
     instructor: "Mestre André & Equipe Nobre Arte",
     iconName: "Flame",
     accentColor: "from-red-600/30 to-blood-950/80",
-    imageUrl: "https://images.unsplash.com/photo-1509563268479-0f004cf3f58b?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1517438476312-10d79c077509?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "kickboxing-muaythai",

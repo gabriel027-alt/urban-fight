@@ -18,6 +18,7 @@ import {
   Crosshair,
   UserCheck
 } from "lucide-react";
+import { URBAN_FIGHT_CONFIG } from "@/lib/utils";
 
 interface ModalitiesGridProps {
   onSelectModality: (modalityName: string) => void;
@@ -124,13 +125,13 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
               {/* Dynamic Specular Glare Layer */}
               <div className="tilt-glare" />
 
-              {/* Background Athlete Photo with Smart Lighting - High Quality, Clean and Visible */}
+              {/* Background Athlete Photo with Smart Lighting - 80%-95% Clarity & Vivid Combat Tone */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-70 group-hover:opacity-85 transition-opacity duration-500 scale-105 pointer-events-none"
+                className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-95 transition-all duration-500 scale-105 pointer-events-none"
                 style={{ backgroundImage: `url('${item.imageUrl}')` }}
               />
-              {/* Smart Lighting: clear at top to showcase athlete action, smooth dark gradient toward bottom for pure white text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/85 to-zinc-950/25 pointer-events-none" />
+              {/* Smart Lighting: gentle directional gradient (dark only at base for text legibility, clear and crisp through center and top) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none" />
 
               {/* Content Header */}
               <div className="relative z-10">
@@ -219,10 +220,65 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 className="relative z-10 w-full py-3.5 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-lg font-bold border border-zinc-600 hover:border-blood-500 clip-chamfer-top flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-spotlight-sharp"
               >
                 <span>QUERO TREINAR ESSA MODALIDADE</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           ))}
+        </div>
+
+        {/* Highlight Banner: Multi-Modalities / Cross-Training Package */}
+        <div className="mt-14 relative bg-gradient-to-b md:bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border-2 border-blood-600/70 clip-chamfer-top p-6 sm:p-10 shadow-2xl overflow-hidden">
+          {/* Subtle Ambient Red Glow */}
+          <div className="absolute -right-20 -top-20 w-80 h-80 bg-blood-600/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-blood-600/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <div className="space-y-3 max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blood-600/20 border border-blood-500/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-wider clip-tag">
+                <Flame className="w-3.5 h-3.5 text-blood-500" />
+                <span>COMBO DE ARTES MARCIAIS • CROSS-TRAINING</span>
+              </div>
+
+              <h3 className="font-combat text-3xl sm:text-4xl lg:text-5xl uppercase font-black text-white tracking-tight leading-tight">
+                QUER TREINAR MAIS DE UMA MODALIDADE?
+              </h3>
+
+              <p className="font-sans text-sm sm:text-base text-zinc-300 leading-relaxed">
+                Combine a contundência da <strong className="text-white font-semibold">Trocação</strong> (Boxe ou Muay Thai) com a inteligência de solo do <strong className="text-white font-semibold">Jiu-Jitsu</strong> ou a defesa urbana do <strong className="text-white font-semibold">Krav Maga & Jeet Kune Do</strong>. Fale diretamente com o Mestre André e nossa recepção para entender as condições especiais e montar um plano personalizado com múltiplos treinos na semana.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <div className="inline-flex items-center gap-2 text-xs font-tactical text-zinc-300 bg-zinc-950/90 px-3 py-1.5 border border-zinc-800 clip-tag">
+                  <Check className="w-3.5 h-3.5 text-blood-500 shrink-0" />
+                  <span>Descontos Progressivos em Combos</span>
+                </div>
+                <div className="inline-flex items-center gap-2 text-xs font-tactical text-zinc-300 bg-zinc-950/90 px-3 py-1.5 border border-zinc-800 clip-tag">
+                  <Check className="w-3.5 h-3.5 text-blood-500 shrink-0" />
+                  <span>Grade Integrada Sem Choque de Horários</span>
+                </div>
+                <div className="inline-flex items-center gap-2 text-xs font-tactical text-zinc-300 bg-zinc-950/90 px-3 py-1.5 border border-zinc-800 clip-tag">
+                  <Check className="w-3.5 h-3.5 text-blood-500 shrink-0" />
+                  <span>Evolução Técnica & Condicionamento Completo</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-auto shrink-0">
+              <a
+                href={`https://wa.me/${URBAN_FIGHT_CONFIG.whatsappRaw}?text=${encodeURIComponent(
+                  "Olá Mestre André! Gostaria de saber mais sobre os planos combinados para treinar mais de uma modalidade na Urban Fight."
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold clip-chamfer-top border border-blood-400/50 shadow-spotlight-sharp transition-all group"
+              >
+                <span>CONSULTAR PLANOS COMBINADOS</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
+              </a>
+              <span className="block text-center lg:text-right text-[11px] font-tactical text-zinc-400 uppercase tracking-widest mt-2">
+                Atendimento direto com Mestre André
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
