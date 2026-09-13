@@ -69,7 +69,7 @@ export default function Home() {
         <LocationAndStructure />
 
         {/* 7.1. Tactical Social Proof & Student Validation Card */}
-        <SocialProofSection />
+        <SocialProofSection onStartTriage={() => scrollToTriage()} />
 
         {/* 8. Operational Class Schedule (Shifts & Times) */}
         <ScheduleSection onScheduleSlot={(modality) => scrollToTriage(modality)} />
