@@ -119,29 +119,27 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 transform: "perspective(1000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg))",
                 transition: "transform 0.15s ease-out, box-shadow 0.2s ease",
               }}
-              className="tilt-card relative bg-[#09090b] border border-zinc-800 hover:border-blood-600/80 clip-chamfer-top p-6 sm:p-7 flex flex-col justify-between overflow-hidden group shadow-combat-plate"
+              className="tilt-card relative bg-zinc-900/95 border border-zinc-700 hover:border-blood-500 clip-chamfer-top p-6 sm:p-7 flex flex-col justify-between overflow-hidden group shadow-2xl transition-all"
             >
               {/* Dynamic Specular Glare Layer */}
               <div className="tilt-glare" />
 
-              {/* Background Fighter Photo with Dramatic High-Contrast Dark Treatment */}
+              {/* Background Athlete Photo with Smart Lighting - High Quality, Clean and Visible */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-55 transition-opacity duration-500 scale-105 filter grayscale contrast-125 brightness-80 pointer-events-none"
+                className="absolute inset-0 bg-cover bg-center opacity-70 group-hover:opacity-85 transition-opacity duration-500 scale-105 pointer-events-none"
                 style={{ backgroundImage: `url('${item.imageUrl}')` }}
               />
-              {/* Uniform Dark Combat Luxury Overlay */}
-              <div className="absolute inset-0 bg-black/80 pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-[#09090b]/75 to-transparent pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-b from-blood-950/20 via-transparent to-black pointer-events-none" />
+              {/* Smart Lighting: clear at top to showcase athlete action, smooth dark gradient toward bottom for pure white text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/85 to-zinc-950/25 pointer-events-none" />
 
               {/* Content Header */}
               <div className="relative z-10">
                 <div className="flex items-start justify-between gap-3 mb-5">
-                  <div className="w-11 h-11 bg-black border border-zinc-700/80 flex items-center justify-center clip-tag group-hover:border-blood-500 transition-colors">
+                  <div className="w-11 h-11 bg-zinc-950 border border-zinc-600 flex items-center justify-center clip-tag group-hover:border-blood-500 transition-colors shadow-md">
                     {renderIcon(item.iconName)}
                   </div>
                   {item.badge && (
-                    <span className="px-2.5 py-1 text-[10px] font-tactical font-bold tracking-wider uppercase bg-blood-600/20 border border-blood-500/40 text-blood-400 clip-tag">
+                    <span className="px-2.5 py-1 text-[10px] font-tactical font-bold tracking-wider uppercase bg-blood-600/30 border border-blood-500/50 text-blood-300 clip-tag shadow-sm">
                       {item.badge}
                     </span>
                   )}
@@ -150,7 +148,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 {/* Title and Tagline */}
                 <div className="space-y-1 mb-4">
                   {item.legendTribute && (
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 mb-1 bg-black/90 border border-blood-600/40 text-[10px] font-tactical uppercase tracking-wider text-blood-400 clip-tag">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 mb-1 bg-zinc-950/90 border border-blood-500/60 text-[10px] font-tactical uppercase tracking-wider text-blood-300 clip-tag shadow-sm">
                       <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse" />
                       <span>{item.legendTribute}</span>
                     </div>
@@ -158,20 +156,20 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                   <h3 className="font-combat text-3xl sm:text-4xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-none">
                     {item.name}
                   </h3>
-                  <p className="font-tactical text-xs text-zinc-400 uppercase tracking-wider italic pt-1">
+                  <p className="font-tactical text-xs text-zinc-200 uppercase tracking-wider italic pt-1">
                     &ldquo;{item.tagline}&rdquo;
                   </p>
                 </div>
 
                 {/* Description */}
-                <p className="font-sans text-xs sm:text-sm text-zinc-300 leading-relaxed line-clamp-3 mb-6">
+                <p className="font-sans text-xs sm:text-sm text-zinc-200 leading-relaxed line-clamp-3 mb-6">
                   {item.description}
                 </p>
 
                 {/* Tactical Metrics: Burn & Intensity */}
-                <div className="grid grid-cols-2 gap-2 mb-6 p-3 bg-black border border-zinc-800 clip-tag">
+                <div className="grid grid-cols-2 gap-2 mb-6 p-3 bg-zinc-950/80 border border-zinc-700 clip-tag shadow-inner">
                   <div>
-                    <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-500 font-bold block">
+                    <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-400 font-bold block">
                       GASTO CALÓRICO
                     </span>
                     <span className="font-tactical text-xs font-bold text-white flex items-center gap-1 mt-0.5">
@@ -180,7 +178,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                     </span>
                   </div>
                   <div>
-                    <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-500 font-bold block">
+                    <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-400 font-bold block">
                       INTENSIDADE
                     </span>
                     <span className="font-tactical text-xs font-bold text-blood-400 flex items-center gap-1 mt-0.5">
@@ -192,11 +190,11 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
 
                 {/* Benefits checklist */}
                 <div className="space-y-2 mb-6">
-                  <span className="font-tactical text-[10px] uppercase tracking-wider text-zinc-400 font-bold block">
+                  <span className="font-tactical text-[10px] uppercase tracking-wider text-zinc-300 font-bold block">
                     VANTAGENS IMEDIATAS:
                   </span>
                   {item.benefits.slice(0, 3).map((b, i) => (
-                    <div key={i} className="flex items-start gap-2 text-xs text-zinc-300 font-sans">
+                    <div key={i} className="flex items-start gap-2 text-xs text-zinc-200 font-sans">
                       <Check className="w-3.5 h-3.5 text-blood-500 shrink-0 mt-0.5" />
                       <span>{b}</span>
                     </div>
@@ -204,12 +202,12 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 </div>
 
                 {/* Audience */}
-                <div className="border-t border-zinc-800/80 pt-3 mb-6">
-                  <div className="flex items-center gap-1.5 font-tactical text-[10px] uppercase tracking-wider text-zinc-400 mb-1">
+                <div className="border-t border-zinc-800 pt-3 mb-6">
+                  <div className="flex items-center gap-1.5 font-tactical text-[10px] uppercase tracking-wider text-zinc-300 mb-1 font-bold">
                     <UserCheck className="w-3 h-3 text-blood-400" />
                     <span>PERFIL DO ALUNO:</span>
                   </div>
-                  <p className="text-xs text-zinc-400 font-sans">
+                  <p className="text-xs text-zinc-300 font-sans">
                     {item.targetAudience.join(" • ")}
                   </p>
                 </div>
@@ -218,7 +216,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
               {/* Action Button */}
               <button
                 onClick={() => onSelectModality(item.name)}
-                className="relative z-10 w-full py-3.5 px-4 bg-black hover:bg-blood-600 text-zinc-200 hover:text-white font-combat uppercase tracking-wider text-lg font-bold border border-zinc-800 hover:border-blood-500 clip-chamfer-top flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-spotlight-sharp"
+                className="relative z-10 w-full py-3.5 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-lg font-bold border border-zinc-600 hover:border-blood-500 clip-chamfer-top flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-spotlight-sharp"
               >
                 <span>QUERO TREINAR ESSA MODALIDADE</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

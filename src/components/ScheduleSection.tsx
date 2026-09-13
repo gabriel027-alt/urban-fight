@@ -1,15 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { SCHEDULE_DATA, ScheduleSlot } from "@/data/schedule";
+import { 
+  OFFICIAL_MODALITIES_SCHEDULE, 
+  ScheduleHour
+} from "@/data/schedule";
 import { 
   Clock, 
   Calendar, 
-  Sun, 
-  Sunset, 
-  Moon, 
   ArrowRight,
-  Flame
+  Flame,
+  Users
 } from "lucide-react";
 
 interface ScheduleSectionProps {
@@ -17,33 +18,86 @@ interface ScheduleSectionProps {
 }
 
 export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot }) => {
-  const [filterShift, setFilterShift] = useState<string>("all");
+  const [filterModality, setFilterModality] = useState<string>("all");
 
-  const filteredSlots = filterShift === "all"
-    ? SCHEDULE_DATA
-    : SCHEDULE_DATA.filter((s) => s.shift === filterShift);
+  const filterTabs = [
+    { id: "all", label: "TODAS AS MODALIDADES" },
+    { id: "boxe", label: "BOXE" },
+    { id: "kickboxing", label: "KICKBOXING" },
+    { id: "jiu-jitsu", label: "JIU-JITSU" },
+    { id: "taekwondo", label: "TAEKWONDO" },
+    { id: "krav-maga", label: "KRAV MAGA" },
+    { id: "jeet-kune-do", label: "JEET KUNE DO" },
+  ];
 
-  const getShiftBadge = (shift: ScheduleSlot["shift"]) => {
-    switch (shift) {
-      case "morning":
-        return {
-          label: "MANHÃ",
-          icon: Sun,
-          className: "text-zinc-200 bg-zinc-800 border-zinc-700",
-        };
-      case "afternoon":
-        return {
-          label: "TARDE / KIDS",
-          icon: Sunset,
-          className: "text-zinc-200 bg-zinc-800 border-zinc-700",
-        };
-      case "evening":
-        return {
-          label: "NOITE",
-          icon: Moon,
-          className: "text-blood-400 bg-blood-600/10 border-blood-500/30",
-        };
+  const displayedModalities = filterModality === "all"
+    ? OFFICIAL_MODALITIES_SCHEDULE
+    : OFFICIAL_MODALITIES_SCHEDULE.filter((m) => m.id === filterModality);
+
+  const renderHourBadge = (h: ScheduleHour, idx: number) => {
+    if (h.tag === "Feminino") {
+      return (
+        <span
+          key={idx}
+          className="inline-flex items-center gap-1.5 px-3 py-1 bg-blood-950 border border-blood-500/80 text-blood-200 font-tactical text-xs font-bold clip-tag shadow-sm"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse" />
+          <span>{h.time} (Fem)</span>
+        </span>
+      );
     }
+    if (h.tag === "Kids") {
+      return (
+        <span
+          key={idx}
+          className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-950 border border-blue-500/80 text-blue-200 font-tactical text-xs font-bold clip-tag shadow-sm"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+          <span>{h.time} (Kids)</span>
+        </span>
+      );
+    }
+    if (h.tag === "Adulto") {
+      return (
+        <span
+          key={idx}
+          className="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-800 border border-zinc-600 text-white font-tactical text-xs font-bold clip-tag shadow-sm"
+        >
+          <span>{h.time} (Adulto)</span>
+        </span>
+      );
+    }
+    if (h.tag === "Misto") {
+      return (
+        <span
+          key={idx}
+          className="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-800 border border-zinc-600 text-zinc-100 font-tactical text-xs font-bold clip-tag shadow-sm"
+        >
+          <span>{h.time} (Misto)</span>
+        </span>
+      );
+    }
+    if (h.tag === "JKD / Krav Maga") {
+      return (
+        <span
+          key={idx}
+          className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-950 border border-amber-500/80 text-amber-200 font-tactical text-xs font-bold clip-tag shadow-sm"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+          <span>{h.time} (JKD/Krav Maga)</span>
+        </span>
+      );
+    }
+
+    return (
+      <span
+        key={idx}
+        className="inline-flex items-center gap-1 px-3 py-1 bg-zinc-800 hover:bg-zinc-750 border border-zinc-600 text-white font-tactical text-xs font-bold clip-tag shadow-sm transition-colors"
+      >
+        <Clock className="w-3 h-3 text-blood-400" />
+        <span>{h.time}</span>
+      </span>
+    );
   };
 
   return (
@@ -51,121 +105,93 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-zinc-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
             <Calendar className="w-3.5 h-3.5 text-blood-500" />
-            <span>GRADE OPERACIONAL DE TREINOS</span>
+            <span>GRADE OFICIAL DE COMBATE • SEDE SANTO EXPEDITO</span>
           </div>
 
           <h2 className="font-combat text-5xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
-            HORÁRIOS DE COMBATE. <br />
+            HORÁRIOS OFICIAIS. <br />
             <span className="text-blood-600">
-              DAS 06:30 ÀS 22:00.
+              ESCOLHA SEU TURNO.
             </span>
           </h2>
 
-          <p className="font-sans text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto">
-            Encaixe o treino antes de ir para o trabalho, no turno da tarde com seus filhos ou para descarregar toda a adrenalina à noite.
+          <p className="font-sans text-zinc-300 text-sm sm:text-base max-w-2xl mx-auto">
+            Grade oficial da Urban Fight Montes Claros. Turmas abertas pela manhã, tarde e noite com divisões mistas, femininas e infantis (Kids).
           </p>
 
-          {/* Shift Filter Buttons with Tactical Pill Style */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
-            <button
-              onClick={() => setFilterShift("all")}
-              className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag transition-all ${
-                filterShift === "all"
-                  ? "bg-blood-600 text-white shadow-spotlight-sharp"
-                  : "bg-[#09090b] text-zinc-400 hover:text-white border border-zinc-800"
-              }`}
-            >
-              TODOS OS TURNOS
-            </button>
-            <button
-              onClick={() => setFilterShift("morning")}
-              className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag flex items-center gap-1.5 transition-all ${
-                filterShift === "morning"
-                  ? "bg-blood-600 text-white shadow-spotlight-sharp"
-                  : "bg-[#09090b] text-zinc-400 hover:text-white border border-zinc-800"
-              }`}
-            >
-              <Sun className="w-3.5 h-3.5 text-zinc-300" />
-              <span>MANHÃ (06:30 - 10:15)</span>
-            </button>
-            <button
-              onClick={() => setFilterShift("afternoon")}
-              className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag flex items-center gap-1.5 transition-all ${
-                filterShift === "afternoon"
-                  ? "bg-blood-600 text-white shadow-spotlight-sharp"
-                  : "bg-[#09090b] text-zinc-400 hover:text-white border border-zinc-800"
-              }`}
-            >
-              <Sunset className="w-3.5 h-3.5 text-zinc-300" />
-              <span>TARDE & KIDS (15:00 - 18:30)</span>
-            </button>
-            <button
-              onClick={() => setFilterShift("evening")}
-              className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag flex items-center gap-1.5 transition-all ${
-                filterShift === "evening"
-                  ? "bg-blood-600 text-white shadow-spotlight-sharp"
-                  : "bg-asphalt-900 text-zinc-400 hover:text-white border border-zinc-800"
-              }`}
-            >
-              <Moon className="w-3.5 h-3.5 text-blood-400" />
-              <span>NOITE (18:30 - 22:00)</span>
-            </button>
+          {/* Modality Filter Tabs */}
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-3">
+            {filterTabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setFilterModality(tab.id)}
+                className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag transition-all ${
+                  filterModality === tab.id
+                    ? "bg-blood-600 text-white shadow-spotlight-sharp border-b-2 border-blood-400"
+                    : "bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-800 border border-zinc-700"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Schedule Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredSlots.map((slot, index) => {
-            const badge = getShiftBadge(slot.shift);
-            const BadgeIcon = badge.icon;
-            return (
-              <div
-                key={index}
-                className="p-5 bg-asphalt-900/90 border border-zinc-800/90 hover:border-blood-600/70 clip-chamfer-top flex flex-col justify-between group transition-all shadow-combat-plate"
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="font-tactical text-sm font-bold text-blood-400 flex items-center gap-1.5 bg-black/90 px-3 py-1 border border-blood-700/40 clip-tag">
-                      <Clock className="w-3.5 h-3.5 text-blood-500" />
-                      {slot.time}
+        {/* Official Modalities Schedule Cards (High Contrast bg-zinc-900/95 & border-zinc-700) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {displayedModalities.map((item) => (
+            <div
+              key={item.id}
+              className="bg-zinc-900/95 border border-zinc-700 hover:border-blood-500 clip-chamfer-top p-6 sm:p-7 flex flex-col justify-between shadow-2xl transition-all group"
+            >
+              <div className="space-y-5">
+                {/* Header */}
+                <div className="border-b border-zinc-800 pb-4">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 bg-blood-600/25 border border-blood-500/50 text-blood-300 clip-tag">
+                      {item.badge}
                     </span>
-
-                    <span className={`inline-flex items-center gap-1 font-tactical text-[10px] font-bold tracking-wider px-2.5 py-0.5 border clip-tag ${badge.className}`}>
-                      <BadgeIcon className="w-3 h-3" />
-                      {badge.label}
+                    <span className="font-tactical text-[11px] text-zinc-400 flex items-center gap-1">
+                      <Users className="w-3 h-3 text-blood-500" />
+                      {item.audience}
                     </span>
                   </div>
 
-                  <h3 className="font-combat text-2xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-tight">
-                    {slot.modality}
+                  <h3 className="font-combat text-3xl sm:text-4xl text-white uppercase tracking-wide group-hover:text-blood-400 transition-colors leading-none">
+                    {item.name}
                   </h3>
-
-                  <div className="text-xs font-sans text-zinc-400 mt-3 space-y-1">
-                    <div className="flex items-center gap-1.5">
-                      <span className="font-tactical uppercase text-[10px] text-zinc-500 font-bold">Dias:</span>
-                      <span className="text-zinc-200 font-medium">{slot.days}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <span className="font-tactical uppercase text-[10px] text-zinc-500 font-bold">Nível:</span>
-                      <span className="text-zinc-300">{slot.level}</span>
-                    </div>
-                  </div>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-zinc-800/80">
-                  <button
-                    onClick={() => onScheduleSlot(slot.modality)}
-                    className="w-full py-2.5 px-3 bg-asphalt-800 hover:bg-blood-600 text-zinc-300 hover:text-white font-tactical uppercase text-xs font-bold tracking-wider flex items-center justify-center gap-1.5 transition-colors clip-tag"
-                  >
-                    <span>AGENDAR ESTE HORÁRIO</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                {/* Days and Hours List */}
+                <div className="space-y-4">
+                  {item.schedules.map((sch, sIdx) => (
+                    <div key={sIdx} className="space-y-2">
+                      <div className="flex items-center gap-1.5 text-zinc-200 font-tactical text-xs font-bold uppercase tracking-wide">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blood-500" />
+                        <span>{sch.day}:</span>
+                      </div>
+                      <div className="flex flex-wrap items-center gap-1.5 pl-3">
+                        {sch.hours.map((h, hIdx) => renderHourBadge(h, hIdx))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            );
-          })}
+
+              {/* Action Button */}
+              <div className="pt-6 mt-6 border-t border-zinc-800">
+                <button
+                  onClick={() => onScheduleSlot(item.name)}
+                  className="w-full py-3 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-base font-bold clip-chamfer-top flex items-center justify-center gap-2 border border-zinc-600 hover:border-blood-500 transition-all shadow-md group-hover:shadow-spotlight-sharp"
+                >
+                  <span>AGENDAR NESTA MODALIDADE</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Featured Presentation Video: Gym Atmosphere & Dynamics */}
