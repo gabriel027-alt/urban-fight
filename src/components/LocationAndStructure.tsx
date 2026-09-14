@@ -197,7 +197,7 @@ export const LocationAndStructure: React.FC = () => {
                 href="https://waze.com/ul?q=Av.+Cula+Mangabeira,+1497+-+Santo+Expedito,+Montes+Claros+-+MG"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider flex items-center justify-center gap-2 border border-zinc-700 clip-tag transition-colors"
+                className="w-full py-3 px-4 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider flex items-center justify-center gap-2 border border-zinc-700 clip-chamfer-top transition-colors"
               >
                 <Navigation className="w-4 h-4 text-sky-400" />
                 <span>ABRIR NO APLICATIVO WAZE</span>

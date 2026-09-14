@@ -116,7 +116,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider clip-tag flex items-center gap-2 border border-zinc-700 transition-colors"
+              className="px-6 py-3.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider clip-chamfer-top flex items-center gap-2 border border-zinc-700 transition-colors"
             >
               <MessageCircle className="w-4 h-4 text-emerald-400" />
               <span>CHAMAR NO WHATSAPP</span>
