@@ -22,7 +22,7 @@ export const Hero: React.FC<HeroProps> = ({
   onExploreModalities,
 }) => {
   return (
-    <section className="relative overflow-hidden pt-8 pb-16 sm:pt-14 sm:pb-24 border-b border-zinc-900 bg-[#030303] w-full max-w-[100vw]">
+    <section className="relative overflow-hidden pt-6 pb-12 sm:pt-14 sm:pb-24 border-b border-zinc-900 bg-[#030303] w-full max-w-[100vw]">
       {/* Background Video in Absolute Position with Enhanced Clarity */}
       <video
         src="/publichero-bg.mp4"
@@ -30,50 +30,50 @@ export const Hero: React.FC<HeroProps> = ({
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none brightness-90 contrast-110"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none brightness-95 md:brightness-90 contrast-105 md:contrast-110"
       >
         <source src="/publichero-bg.mp4" type="video/mp4" />
         <source src="/hero-bg.mp4" type="video/mp4" />
       </video>
 
-      {/* Lighter Cinema Overlay: Preserves ring details and motion while guaranteeing text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/75 pointer-events-none z-0" />
+      {/* Responsive Cinema Overlay: Light and fluid on mobile to show video movement, darker on desktop */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/80 md:from-black/50 md:via-black/40 md:to-black/75 pointer-events-none z-0" />
 
-      {/* 1. Dramatic Ring Spotlights (Crossed angular beams) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] bg-ring-spotlight pointer-events-none opacity-80 animate-spotlight-pulse z-[1]" />
-      <div className="absolute -top-10 left-0 w-96 h-96 spotlight-beam-left opacity-30 pointer-events-none z-[1]" />
-      <div className="absolute -top-10 right-0 w-96 h-96 spotlight-beam-right opacity-30 pointer-events-none z-[1]" />
+      {/* 1. Dramatic Ring Spotlights (Crossed angular beams - optimized for mobile) */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[450px] sm:h-[650px] bg-ring-spotlight pointer-events-none opacity-60 sm:opacity-80 animate-spotlight-pulse z-[1]" />
+      <div className="hidden sm:block absolute -top-10 left-0 w-96 h-96 spotlight-beam-left opacity-30 pointer-events-none z-[1]" />
+      <div className="hidden sm:block absolute -top-10 right-0 w-96 h-96 spotlight-beam-right opacity-30 pointer-events-none z-[1]" />
       
-      {/* Background Combat Texture - subtle so it doesn't obscure the video */}
-      <div className="absolute inset-0 bg-carbon opacity-20 pointer-events-none z-[1]" />
+      {/* Background Combat Texture - hidden on mobile to avoid muddiness */}
+      <div className="hidden md:block absolute inset-0 bg-carbon opacity-20 pointer-events-none z-[1]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blood-600 to-transparent z-[2]" />
 
       {/* Main Content Container */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         {/* Top Bar on Mobile/Desktop */}
-        <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-3 mb-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-asphalt-900 border border-blood-700/60 shadow-spotlight-sharp clip-tag">
+        <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-3 mb-4 sm:mb-6">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-asphalt-900/90 border border-blood-700/60 shadow-spotlight-sharp clip-tag">
             <span className="w-2 h-2 rounded-full bg-blood-500 animate-ping" />
-            <span className="font-tactical text-xs uppercase tracking-widest text-blood-400 font-bold">
+            <span className="font-tactical text-[11px] sm:text-xs uppercase tracking-widest text-blood-400 font-bold">
               QG OFICIAL • MESTRE ANDRÉ
             </span>
           </div>
 
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-asphalt-900/80 border border-zinc-800 clip-tag text-xs font-tactical text-zinc-400">
-            <MapPin className="w-3.5 h-3.5 text-blood-500" />
-            <span className="tracking-wide text-zinc-300">SANTO EXPEDITO • MONTES CLAROS - MG</span>
+          <div className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-asphalt-900/80 border border-zinc-800 clip-tag text-[11px] sm:text-xs font-tactical text-zinc-400">
+            <MapPin className="w-3.5 h-3.5 text-blood-500 shrink-0" />
+            <span className="tracking-wide text-zinc-300 truncate">SANTO EXPEDITO • MONTES CLAROS</span>
           </div>
         </div>
 
         {/* 2-Column Hero Grid: Left Content, Right Official Logo with Red LED Glow */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center mb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center mb-8 sm:mb-14">
           {/* Left Column: Massive Headline & CTAs */}
-          <div className="lg:col-span-7 space-y-6 text-left">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-left">
             <div>
-              <span className="font-tactical text-xs sm:text-sm uppercase tracking-[0.3em] text-blood-500 font-bold block mb-2">
+              <span className="font-tactical text-[11px] sm:text-sm uppercase tracking-[0.25em] sm:tracking-[0.3em] text-blood-500 font-bold block mb-1.5 sm:mb-2">
                 [ CENTRO DE ALTO RENDIMENTO MARCIAL ]
               </span>
-              <h1 className="font-combat text-5xl sm:text-7xl md:text-8xl xl:text-9xl uppercase font-black text-white tracking-tight leading-[0.88] drop-shadow-2xl">
+              <h1 className="font-combat text-4xl sm:text-7xl md:text-8xl xl:text-9xl uppercase font-black text-white tracking-tight leading-[0.9] sm:leading-[0.88] drop-shadow-2xl">
                 FORJE SEU CORPO. <br />
                 <span className="text-blood-600">
                   BLINDE SUA MENTE.
@@ -81,17 +81,17 @@ export const Hero: React.FC<HeroProps> = ({
               </h1>
             </div>
 
-            <p className="font-sans text-base sm:text-lg text-zinc-300 max-w-2xl leading-relaxed font-normal text-balance">
+            <p className="font-sans text-sm sm:text-base md:text-lg text-zinc-300 max-w-2xl leading-relaxed font-normal text-balance">
               O maior templo de artes marciais de Montes Claros. Focado em queima calórica devastadora, autodefesa real sem regras fúteis e disciplina militar sob a tutela direta do <strong className="text-white font-bold">Mestre André</strong>.
             </p>
 
             {/* Tactical Action Buttons (Dual CTAs with chamfered cuts) */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <div className="pt-1 sm:pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <button
                 onClick={onStartTriage}
-                className="relative group overflow-hidden px-8 py-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] clip-chamfer-top border border-blood-500/50 flex items-center justify-center gap-3"
+                className="relative group overflow-hidden px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-lg sm:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] clip-chamfer-top border border-blood-500/50 flex items-center justify-center gap-3"
               >
-                <span className="relative z-10 flex items-center gap-3">
+                <span className="relative z-10 flex items-center gap-2 sm:gap-3">
                   <span>AGENDAR AULA EXPERIMENTAL</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
                 </span>
@@ -100,15 +100,15 @@ export const Hero: React.FC<HeroProps> = ({
 
               <button
                 onClick={onExploreModalities}
-                className="px-7 py-4 bg-asphalt-900 hover:bg-asphalt-850 text-zinc-200 hover:text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-bold border border-zinc-800 hover:border-blood-600 transition-all clip-chamfer-top flex items-center justify-center gap-2"
+                className="px-6 sm:px-7 py-3.5 sm:py-4 bg-black/80 hover:bg-asphalt-850 text-zinc-200 hover:text-white font-combat uppercase tracking-wider text-base sm:text-2xl font-bold border border-zinc-700 hover:border-blood-600 transition-all clip-chamfer-top flex items-center justify-center gap-2 backdrop-blur-sm shadow-md"
               >
-                <Crosshair className="w-5 h-5 text-blood-500" />
+                <Crosshair className="w-4 sm:w-5 h-4 sm:h-5 text-blood-500" />
                 <span>VER MODALIDADES</span>
               </button>
             </div>
 
             {/* Micro-guarantees */}
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-tactical uppercase tracking-wider text-zinc-400 pt-2">
+            <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-1.5 text-[11px] sm:text-xs font-tactical uppercase tracking-wider text-zinc-400 pt-1 sm:pt-2">
               <span className="flex items-center gap-1.5 text-zinc-300">
                 <span className="w-1.5 h-1.5 bg-blood-500 rounded-full" />
                 1ª AULA 100% CORTESIA
@@ -125,16 +125,16 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* Right Column: Official Logo Showcase with Red LED Backlighting Effects */}
-          <div className="lg:col-span-5 flex items-center justify-center">
-            <div className="relative w-full max-w-md aspect-square flex items-center justify-center">
+          <div className="lg:col-span-5 flex items-center justify-center pt-2 sm:pt-0">
+            <div className="relative w-full max-w-[240px] sm:max-w-sm lg:max-w-md aspect-square flex items-center justify-center">
               {/* Red LED Glow Halos in multiple layers */}
-              <div className="absolute inset-0 bg-blood-600/35 rounded-full blur-[90px] animate-pulse pointer-events-none" />
-              <div className="absolute w-72 h-72 bg-blood-700/40 rounded-full blur-[60px] pointer-events-none" />
+              <div className="absolute inset-0 bg-blood-600/30 rounded-full blur-[60px] sm:blur-[90px] animate-pulse pointer-events-none" />
+              <div className="absolute w-44 h-44 sm:w-72 sm:h-72 bg-blood-700/35 rounded-full blur-[40px] sm:blur-[60px] pointer-events-none" />
               
               {/* Outer Combat Ring with Chamfered Tag Accents */}
-              <div className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 rounded-full p-2 bg-gradient-to-b from-blood-600 via-blood-900 to-black shadow-spotlight-red border-2 border-blood-500/70 flex items-center justify-center group">
+              <div className="relative z-10 w-48 h-48 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full p-1.5 sm:p-2 bg-gradient-to-b from-blood-600 via-blood-900 to-black shadow-spotlight-red border-2 border-blood-500/70 flex items-center justify-center group">
                 {/* Inner Bezel */}
-                <div className="w-full h-full rounded-full overflow-hidden bg-black p-2 border border-zinc-700 relative shadow-inner">
+                <div className="w-full h-full rounded-full overflow-hidden bg-black p-1.5 sm:p-2 border border-zinc-700 relative shadow-inner">
                   {/* Official Logo Image */}
                   <Image
                     src="/logo-urban-fight.jpg"
@@ -150,15 +150,15 @@ export const Hero: React.FC<HeroProps> = ({
               </div>
 
               {/* Floating Tactical Badges */}
-              <div className="absolute -top-2 left-4 z-20 bg-asphalt-900/95 border border-blood-600 px-3 py-1 clip-tag shadow-spotlight-sharp">
-                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider text-white flex items-center gap-1">
+              <div className="absolute -top-1 sm:-top-2 left-2 sm:left-4 z-20 bg-asphalt-900/95 border border-blood-600 px-2 sm:px-3 py-0.5 sm:py-1 clip-tag shadow-spotlight-sharp">
+                <span className="font-tactical text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-white flex items-center gap-1">
                   <Flame className="w-3 h-3 text-blood-500" />
                   QG MONTES CLAROS
                 </span>
               </div>
 
-              <div className="absolute -bottom-2 right-4 z-20 bg-[#09090b] border border-blood-600/80 px-3 py-1 clip-tag shadow-spotlight-sharp">
-                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider text-zinc-200 flex items-center gap-1">
+              <div className="absolute -bottom-1 sm:-bottom-2 right-2 sm:right-4 z-20 bg-[#09090b] border border-blood-600/80 px-2 sm:px-3 py-0.5 sm:py-1 clip-tag shadow-spotlight-sharp">
+                <span className="font-tactical text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-zinc-200 flex items-center gap-1">
                   <ShieldCheck className="w-3 h-3 text-blood-500" />
                   ALTA PERFORMANCE
                 </span>
@@ -168,60 +168,60 @@ export const Hero: React.FC<HeroProps> = ({
         </div>
 
         {/* 4 Combat Authority Cards with Tactical Cut and Metric Styling */}
-        <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-6xl mx-auto">
+        <div className="mt-6 sm:mt-8 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 max-w-6xl mx-auto">
           {/* Card 1 */}
-          <div className="p-5 bg-asphalt-900/90 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate clip-chamfer-top hover:border-blood-500 transition-all group">
-            <div className="flex items-center justify-between mb-2">
-              <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-500">PROGRAMAS</span>
-              <Flame className="w-4 h-4 text-blood-500 group-hover:scale-110 transition-transform" />
+          <div className="p-3.5 sm:p-5 bg-asphalt-900/95 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate clip-chamfer-top hover:border-blood-500 transition-all group">
+            <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500">PROGRAMAS</span>
+              <Flame className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-blood-500 group-hover:scale-110 transition-transform" />
             </div>
-            <div className="font-combat text-4xl sm:text-5xl font-black text-white leading-none">
+            <div className="font-combat text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-none">
               +6 MODALIDADES
             </div>
-            <p className="text-xs text-zinc-400 mt-2 font-sans">
-              Boxe, Muay Thai, Jiu-Jitsu, Jeet Kune Do, Defesa Urbana e Kids.
+            <p className="text-[11px] sm:text-xs text-zinc-400 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
+              Boxe, Muay Thai, Jiu-Jitsu, Krav Maga, Jeet Kune Do e Kids.
             </p>
           </div>
 
           {/* Card 2 */}
-          <div className="p-5 bg-asphalt-900/90 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate clip-chamfer-top hover:border-blood-500 transition-all group">
-            <div className="flex items-center justify-between mb-2">
-              <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-500">INTENSIDADE</span>
-              <Activity className="w-4 h-4 text-blood-500 group-hover:scale-110 transition-transform" />
+          <div className="p-3.5 sm:p-5 bg-asphalt-900/95 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate clip-chamfer-top hover:border-blood-500 transition-all group">
+            <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500">INTENSIDADE</span>
+              <Activity className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-blood-500 group-hover:scale-110 transition-transform" />
             </div>
-            <div className="font-combat text-4xl sm:text-5xl font-black text-white leading-none">
+            <div className="font-combat text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-none">
               1000 KCAL/H
             </div>
-            <p className="text-xs text-zinc-400 mt-2 font-sans">
-              Queima lipídica extrema, tônus muscular e preparo cardiovascular.
+            <p className="text-[11px] sm:text-xs text-zinc-400 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
+              Queima calórica, tônus muscular e preparo cardiovascular.
             </p>
           </div>
 
           {/* Card 3 */}
-          <div className="p-5 bg-asphalt-900/90 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate clip-chamfer-top hover:border-blood-500 transition-all group">
-            <div className="flex items-center justify-between mb-2">
-              <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-500">SEGURANÇA</span>
-              <ShieldCheck className="w-4 h-4 text-blood-500 group-hover:scale-110 transition-transform" />
+          <div className="p-3.5 sm:p-5 bg-asphalt-900/95 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate clip-chamfer-top hover:border-blood-500 transition-all group">
+            <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500">SEGURANÇA</span>
+              <ShieldCheck className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-blood-500 group-hover:scale-110 transition-transform" />
             </div>
-            <div className="font-combat text-4xl sm:text-5xl font-black text-white leading-none">
+            <div className="font-combat text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-none">
               ZERO EGO
             </div>
-            <p className="text-xs text-zinc-400 mt-2 font-sans">
-              Ambiente de fraternidade. Iniciantes preservados e acompanhados.
+            <p className="text-[11px] sm:text-xs text-zinc-400 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
+              Ambiente acolhedor. Iniciantes acompanhados em cada golpe.
             </p>
           </div>
 
           {/* Card 4 */}
-          <div className="p-5 bg-asphalt-900/90 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate clip-chamfer-top hover:border-blood-500 transition-all group">
-            <div className="flex items-center justify-between mb-2">
-              <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-500">LINHAGEM</span>
-              <Trophy className="w-4 h-4 text-blood-500 group-hover:scale-110 transition-transform" />
+          <div className="p-3.5 sm:p-5 bg-asphalt-900/95 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate clip-chamfer-top hover:border-blood-500 transition-all group">
+            <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500">LINHAGEM</span>
+              <Trophy className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-blood-500 group-hover:scale-110 transition-transform" />
             </div>
-            <div className="font-combat text-4xl sm:text-5xl font-black text-white leading-none">
+            <div className="font-combat text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-none">
               MESTRE ANDRÉ
             </div>
-            <p className="text-xs text-zinc-400 mt-2 font-sans">
-              Supervisão de instrutores graduados e formadores de campeões em MOC.
+            <p className="text-[11px] sm:text-xs text-zinc-400 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
+              Supervisão de quem tem mais de 20 anos de tatame em Montes Claros.
             </p>
           </div>
         </div>
@@ -229,3 +229,4 @@ export const Hero: React.FC<HeroProps> = ({
     </section>
   );
 };
+
