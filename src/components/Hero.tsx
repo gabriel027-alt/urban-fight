@@ -22,18 +22,34 @@ export const Hero: React.FC<HeroProps> = ({
   onExploreModalities,
 }) => {
   return (
-    <section className="relative overflow-hidden pt-8 pb-16 sm:pt-14 sm:pb-24 border-b border-zinc-900 bg-[#030303]">
+    <section className="relative overflow-hidden pt-8 pb-16 sm:pt-14 sm:pb-24 border-b border-zinc-900 bg-[#030303] w-full max-w-[100vw]">
+      {/* Background Video in Absolute Position */}
+      <video
+        src="/publichero-bg.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+      >
+        <source src="/publichero-bg.mp4" type="video/mp4" />
+        <source src="/hero-bg.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark Overlay Layer for Contrast & Text Readability */}
+      <div className="absolute inset-0 bg-black/80 backdrop-brightness-50 pointer-events-none z-0" />
+
       {/* 1. Dramatic Ring Spotlights (Crossed angular beams) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] bg-ring-spotlight pointer-events-none opacity-90 animate-spotlight-pulse" />
-      <div className="absolute -top-10 left-0 w-96 h-96 spotlight-beam-left opacity-40 pointer-events-none" />
-      <div className="absolute -top-10 right-0 w-96 h-96 spotlight-beam-right opacity-40 pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] bg-ring-spotlight pointer-events-none opacity-90 animate-spotlight-pulse z-[1]" />
+      <div className="absolute -top-10 left-0 w-96 h-96 spotlight-beam-left opacity-40 pointer-events-none z-[1]" />
+      <div className="absolute -top-10 right-0 w-96 h-96 spotlight-beam-right opacity-40 pointer-events-none z-[1]" />
       
       {/* Background Combat Texture */}
-      <div className="absolute inset-0 bg-carbon opacity-60 pointer-events-none" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blood-600 to-transparent" />
+      <div className="absolute inset-0 bg-carbon opacity-60 pointer-events-none z-[1]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blood-600 to-transparent z-[2]" />
 
       {/* Main Content Container */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         {/* Top Bar on Mobile/Desktop */}
         <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-3 mb-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-asphalt-900 border border-blood-700/60 shadow-spotlight-sharp clip-tag">
