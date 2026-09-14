@@ -152,7 +152,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={handleCtaClick}
-              className="px-5 py-2.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-lg font-bold shadow-spotlight-sharp transition-all rounded-md border border-blood-500/80 flex items-center gap-2"
+              className="px-5 py-2.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-lg font-bold transition-colors border border-blood-500 rounded-none flex items-center gap-2"
             >
               <span>AULA EXPERIMENTAL</span>
               <ArrowRight className="w-4 h-4" />
@@ -162,7 +162,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 bg-asphalt-900 border border-zinc-800 text-zinc-300 hover:text-white rounded-md"
+            className="lg:hidden p-2 bg-asphalt-900 border border-zinc-800 text-zinc-300 hover:text-white rounded-none"
             aria-label="Menu de navegação"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -172,7 +172,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
           <div className="lg:hidden bg-[#070709] border-b border-zinc-800 px-4 pt-3 pb-6 space-y-4 animate-in fade-in duration-150">
-            <div className="p-2.5 bg-asphalt-900 border border-zinc-800 text-xs font-tactical text-zinc-300 flex items-center gap-2 rounded-md">
+            <div className="p-2.5 bg-asphalt-900 border border-zinc-800 text-xs font-tactical text-zinc-300 flex items-center gap-2 rounded-none">
               <MapPin className="w-4 h-4 text-blood-500 shrink-0" />
               <span>Av. Cula Mangabeira, 1497 - Santo Expedito, Montes Claros</span>
             </div>
@@ -182,7 +182,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
                 <button
                   key={link.name}
                   onClick={() => handleAction(link.href)}
-                  className="text-left py-2.5 px-3 font-tactical text-sm uppercase tracking-wider font-bold text-zinc-200 hover:bg-asphalt-800 hover:text-blood-400 transition-colors rounded-md"
+                  className="text-left py-2.5 px-3 font-tactical text-sm uppercase tracking-wider font-bold text-zinc-200 hover:bg-asphalt-800 hover:text-blood-400 transition-colors rounded-none"
                 >
                   {link.name}
                 </button>
@@ -192,7 +192,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
             <div className="pt-2 border-t border-zinc-800">
               <button
                 onClick={handleCtaClick}
-                className="w-full py-3.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 font-combat uppercase tracking-wider text-xl font-black text-white flex items-center justify-center gap-2 rounded-md border border-blood-500/80 shadow-spotlight-sharp"
+                className="w-full py-3.5 bg-blood-600 hover:bg-blood-500 font-combat uppercase tracking-wider text-xl font-black text-white flex items-center justify-center gap-2 rounded-none border border-blood-500 transition-colors"
               >
                 <span>AGENDAR AULA EXPERIMENTAL GRATUITA</span>
                 <ArrowRight className="w-4 h-4" />
