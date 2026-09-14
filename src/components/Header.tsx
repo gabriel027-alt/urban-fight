@@ -59,7 +59,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
   return (
     <>
       {/* Top Micro-Bar (Fight Night style) */}
-      <div className="bg-[#030304] border-b border-zinc-850 text-xs py-1.5 px-4 hidden sm:block">
+      <div className="bg-[#030303] border-b border-zinc-900 text-xs py-1.5 px-4 hidden sm:block">
         <div className="max-w-7xl mx-auto flex items-center justify-between font-tactical text-zinc-400">
           <div className="flex items-center gap-2">
             <span className="flex h-2 w-2 relative">
@@ -103,8 +103,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
       <header
         className={`sticky top-0 z-50 transition-all duration-200 ${
           isScrolled
-            ? "bg-[#050505]/98 backdrop-blur-md border-b border-zinc-800 shadow-2xl py-2.5"
-            : "bg-[#050505]/80 backdrop-blur-sm border-b border-zinc-900 py-3.5"
+            ? "bg-[#030303]/98 backdrop-blur-md border-b border-zinc-800 shadow-2xl py-2.5"
+            : "bg-[#030303] border-b border-zinc-900 py-3.5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">

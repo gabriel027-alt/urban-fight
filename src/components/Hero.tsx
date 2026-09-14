@@ -39,26 +39,18 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Cinematic Luminous Overlay: Crisp, bright, and vivid on mobile & desktop alike */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/70 pointer-events-none z-0" />
 
-      {/* 1. Dramatic Ring Spotlights */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[450px] sm:h-[650px] bg-ring-spotlight pointer-events-none opacity-50 sm:opacity-80 animate-spotlight-pulse z-[1]" />
-      <div className="hidden sm:block absolute -top-10 left-0 w-96 h-96 spotlight-beam-left opacity-30 pointer-events-none z-[1]" />
-      <div className="hidden sm:block absolute -top-10 right-0 w-96 h-96 spotlight-beam-right opacity-30 pointer-events-none z-[1]" />
-      
-      {/* Background Combat Texture - subtle on desktop */}
-      <div className="hidden md:block absolute inset-0 bg-carbon opacity-15 pointer-events-none z-[1]" />
-
       {/* Main Content Container */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         {/* Top Bar on Mobile/Desktop */}
         <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-3 mb-4 sm:mb-6">
-          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-asphalt-900/90 border border-blood-700/60 shadow-spotlight-sharp rounded sm:clip-tag">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-asphalt-900/90 border border-blood-700/60 rounded-md">
             <span className="w-2 h-2 rounded-full bg-blood-500 animate-ping" />
             <span className="font-tactical text-[11px] sm:text-xs uppercase tracking-widest text-blood-400 font-bold">
               QG OFICIAL • MESTRE ANDRÉ
             </span>
           </div>
 
-          <div className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-asphalt-900/80 border border-zinc-800 rounded sm:clip-tag text-[11px] sm:text-xs font-tactical text-zinc-400">
+          <div className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-asphalt-900/80 border border-zinc-800 rounded-md text-[11px] sm:text-xs font-tactical text-zinc-400">
             <MapPin className="w-3.5 h-3.5 text-blood-500 shrink-0" />
             <span className="tracking-wide text-zinc-300 truncate">SANTO EXPEDITO • MONTES CLAROS</span>
           </div>
@@ -149,14 +141,14 @@ export const Hero: React.FC<HeroProps> = ({
               </div>
 
               {/* Floating Tactical Badges - Cleanly displayed on tablet/desktop */}
-              <div className="hidden sm:flex absolute -top-2 left-4 z-20 bg-asphalt-900/95 border border-blood-600 px-3 py-1 clip-tag shadow-spotlight-sharp">
+              <div className="hidden sm:flex absolute -top-2 left-4 z-20 bg-asphalt-900/95 border border-blood-600 px-3 py-1 rounded-md">
                 <span className="font-tactical text-[10px] font-bold uppercase tracking-wider text-white flex items-center gap-1">
                   <Flame className="w-3 h-3 text-blood-500" />
                   QG MONTES CLAROS
                 </span>
               </div>
 
-              <div className="hidden sm:flex absolute -bottom-2 right-4 z-20 bg-[#09090b] border border-blood-600/80 px-3 py-1 clip-tag shadow-spotlight-sharp">
+              <div className="hidden sm:flex absolute -bottom-2 right-4 z-20 bg-[#09090b] border border-blood-600/80 px-3 py-1 rounded-md">
                 <span className="font-tactical text-[10px] font-bold uppercase tracking-wider text-zinc-200 flex items-center gap-1">
                   <ShieldCheck className="w-3 h-3 text-blood-500" />
                   ALTA PERFORMANCE
