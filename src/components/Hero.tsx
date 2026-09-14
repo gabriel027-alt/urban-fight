@@ -23,29 +23,29 @@ export const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <section className="relative overflow-hidden pt-8 pb-16 sm:pt-14 sm:pb-24 border-b border-zinc-900 bg-[#030303] w-full max-w-[100vw]">
-      {/* Background Video in Absolute Position */}
+      {/* Background Video in Absolute Position with Enhanced Clarity */}
       <video
         src="/publichero-bg.mp4"
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none brightness-90 contrast-110"
       >
         <source src="/publichero-bg.mp4" type="video/mp4" />
         <source src="/hero-bg.mp4" type="video/mp4" />
       </video>
 
-      {/* Dark Overlay Layer for Contrast & Text Readability */}
-      <div className="absolute inset-0 bg-black/80 backdrop-brightness-50 pointer-events-none z-0" />
+      {/* Lighter Cinema Overlay: Preserves ring details and motion while guaranteeing text contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/75 pointer-events-none z-0" />
 
       {/* 1. Dramatic Ring Spotlights (Crossed angular beams) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] bg-ring-spotlight pointer-events-none opacity-90 animate-spotlight-pulse z-[1]" />
-      <div className="absolute -top-10 left-0 w-96 h-96 spotlight-beam-left opacity-40 pointer-events-none z-[1]" />
-      <div className="absolute -top-10 right-0 w-96 h-96 spotlight-beam-right opacity-40 pointer-events-none z-[1]" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] bg-ring-spotlight pointer-events-none opacity-80 animate-spotlight-pulse z-[1]" />
+      <div className="absolute -top-10 left-0 w-96 h-96 spotlight-beam-left opacity-30 pointer-events-none z-[1]" />
+      <div className="absolute -top-10 right-0 w-96 h-96 spotlight-beam-right opacity-30 pointer-events-none z-[1]" />
       
-      {/* Background Combat Texture */}
-      <div className="absolute inset-0 bg-carbon opacity-60 pointer-events-none z-[1]" />
+      {/* Background Combat Texture - subtle so it doesn't obscure the video */}
+      <div className="absolute inset-0 bg-carbon opacity-20 pointer-events-none z-[1]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blood-600 to-transparent z-[2]" />
 
       {/* Main Content Container */}
