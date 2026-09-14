@@ -39,7 +39,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
       return (
         <span
           key={idx}
-          className="inline-flex items-center gap-1.5 px-3 py-1 bg-blood-950 border border-blood-500/80 text-blood-200 font-tactical text-xs font-bold clip-tag shadow-sm"
+          className="inline-flex items-center gap-1.5 px-3 py-1 bg-blood-950 border border-blood-500/80 text-blood-200 font-tactical text-xs font-bold shadow-sm"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse" />
           <span>{h.time} (Fem)</span>
@@ -50,7 +50,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
       return (
         <span
           key={idx}
-          className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-950 border border-blue-500/80 text-blue-200 font-tactical text-xs font-bold clip-tag shadow-sm"
+          className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-950 border border-blue-500/80 text-blue-200 font-tactical text-xs font-bold shadow-sm"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
           <span>{h.time} (Kids)</span>
@@ -61,7 +61,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
       return (
         <span
           key={idx}
-          className="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-800 border border-zinc-600 text-white font-tactical text-xs font-bold clip-tag shadow-sm"
+          className="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-800 border border-zinc-600 text-white font-tactical text-xs font-bold shadow-sm"
         >
           <span>{h.time} (Adulto)</span>
         </span>
@@ -71,7 +71,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
       return (
         <span
           key={idx}
-          className="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-800 border border-zinc-600 text-zinc-100 font-tactical text-xs font-bold clip-tag shadow-sm"
+          className="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-800 border border-zinc-600 text-zinc-100 font-tactical text-xs font-bold shadow-sm"
         >
           <span>{h.time} (Misto)</span>
         </span>
@@ -81,7 +81,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
       return (
         <span
           key={idx}
-          className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-950 border border-amber-500/80 text-amber-200 font-tactical text-xs font-bold clip-tag shadow-sm"
+          className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-950 border border-amber-500/80 text-amber-200 font-tactical text-xs font-bold shadow-sm"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
           <span>{h.time} (JKD/Krav Maga)</span>
@@ -92,7 +92,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
     return (
       <span
         key={idx}
-        className="inline-flex items-center gap-1 px-3 py-1 bg-zinc-800 hover:bg-zinc-750 border border-zinc-600 text-white font-tactical text-xs font-bold clip-tag shadow-sm transition-colors"
+        className="inline-flex items-center gap-1 px-3 py-1 bg-zinc-800 hover:bg-zinc-750 border border-zinc-600 text-white font-tactical text-xs font-bold shadow-sm transition-colors"
       >
         <Clock className="w-3 h-3 text-blood-400" />
         <span>{h.time}</span>
@@ -105,7 +105,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-zinc-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-zinc-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
             <Calendar className="w-3.5 h-3.5 text-blood-500" />
             <span>GRADE OFICIAL DE COMBATE • SEDE SANTO EXPEDITO</span>
           </div>
@@ -127,7 +127,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               <button
                 key={tab.id}
                 onClick={() => setFilterModality(tab.id)}
-                className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold clip-tag transition-all ${
+                className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold transition-all ${
                   filterModality === tab.id
                     ? "bg-blood-600 text-white shadow-spotlight-sharp border-b-2 border-blood-400"
                     : "bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-800 border border-zinc-700"
@@ -144,13 +144,13 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
           {displayedModalities.map((item) => (
             <div
               key={item.id}
-              className="bg-zinc-900/95 border border-zinc-700 hover:border-blood-500 clip-chamfer-top p-6 sm:p-7 flex flex-col justify-between shadow-2xl transition-all group"
+              className="bg-zinc-900/95 border border-zinc-700 hover:border-blood-500 rounded-none p-6 sm:p-7 flex flex-col justify-between shadow-2xl transition-all group"
             >
               <div className="space-y-5">
                 {/* Header */}
                 <div className="border-b border-zinc-800 pb-4">
                   <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 bg-blood-600/25 border border-blood-500/50 text-blood-300 clip-tag">
+                    <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 bg-blood-600/25 border border-blood-500/50 text-blood-300">
                       {item.badge}
                     </span>
                     <span className="font-tactical text-[11px] text-zinc-400 flex items-center gap-1">
@@ -184,7 +184,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               <div className="pt-6 mt-6 border-t border-zinc-800">
                 <button
                   onClick={() => onScheduleSlot(item.name)}
-                  className="w-full py-3 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-base font-bold clip-chamfer-top flex items-center justify-center gap-2 border border-zinc-600 hover:border-blood-500 transition-all shadow-md group-hover:shadow-spotlight-sharp"
+                  className="w-full py-3 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-base font-bold rounded-none flex items-center justify-center gap-2 border border-zinc-600 hover:border-blood-500 transition-all shadow-md group-hover:shadow-spotlight-sharp"
                 >
                   <span>AGENDAR NESTA MODALIDADE</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -195,13 +195,13 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
         </div>
 
         {/* Featured Presentation Video: Gym Atmosphere & Dynamics */}
-        <div className="mt-16 bg-asphalt-900 border border-zinc-800 clip-chamfer-top p-6 sm:p-8 shadow-combat-plate relative overflow-hidden">
+        <div className="mt-16 bg-asphalt-900 border border-zinc-800 rounded-none p-6 sm:p-8 shadow-combat-plate relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-blood-600/10 rounded-full blur-3xl pointer-events-none" />
           
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-800 pb-4">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-black border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag mb-1.5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-black border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest mb-1.5">
                   <Flame className="w-3.5 h-3.5 text-blood-500" />
                   <span>VÍDEO DE APRESENTAÇÃO • ENERGIA DO TATAME</span>
                 </div>
@@ -235,7 +235,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               </p>
               <button
                 onClick={() => onScheduleSlot("Aula Experimental")}
-                className="shrink-0 px-6 py-3 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold clip-chamfer-top transition-all shadow-spotlight-sharp"
+                className="shrink-0 px-6 py-3 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-none transition-all shadow-spotlight-sharp"
               >
                 EXPERIMENTAR ESTE TREINO
               </button>

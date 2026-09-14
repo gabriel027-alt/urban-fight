@@ -119,7 +119,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
         <div className="text-center space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
             <Crosshair className="w-3.5 h-3.5 text-blood-500" />
             <span>TRIAGEM TÁTICA DE ADMISSÃO</span>
           </div>
@@ -134,12 +134,12 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
         </div>
 
         {/* Funnel Box */}
-        <div className="bg-[#09090b] border border-zinc-800 clip-chamfer-top p-6 sm:p-10 shadow-combat-plate">
+        <div className="bg-[#09090b] border border-zinc-800 rounded-none p-6 sm:p-10 shadow-combat-plate">
           {/* Step Progress Bar */}
           <div className="mb-8 pb-4 border-b border-zinc-800">
             <div className="flex items-center justify-between font-tactical text-xs uppercase tracking-wider text-zinc-400 mb-2">
               <span className="flex items-center gap-2 text-white font-bold">
-                <span className="w-5 h-5 bg-blood-600 text-white flex items-center justify-center text-[10px] clip-tag">
+                <span className="w-5 h-5 bg-blood-600 text-white flex items-center justify-center text-[10px] rounded-none">
                   {currentStep}
                 </span>
                 ETAPA {currentStep} DE 3
@@ -174,13 +174,13 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                       key={item.id}
                       type="button"
                       onClick={() => setFormData({ ...formData, goal: item.title })}
-                      className={`p-4 text-left border clip-chamfer-top transition-all flex items-start gap-3.5 ${
+                      className={`p-4 text-left border rounded-none transition-all flex items-start gap-3.5 ${
                         isSelected
                           ? "bg-blood-900/30 border-blood-500 shadow-spotlight-sharp ring-1 ring-blood-500"
                           : "bg-asphalt-850 border-zinc-800 hover:border-zinc-700"
                       }`}
                     >
-                      <div className={`p-2.5 shrink-0 clip-tag ${
+                      <div className={`p-2.5 shrink-0 rounded-none ${
                         isSelected ? "bg-blood-600 text-white" : "bg-zinc-800 text-zinc-400"
                       }`}>
                         <Icon className="w-5 h-5" />
@@ -198,7 +198,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="px-6 py-3.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-black clip-chamfer-top flex items-center gap-2 transition-all shadow-spotlight-sharp"
+                  className="px-6 py-3.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-black rounded-none flex items-center gap-2 transition-all shadow-spotlight-sharp"
                 >
                   <span>AVANÇAR PARA ETAPA 2</span>
                   <ArrowRight className="w-4 h-4" />
@@ -221,7 +221,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                       key={idx}
                       type="button"
                       onClick={() => setFormData({ ...formData, experience: exp.title })}
-                      className={`w-full p-4 text-left border clip-tag transition-all flex items-start gap-3.5 ${
+                      className={`w-full p-4 text-left border rounded-none transition-all flex items-start gap-3.5 ${
                         isSelected
                           ? "bg-blood-900/30 border-blood-500 shadow-spotlight-sharp ring-1 ring-blood-500"
                           : "bg-asphalt-850 border-zinc-800 hover:border-zinc-700"
@@ -245,7 +245,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                 <button
                   type="button"
                   onClick={handlePrev}
-                  className="px-5 py-2.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-300 font-tactical uppercase text-xs font-bold tracking-wider clip-tag flex items-center gap-2 border border-zinc-700 transition-colors"
+                  className="px-5 py-2.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-300 font-tactical uppercase text-xs font-bold tracking-wider rounded-none flex items-center gap-2 border border-zinc-700 transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>VOLTAR</span>
@@ -254,7 +254,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="px-6 py-3.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-black clip-chamfer-top flex items-center gap-2 transition-all shadow-spotlight-sharp"
+                  className="px-6 py-3.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-black rounded-none flex items-center gap-2 transition-all shadow-spotlight-sharp"
                 >
                   <span>AVANÇAR PARA ETAPA 3</span>
                   <ArrowRight className="w-4 h-4" />
@@ -283,7 +283,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                 <select
                   value={formData.modality}
                   onChange={(e) => setFormData({ ...formData, modality: e.target.value })}
-                  className="w-full bg-black border border-zinc-700 clip-tag px-4 py-3 text-white font-tactical text-sm focus:outline-none focus:border-blood-500 transition-colors"
+                  className="w-full bg-black border border-zinc-700 rounded-none px-4 py-3 text-white font-tactical text-sm focus:outline-none focus:border-blood-500 transition-colors"
                 >
                   {modalityOptions.map((opt, i) => (
                     <option key={i} value={opt} className="bg-asphalt-900 text-white">
@@ -312,7 +312,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                             shift: `${shift.label} (${shift.time})`,
                           })
                         }
-                        className={`p-3.5 border clip-tag text-left transition-all ${
+                        className={`p-3.5 border rounded-none text-left transition-all ${
                           isSelected
                             ? "bg-blood-900/30 border-blood-500 text-white ring-1 ring-blood-500"
                             : "bg-asphalt-850 border-zinc-800 text-zinc-400 hover:text-white"
@@ -341,7 +341,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                     placeholder="Ex: Carlos Andrade"
                     value={formData.name || ""}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-black border border-zinc-700 clip-tag px-4 py-2.5 text-white font-tactical text-sm placeholder:text-zinc-600 focus:outline-none focus:border-blood-500 transition-colors"
+                    className="w-full bg-black border border-zinc-700 rounded-none px-4 py-2.5 text-white font-tactical text-sm placeholder:text-zinc-600 focus:outline-none focus:border-blood-500 transition-colors"
                   />
                 </div>
 
@@ -355,7 +355,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                     placeholder="(38) 99999-9999"
                     value={formData.phone || ""}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-black border border-zinc-700 clip-tag px-4 py-2.5 text-white font-tactical text-sm placeholder:text-zinc-600 focus:outline-none focus:border-blood-500 transition-colors"
+                    className="w-full bg-black border border-zinc-700 rounded-none px-4 py-2.5 text-white font-tactical text-sm placeholder:text-zinc-600 focus:outline-none focus:border-blood-500 transition-colors"
                   />
                 </div>
               </div>
@@ -365,7 +365,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                 <button
                   type="button"
                   onClick={handlePrev}
-                  className="px-5 py-2.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-300 font-tactical uppercase text-xs font-bold tracking-wider clip-tag flex items-center gap-2 border border-zinc-700 transition-colors"
+                  className="px-5 py-2.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-300 font-tactical uppercase text-xs font-bold tracking-wider rounded-none flex items-center gap-2 border border-zinc-700 transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>VOLTAR</span>
@@ -373,7 +373,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
 
                 <button
                   type="submit"
-                  className="flex-1 sm:flex-initial px-8 py-4 bg-gradient-to-r from-emerald-600 via-emerald-500 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-black clip-chamfer-top flex items-center justify-center gap-3 shadow-lg shadow-emerald-950/40 hover:scale-[1.02] active:scale-[0.98] transition-all border border-emerald-400/40"
+                  className="flex-1 sm:flex-initial px-8 py-4 bg-gradient-to-r from-emerald-600 via-emerald-500 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-black rounded-none flex items-center justify-center gap-3 shadow-lg shadow-emerald-950/40 hover:scale-[1.02] active:scale-[0.98] transition-all border border-emerald-400/40"
                 >
                   <Send className="w-5 h-5" />
                   <span>CONFIRMAR NO WHATSAPP DO MESTRE</span>

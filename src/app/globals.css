@@ -50,59 +50,21 @@ body {
   background: #dc2626;
 }
 
-/* Tactical Chamfered Cuts (Military / Fight Club aesthetic) */
-.clip-chamfer {
-  clip-path: polygon(
-    0% 0%,
-    calc(100% - 20px) 0%,
-    100% 20px,
-    100% 100%,
-    20px 100%,
-    0% calc(100% - 20px)
-  );
-}
-
-.clip-chamfer-top {
-  clip-path: polygon(
-    0% 0%,
-    calc(100% - 28px) 0%,
-    100% 28px,
-    100% 100%,
-    0% 100%
-  );
-}
-
-.clip-chamfer-bottom {
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% calc(100% - 20px),
-    calc(100% - 20px) 100%,
-    0% 100%
-  );
-}
-
+/* Rectangular Clean Design System (Clean, solid, professional rectangular aesthetic) */
+.clip-chamfer,
+.clip-chamfer-top,
+.clip-chamfer-bottom,
 .clip-tag {
-  clip-path: polygon(
-    10px 0%,
-    100% 0%,
-    calc(100% - 10px) 100%,
-    0% 100%
-  );
+  clip-path: none !important;
 }
 
-/* Tactical Border with chamfer cut */
+/* Tactical Border - Clean rectangular styling */
 .chamfer-border {
   position: relative;
 }
 
 .chamfer-border::after {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  background: linear-gradient(135deg, rgba(220, 38, 38, 0.7), rgba(255, 255, 255, 0.1), transparent 60%);
-  clip-path: inherit;
-  z-index: -1;
+  content: none;
 }
 
 /* 3D Tilt Card Perspective */

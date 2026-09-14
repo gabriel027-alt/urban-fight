@@ -29,7 +29,7 @@ export const ModalitiesGuidanceVideo: React.FC<ModalitiesGuidanceVideoProps> = (
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
             <Video className="w-3.5 h-3.5 text-blood-500" />
             <span>QUAL MODALIDADE ESCOLHER? • ORIENTAÇÃO DO MESTRE</span>
           </div>
@@ -45,7 +45,7 @@ export const ModalitiesGuidanceVideo: React.FC<ModalitiesGuidanceVideoProps> = (
         </div>
 
         {/* Cinematic Video Player Container (16:9, Solid Black, object-contain, no border clipping) */}
-        <div className="relative max-w-4xl mx-auto bg-black border-2 border-zinc-800 hover:border-blood-600/80 transition-colors duration-300 clip-chamfer-top shadow-2xl overflow-hidden group">
+        <div className="relative max-w-4xl mx-auto bg-black border-2 border-zinc-800 hover:border-blood-600/80 transition-colors duration-300 rounded-none shadow-2xl overflow-hidden group">
           {/* Top Video Header Tag */}
           <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
             <div className="flex items-center gap-2 text-zinc-300">
@@ -98,7 +98,7 @@ export const ModalitiesGuidanceVideo: React.FC<ModalitiesGuidanceVideoProps> = (
         <div className="mt-10 max-w-2xl mx-auto text-center space-y-4">
           <button
             onClick={onStartTriage}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] clip-chamfer-top border border-blood-400/50 group"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] rounded-none border border-blood-400/50 group"
           >
             <Flame className="w-5 h-5 text-white" />
             <span>QUERO AGENDAR MINHA AULA EXPERIMENTAL</span>

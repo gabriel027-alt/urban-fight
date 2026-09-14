@@ -58,7 +58,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Top Header / Tactical Tag */}
         <div className="mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest mb-3">
             <Flame className="w-3.5 h-3.5 text-blood-500" />
             <span>LIDERANÇA & LINHAGEM TÉCNICA</span>
           </div>
@@ -76,7 +76,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
           {/* Column 1: Real Photo of Mestre André + Main Interactive Video Player */}
           <div className="lg:col-span-6 flex flex-col space-y-6">
             {/* Card 1: Official Real Photo of Mestre André with Illuminated Tactical Frame */}
-            <div className="relative rounded-none clip-chamfer-top bg-[#09090b] p-1 border border-zinc-800 shadow-spotlight-sharp group">
+            <div className="relative rounded-none bg-[#09090b] p-1 border border-zinc-800 shadow-spotlight-sharp group">
               <div className="relative overflow-hidden bg-[#060608] p-5 flex flex-col sm:flex-row items-center gap-6">
                 {/* Real Photo Thumbnail */}
                 <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-2 border-blood-600 shadow-spotlight-sharp shrink-0 bg-black">
@@ -92,7 +92,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
 
                 {/* Profile Details */}
                 <div className="space-y-2 text-center sm:text-left">
-                  <div className="inline-block px-2.5 py-0.5 bg-blood-600 text-white font-tactical text-[10px] font-bold uppercase tracking-wider clip-tag">
+                  <div className="inline-block px-2.5 py-0.5 bg-blood-600 text-white font-tactical text-[10px] font-bold uppercase tracking-wider">
                     FUNDADOR & HEAD COACH
                   </div>
                   <h3 className="font-combat text-3xl sm:text-4xl font-black text-white uppercase tracking-wider leading-none">
@@ -114,14 +114,14 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
             </div>
 
             {/* Card 2: Main Interactive Video Player of Mestre André (object-contain & aspect-video) */}
-            <div className="relative rounded-none clip-chamfer-top bg-[#09090b] p-1 border border-blood-600 shadow-spotlight-sharp">
+            <div className="relative rounded-none bg-[#09090b] p-1 border border-blood-600 shadow-spotlight-sharp">
               <div className="relative w-full overflow-hidden bg-[#030303] p-4 sm:p-5 flex flex-col justify-between space-y-3">
                 <div className="flex items-center justify-between gap-2 z-10">
-                  <span className="font-tactical text-[10px] tracking-widest text-zinc-200 font-bold bg-black border border-zinc-800 px-2.5 py-1 clip-tag flex items-center gap-1.5">
+                  <span className="font-tactical text-[10px] tracking-widest text-zinc-200 font-bold bg-black border border-zinc-800 px-2.5 py-1 flex items-center gap-1.5">
                     <Play className="w-3 h-3 text-blood-500 fill-blood-500" />
                     VÍDEO PRINCIPAL • PALAVRA DO MESTRE
                   </span>
-                  <span className="font-tactical text-[10px] tracking-wider text-blood-400 bg-blood-950/80 border border-blood-600/50 px-2 py-0.5 clip-tag flex items-center gap-1">
+                  <span className="font-tactical text-[10px] tracking-wider text-blood-400 bg-blood-950/80 border border-blood-600/50 px-2 py-0.5 flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse" />
                     ASSISTA AO VÍDEO
                   </span>
@@ -152,7 +152,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
           {/* Column 2: Lineage & Manifesto Editorial Column */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
             {/* Engraved Manifesto Box */}
-            <div className="p-6 sm:p-8 bg-[#09090b] border-l-4 border-blood-600 border-y border-r border-zinc-800 clip-chamfer-top shadow-combat-plate relative">
+            <div className="p-6 sm:p-8 bg-[#09090b] border-l-4 border-blood-600 border-y border-r border-zinc-800 rounded-none shadow-combat-plate relative">
               <span className="font-tactical text-xs uppercase tracking-[0.25em] text-blood-500 font-bold block mb-2">
                 {"// MANIFESTO DO TATAME"}
               </span>
@@ -176,7 +176,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                 {martialRanks.map((rank, idx) => (
                   <div
                     key={idx}
-                    className="p-4 bg-[#09090b] border border-zinc-800 hover:border-blood-600/60 transition-all clip-tag flex flex-col sm:flex-row sm:items-center justify-between gap-3 group"
+                    className="p-4 bg-[#09090b] border border-zinc-800 hover:border-blood-600/60 transition-all rounded-none flex flex-col sm:flex-row sm:items-center justify-between gap-3 group"
                   >
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
@@ -206,7 +206,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
             <div className="pt-2">
               <button
                 onClick={onStartTriage}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl font-black shadow-spotlight-sharp transition-all clip-chamfer-top flex items-center justify-center gap-3 border border-blood-500/50"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl font-black shadow-spotlight-sharp transition-all rounded-none flex items-center justify-center gap-3 border border-blood-500/50"
               >
                 <span>TREINAR COM O MESTRE ANDRÉ</span>
                 <ArrowRight className="w-5 h-5" />
@@ -220,7 +220,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
           <div className="max-w-4xl mx-auto">
             {/* Header do Bloco Secundário */}
             <div className="text-center space-y-4 mb-10">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
                 <Film className="w-3.5 h-3.5 text-blood-500" />
                 <span>VÍDEO INSTITUCIONAL • O LEGADO DA ACADEMIA</span>
               </div>
@@ -240,7 +240,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
             </div>
 
             {/* Player de Vídeo 16:9 Cinema Dark Combat Luxury */}
-            <div className="relative bg-black border-2 border-zinc-800 hover:border-blood-600/80 transition-colors duration-300 clip-chamfer-top shadow-2xl overflow-hidden group">
+            <div className="relative bg-black border-2 border-zinc-800 hover:border-blood-600/80 transition-colors duration-300 rounded-none shadow-2xl overflow-hidden group">
               {/* Top Video Header Tag */}
               <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
                 <div className="flex items-center gap-2 text-zinc-300">
@@ -293,7 +293,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
             <div className="mt-8 text-center">
               <button
                 onClick={onStartTriage}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 bg-zinc-900 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-xl font-bold border border-zinc-700 hover:border-blood-500 clip-chamfer-top transition-all duration-300 shadow-combat-plate group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 bg-zinc-900 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-xl font-bold border border-zinc-700 hover:border-blood-500 rounded-none transition-all duration-300 shadow-combat-plate group"
               >
                 <span>FAZER PARTE DESSA HISTÓRIA</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />

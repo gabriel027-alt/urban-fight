@@ -26,7 +26,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
             <HelpCircle className="w-3.5 h-3.5 text-blood-500" />
             <span>QUEBRA DE OBJEÇÕES & DÚVIDAS</span>
           </div>
@@ -50,7 +50,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
             return (
               <div
                 key={index}
-                className={`border transition-all duration-200 clip-chamfer-top ${
+                className={`border transition-all duration-200 rounded-none ${
                   isOpen
                     ? "bg-black border-blood-600 shadow-spotlight-sharp"
                     : "bg-asphalt-900/90 border-zinc-800 hover:border-zinc-700"
@@ -67,7 +67,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
                     {item.question}
                   </span>
                   <div
-                    className={`w-8 h-8 flex items-center justify-center shrink-0 clip-tag transition-transform duration-200 ${
+                    className={`w-8 h-8 flex items-center justify-center shrink-0 rounded-none transition-transform duration-200 ${
                       isOpen
                         ? "bg-blood-600 text-white rotate-180"
                         : "bg-asphalt-800 text-zinc-400"
@@ -93,7 +93,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
         </div>
 
         {/* Objection Breaker Footer CTA */}
-        <div className="mt-12 p-6 sm:p-8 bg-asphalt-900 border border-zinc-800 clip-chamfer-top text-center space-y-4 shadow-combat-plate">
+        <div className="mt-12 p-6 sm:p-8 bg-asphalt-900 border border-zinc-800 rounded-none text-center space-y-4 shadow-combat-plate">
           <h3 className="font-combat text-3xl sm:text-4xl uppercase text-white tracking-wide leading-none">
             AINDA TEM DÚVIDAS SOBRE O SEU PRIMEIRO TREINO?
           </h3>
@@ -104,7 +104,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <button
               onClick={onStartTriage}
-              className="px-7 py-3.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-black clip-chamfer-top flex items-center gap-2 shadow-spotlight-sharp transition-all"
+              className="px-7 py-3.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-black rounded-none flex items-center gap-2 shadow-spotlight-sharp transition-all"
             >
               <span>AGENDAR MINHA AULA EXPERIMENTAL</span>
               <ArrowRight className="w-4 h-4" />
@@ -116,7 +116,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider clip-chamfer-top flex items-center gap-2 border border-zinc-700 transition-colors"
+              className="px-6 py-3.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider rounded-none flex items-center gap-2 border border-zinc-700 transition-colors"
             >
               <MessageCircle className="w-4 h-4 text-emerald-400" />
               <span>CHAMAR NO WHATSAPP</span>

@@ -28,7 +28,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
       <div className="flex items-center gap-2">
         <button
           onClick={onTriggerTriage}
-          className="flex-1 py-3 px-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 text-white font-combat uppercase tracking-wider text-lg font-black clip-chamfer-top border border-blood-500/70 flex items-center justify-center gap-2 shadow-spotlight-sharp active:scale-95 transition-all"
+          className="flex-1 py-3 px-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 text-white font-combat uppercase tracking-wider text-lg font-black rounded-none border border-blood-500/70 flex items-center justify-center gap-2 shadow-spotlight-sharp active:scale-95 transition-all"
         >
           <Flame className="w-4 h-4 text-white" />
           <span>AGENDAR AULA GRÁTIS</span>
@@ -41,7 +41,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-12 h-12 bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-lg clip-chamfer-top border border-emerald-400/60 active:scale-95 transition-transform shrink-0"
+          className="w-12 h-12 bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-lg rounded-none border border-emerald-400/60 active:scale-95 transition-transform shrink-0"
           aria-label="Chamar no WhatsApp"
         >
           <Send className="w-5 h-5" />

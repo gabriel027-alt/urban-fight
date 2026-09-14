@@ -67,7 +67,7 @@ export const Footer: React.FC = () => {
                 href={URBAN_FIGHT_CONFIG.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-asphalt-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-blood-400 hover:border-blood-600 transition-colors clip-tag"
+                className="w-9 h-9 bg-asphalt-900 border border-zinc-800 rounded-none flex items-center justify-center text-zinc-400 hover:text-blood-400 hover:border-blood-600 transition-colors"
                 aria-label="Instagram da Urban Fight"
               >
                 <InstagramIcon className="w-4 h-4" />
@@ -76,7 +76,7 @@ export const Footer: React.FC = () => {
                 href={`https://wa.me/${URBAN_FIGHT_CONFIG.whatsappRaw}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-asphalt-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-emerald-400 hover:border-emerald-600 transition-colors clip-tag"
+                className="w-9 h-9 bg-asphalt-900 border border-zinc-800 rounded-none flex items-center justify-center text-zinc-400 hover:text-emerald-400 hover:border-emerald-600 transition-colors"
                 aria-label="WhatsApp da Urban Fight"
               >
                 <Send className="w-4 h-4" />

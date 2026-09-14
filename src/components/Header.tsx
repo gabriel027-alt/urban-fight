@@ -152,7 +152,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={handleCtaClick}
-              className="px-5 py-2.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-lg font-bold transition-all clip-chamfer-top border border-blood-500/70 flex items-center gap-2"
+              className="px-5 py-2.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-lg font-bold transition-all rounded-none border border-blood-500/70 flex items-center gap-2"
             >
               <span>AULA EXPERIMENTAL</span>
               <ArrowRight className="w-4 h-4" />
@@ -192,7 +192,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
             <div className="pt-2 border-t border-zinc-800">
               <button
                 onClick={handleCtaClick}
-                className="w-full py-3.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 font-combat uppercase tracking-wider text-xl font-black text-white flex items-center justify-center gap-2 clip-chamfer-top border border-blood-500/70 transition-all"
+                className="w-full py-3.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 font-combat uppercase tracking-wider text-xl font-black text-white flex items-center justify-center gap-2 rounded-none border border-blood-500/70 transition-all"
               >
                 <span>AGENDAR AULA EXPERIMENTAL GRATUITA</span>
                 <ArrowRight className="w-4 h-4" />

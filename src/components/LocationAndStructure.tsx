@@ -56,8 +56,8 @@ export const LocationAndStructure: React.FC = () => {
     <section id="estrutura" className="py-20 sm:py-28 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
             <Camera className="w-3.5 h-3.5 text-blood-500" />
             <span>FIGHT GYM TOUR • ESTRUTURA FÍSICA</span>
           </div>
@@ -79,7 +79,7 @@ export const LocationAndStructure: React.FC = () => {
           {gymSpaces.map((space, idx) => (
             <div
               key={idx}
-              className={`${space.colSpan} relative min-h-[320px] sm:min-h-[360px] bg-zinc-900 border border-zinc-800 hover:border-blood-600/70 clip-chamfer-top overflow-hidden group shadow-combat-plate flex flex-col justify-end p-6 sm:p-8`}
+              className={`${space.colSpan} relative min-h-[320px] sm:min-h-[360px] bg-zinc-900 border border-zinc-800 hover:border-blood-600/70 rounded-none overflow-hidden group shadow-combat-plate flex flex-col justify-end p-6 sm:p-8`}
             >
               {/* Photo background - Next.js HD Optimized (Quality 100) */}
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -98,7 +98,7 @@ export const LocationAndStructure: React.FC = () => {
 
               {/* Tactical Badge */}
               <div className="absolute top-4 right-4 z-10">
-                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-black/90 border border-blood-600/50 text-white clip-tag">
+                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-black/90 border border-blood-600/50 text-white">
                   {space.badge}
                 </span>
               </div>
@@ -119,7 +119,7 @@ export const LocationAndStructure: React.FC = () => {
                   {space.highlights.map((h, i) => (
                     <span
                       key={i}
-                      className="font-tactical text-[9px] uppercase tracking-wider px-2 py-0.5 bg-black/90 border border-zinc-700/90 text-zinc-200 clip-tag shadow-sm"
+                      className="font-tactical text-[9px] uppercase tracking-wider px-2 py-0.5 bg-black/90 border border-zinc-700/90 text-zinc-200 shadow-sm"
                     >
                       {h}
                     </span>
@@ -131,11 +131,11 @@ export const LocationAndStructure: React.FC = () => {
         </div>
 
         {/* Physical Address, Hours & Dark Map Embed */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-asphalt-900 border border-zinc-800 clip-chamfer-top p-6 sm:p-10 shadow-combat-plate">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-asphalt-900 border border-zinc-800 rounded-none p-6 sm:p-10 shadow-combat-plate">
           {/* Address Details & Action Buttons */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-asphalt-800 border border-zinc-700 clip-tag">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-asphalt-800 border border-zinc-700">
                 <MapPin className="w-3.5 h-3.5 text-blood-500" />
                 <span className="font-tactical text-xs uppercase tracking-wider text-zinc-300 font-bold">
                   LOCALIZAÇÃO OFICIAL
@@ -186,7 +186,7 @@ export const LocationAndStructure: React.FC = () => {
                 href={URBAN_FIGHT_CONFIG.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-4 px-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl font-black clip-chamfer-top flex items-center justify-center gap-2 shadow-spotlight-sharp transition-all"
+                className="w-full py-4 px-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl font-black rounded-none flex items-center justify-center gap-2 shadow-spotlight-sharp transition-all"
               >
                 <Navigation className="w-5 h-5" />
                 <span>TRAÇAR ROTA NO GOOGLE MAPS</span>
@@ -197,7 +197,7 @@ export const LocationAndStructure: React.FC = () => {
                 href="https://waze.com/ul?q=Av.+Cula+Mangabeira,+1497+-+Santo+Expedito,+Montes+Claros+-+MG"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider flex items-center justify-center gap-2 border border-zinc-700 clip-chamfer-top transition-colors"
+                className="w-full py-3 px-4 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider flex items-center justify-center gap-2 border border-zinc-700 rounded-none transition-colors"
               >
                 <Navigation className="w-4 h-4 text-sky-400" />
                 <span>ABRIR NO APLICATIVO WAZE</span>
@@ -206,7 +206,7 @@ export const LocationAndStructure: React.FC = () => {
           </div>
 
           {/* Stylized Dark Theme Map Embed */}
-          <div className="lg:col-span-7 min-h-[380px] sm:min-h-[460px] bg-black border border-zinc-800 clip-chamfer-top overflow-hidden relative shadow-inner">
+          <div className="lg:col-span-7 min-h-[380px] sm:min-h-[460px] bg-black border border-zinc-800 rounded-none overflow-hidden relative shadow-inner">
             <iframe
               title="Localização Urban Fight Montes Claros"
               src="https://maps.google.com/maps?q=Av.+Cula+Mangabeira,+1497+-+Santo+Expedito,+Montes+Claros+-+MG&t=&z=16&ie=UTF8&iwloc=&output=embed"
@@ -217,7 +217,7 @@ export const LocationAndStructure: React.FC = () => {
               referrerPolicy="no-referrer-when-downgrade"
             />
             {/* Map Overlay Badge */}
-            <div className="absolute bottom-4 left-4 bg-black/90 backdrop-blur-md border border-zinc-700 px-3.5 py-2 clip-tag flex items-center gap-2 pointer-events-none">
+            <div className="absolute bottom-4 left-4 bg-black/90 backdrop-blur-md border border-zinc-700 px-3.5 py-2 flex items-center gap-2 pointer-events-none">
               <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse" />
               <span className="font-tactical text-xs font-bold uppercase tracking-wider text-white">
                 URBAN FIGHT • SANTO EXPEDITO

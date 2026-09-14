@@ -37,7 +37,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest clip-tag">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
             <Video className="w-3.5 h-3.5 text-blood-500" />
             <span>DEPOIMENTOS REAIS • A VOZ DO TATAME</span>
           </div>
@@ -55,7 +55,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
         {/* 2-Column Responsive Video Grid (2 cols desktop, 1 col mobile) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mb-14">
           {/* Video 1: Depoimento no Tatame */}
-          <div className="relative bg-[#08080a] border-2 border-zinc-800 hover:border-blood-600/80 transition-all duration-300 clip-chamfer-top shadow-spotlight-sharp overflow-hidden group flex flex-col justify-between">
+          <div className="relative bg-[#08080a] border-2 border-zinc-800 hover:border-blood-600/80 transition-all duration-300 rounded-none shadow-spotlight-sharp overflow-hidden group flex flex-col justify-between">
             {/* Video Header Bar */}
             <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
               <div className="flex items-center gap-2 text-zinc-300">
@@ -93,7 +93,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
           </div>
 
           {/* Video 2: Depoimento do Igor */}
-          <div className="relative bg-[#08080a] border-2 border-zinc-800 hover:border-blood-600/80 transition-all duration-300 clip-chamfer-top shadow-spotlight-sharp overflow-hidden group flex flex-col justify-between">
+          <div className="relative bg-[#08080a] border-2 border-zinc-800 hover:border-blood-600/80 transition-all duration-300 rounded-none shadow-spotlight-sharp overflow-hidden group flex flex-col justify-between">
             {/* Video Header Bar */}
             <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
               <div className="flex items-center gap-2 text-zinc-300">
@@ -133,13 +133,13 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
 
         {/* Highlight Instagram Testimonial Card */}
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-[#08080a] border-2 border-zinc-800 hover:border-blood-600/70 transition-all duration-300 clip-chamfer-top p-6 sm:p-10 md:p-12 shadow-spotlight-sharp group">
+          <div className="relative bg-[#08080a] border-2 border-zinc-800 hover:border-blood-600/70 transition-all duration-300 rounded-none p-6 sm:p-10 md:p-12 shadow-spotlight-sharp group">
             {/* Subtle Top Accent Strip */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blood-600 to-transparent opacity-75" />
 
             {/* Blood-Red Quotation Icon & Stars */}
             <div className="flex items-center justify-between gap-4 mb-6">
-              <div className="p-3 bg-blood-950/40 border border-blood-600/40 clip-tag">
+              <div className="p-3 bg-blood-950/40 border border-blood-600/40">
                 <Quote className="w-7 h-7 sm:w-8 sm:h-8 text-blood-600 fill-blood-600/20" />
               </div>
 
@@ -176,7 +176,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-900 border border-zinc-700 text-zinc-300 font-tactical text-xs font-bold uppercase tracking-wider clip-tag">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-900 border border-zinc-700 text-zinc-300 font-tactical text-xs font-bold uppercase tracking-wider">
                   <ShieldCheck className="w-3.5 h-3.5 text-blood-500" />
                   <span>Aluno Verificado</span>
                 </span>
@@ -193,7 +193,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
           <div className="mt-12 text-center">
             <button
               onClick={onStartTriage}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] clip-chamfer-top border border-blood-400/50 group"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] rounded-none border border-blood-400/50 group"
             >
               <Flame className="w-5 h-5 text-white" />
               <span>QUERO AGENDAR MINHA AULA EXPERIMENTAL</span>
