@@ -107,7 +107,7 @@ export const MODALITIES: Modality[] = [
       "Praticantes que amam raciocínio estratégico e técnica detalhada",
       "Homens e mulheres de qualquer biotipo físico ou idade",
     ],
-    equipmentNeeded: ["Kimono trançado oficial", "Faixa", "Rashguard (opcional)"],
+    equipmentNeeded: ["Kimono trançado oficial", "Cinto de kimono", "Rashguard (opcional)"],
     instructor: "Instrutores especializados sob supervisão direta do Mestre André",
     iconName: "Swords",
     accentColor: "from-blue-600/30 to-blood-950/80",

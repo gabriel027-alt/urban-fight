@@ -106,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
             className="flex items-center gap-3 group focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] rounded-md"
           >
             <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-blood-600 shadow-spotlight-sharp group-hover:scale-105 transition-transform bg-black flex-shrink-0">
-              <div className="absolute inset-0 rounded-full bg-blood-600/35 blur-sm animate-pulse pointer-events-none" />
+              <div className="absolute inset-0 rounded-full bg-blood-600/25 blur-sm pointer-events-none" />
               <Image
                 src="/logo-urban-fight.jpg"
                 alt="Logo Oficial Urban Fight"

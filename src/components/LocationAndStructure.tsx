@@ -12,7 +12,7 @@ import {
   Camera
 } from "lucide-react";
 
-export const LocationAndStructure: React.FC = () => {
+export const StructureSection: React.FC = () => {
   const gymSpaces = [
     {
       title: "Tatame Profissional",
@@ -130,6 +130,31 @@ export const LocationAndStructure: React.FC = () => {
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+};
+
+export const LocationSection: React.FC = () => {
+  return (
+    <section id="localizacao" className="scroll-mt-20 md:scroll-mt-24 py-16 sm:py-24 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-zinc-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
+            <MapPin className="w-3.5 h-3.5 text-blood-500" />
+            <span>LOCALIZAÇÃO ESTRATÉGICA • SEDE SANTO EXPEDITO</span>
+          </div>
+
+          <h2 className="font-combat text-4xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
+            VENHA CONHECER <br />
+            <span className="text-blood-600">O NOSSO QG EM MONTES CLAROS.</span>
+          </h2>
+
+          <p className="font-sans text-zinc-300 text-sm sm:text-base max-w-2xl mx-auto">
+            Sede própria e acolhedora na principal avenida do bairro Santo Expedito. Estacionamento fácil, ambiente familiar e toda a estrutura para o seu treino.
+          </p>
+        </div>
 
         {/* Physical Address, Hours & Dark Map Embed */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-asphalt-900 border border-zinc-800 rounded-xl p-6 sm:p-10 shadow-combat-plate">
@@ -231,4 +256,4 @@ export const LocationAndStructure: React.FC = () => {
   );
 };
 
-export const StructureSection = LocationAndStructure;
+export const LocationAndStructure = LocationSection;

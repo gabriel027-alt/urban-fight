@@ -21,31 +21,31 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
   const martialRanks = [
     {
       title: "Jiu-Jitsu Brasileiro (BJJ)",
-      rank: "Liderança Técnica & Head Coach",
+      rank: "Head Coach & Líder Técnico",
       details: "Especialista em alavancas, controle posicional e defesa pessoal no solo com vasta experiência prática.",
       beltVisual: "bg-zinc-900 border-y border-zinc-700 relative overflow-hidden flex items-center justify-end px-2",
-      badgeText: "HEAD COACH BJJ",
+      badgeText: "HEAD COACH",
     },
     {
       title: "Muay Thai & Kickboxing",
-      rank: "Treinador Especialista",
+      rank: "Líder Técnico & Head Coach",
       details: "Formação técnica em trocação tailandesa e biomecânica do golpe com as 8 armas.",
       beltVisual: "bg-blood-950 border-y border-blood-800 relative overflow-hidden flex items-center justify-end px-2",
-      badgeText: "TROCAÇÃO DE ELITE",
+      badgeText: "LÍDER TÉCNICO",
     },
     {
       title: "Boxe Tradicional (Nobre Arte)",
-      rank: "Treinador Chefe & Mentor",
+      rank: "Líder Técnico & Mentor",
       details: "Mecânica cirúrgica de punhos, esquivas elusivas e preparação física de atletas de alto rendimento.",
       beltVisual: "bg-zinc-900 border-y border-zinc-700 relative overflow-hidden flex items-center justify-end px-2",
-      badgeText: "NOBRE ARTE",
+      badgeText: "HEAD COACH",
     },
     {
       title: "Jeet Kune Do & Defesa Urbana",
-      rank: "Instrutor Tático de Sobrevivência",
+      rank: "Líder Técnico Tático",
       details: "Aplicação de técnicas reais de desarmamento, neutralização rápida e resposta a agressões urbanas.",
       beltVisual: "bg-zinc-900 border-y border-zinc-700 relative overflow-hidden flex items-center justify-end px-2",
-      badgeText: "TÁTICO & COMBATE",
+      badgeText: "LÍDER TÉCNICO",
     },
   ];
 
@@ -107,7 +107,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                       Santo Expedito • Montes Claros
                     </span>
                     <span>•</span>
-                    <span className="text-zinc-200 font-bold">+20 Anos de Tatame & Liderança Técnica</span>
+                    <span className="text-zinc-200 font-bold">Fundador & Head Coach</span>
                   </div>
                 </div>
               </div>

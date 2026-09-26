@@ -120,11 +120,11 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
           </div>
 
-          {/* Right Column: Pristine Circular Official Logo with Red LED Pulse Glow */}
+          {/* Right Column: Pristine Circular Official Logo with Solid Red LED Glow */}
           <div className="lg:col-span-5 flex items-center justify-center py-4 sm:py-0">
             <div className="relative w-full max-w-[220px] sm:max-w-sm lg:max-w-md aspect-square flex items-center justify-center my-2 sm:my-0">
-              {/* Red LED Glow Halos in multiple layers (pulsing exclusively around the logo) */}
-              <div className="absolute inset-0 bg-blood-600/35 rounded-full blur-[50px] sm:blur-[90px] animate-pulse pointer-events-none" />
+              {/* Red LED Glow Halos in multiple layers (solid, static) */}
+              <div className="absolute inset-0 bg-blood-600/35 rounded-full blur-[50px] sm:blur-[90px] pointer-events-none" />
               <div className="absolute w-40 h-40 sm:w-72 sm:h-72 bg-blood-700/40 rounded-full blur-[35px] sm:blur-[60px] pointer-events-none" />
               
               {/* Outer Combat Ring */}

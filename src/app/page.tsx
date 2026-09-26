@@ -7,7 +7,7 @@ import { MarqueeTicker } from "@/components/MarqueeTicker";
 import { ModalitiesGrid } from "@/components/ModalitiesGrid";
 import { ModalitiesGuidanceVideo } from "@/components/ModalitiesGuidanceVideo";
 import { MasterAndreSection } from "@/components/MasterAndreSection";
-import { LocationAndStructure } from "@/components/LocationAndStructure";
+import { LocationSection, StructureSection } from "@/components/LocationAndStructure";
 import { SocialProofSection } from "@/components/SocialProofSection";
 import { EquipmentSection } from "@/components/EquipmentSection";
 import { ScheduleSection } from "@/components/ScheduleSection";
@@ -59,8 +59,11 @@ export default function Home() {
         {/* 6. Tactical Social Proof & Student Validation (Immediate Proof after Guidance) */}
         <SocialProofSection onStartTriage={() => scrollToTriage()} />
 
-        {/* 7. Fight Gym Tour Photographic Mosaic & Dark Google Map */}
-        <LocationAndStructure />
+        {/* 7. Strategic Location / Sede Santo Expedito Google Maps */}
+        <LocationSection />
+
+        {/* 8. Fight Gym Tour Photographic Mosaic */}
+        <StructureSection />
 
         {/* 8. Reverse Asphalt Combat Tape Marquee */}
         <MarqueeTicker reverse angle="rotate-1 sm:rotate-1.5" theme="asphalt" />
