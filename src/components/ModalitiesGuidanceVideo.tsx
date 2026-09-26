@@ -61,7 +61,7 @@ export const ModalitiesGuidanceVideo: React.FC<ModalitiesGuidanceVideoProps> = (
           <div className="relative aspect-video w-full bg-black flex items-center justify-center">
             <video
               src="/video-mestre-recomendacoes.mp4"
-              poster="/mestre-andre.jpg"
+              poster="/logo-urban-fight.jpg"
               controls
               playsInline
               preload="metadata"
@@ -101,14 +101,14 @@ export const ModalitiesGuidanceVideo: React.FC<ModalitiesGuidanceVideoProps> = (
         <div className="mt-10 max-w-2xl mx-auto text-center space-y-4">
           <button
             onClick={onStartTriage}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] rounded-none border border-blood-400/50 group"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] rounded-none border border-blood-400/50 group focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
           >
             <Flame className="w-5 h-5 text-white" />
             <span>QUERO AGENDAR MINHA AULA EXPERIMENTAL</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
           </button>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-tactical text-zinc-400 uppercase tracking-wider">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-tactical text-zinc-300 uppercase tracking-wider">
             <span className="flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-blood-500" />
               Aula 100% Gratuita e Sem Compromisso
@@ -118,7 +118,7 @@ export const ModalitiesGuidanceVideo: React.FC<ModalitiesGuidanceVideoProps> = (
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blood-400 hover:text-blood-300 underline underline-offset-4 transition-colors font-bold"
+              className="text-blood-400 hover:text-blood-300 underline underline-offset-4 transition-colors font-bold focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
             >
               Ou prefere falar direto no WhatsApp? Clique aqui
             </a>

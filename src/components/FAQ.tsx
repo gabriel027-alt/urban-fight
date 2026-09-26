@@ -38,7 +38,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
             </span>
           </h2>
 
-          <p className="font-sans text-zinc-400 text-sm sm:text-base max-w-xl mx-auto">
+          <p className="font-sans text-zinc-300 text-sm sm:text-base max-w-xl mx-auto">
             Sentir apreensão antes de pisar no tatame é normal. Veja como nossa metodologia garante acolhimento, respeito e proteção à sua integridade física.
           </p>
         </div>
@@ -59,7 +59,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
                 <button
                   id={`faq-question-${index}`}
                   onClick={() => toggleAccordion(index)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-blood-500"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                 >
@@ -70,7 +70,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
                     className={`w-8 h-8 flex items-center justify-center shrink-0 rounded-none transition-transform duration-200 ${
                       isOpen
                         ? "bg-blood-600 text-white rotate-180"
-                        : "bg-asphalt-800 text-zinc-400"
+                        : "bg-asphalt-800 text-zinc-300"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -97,14 +97,14 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
           <h3 className="font-combat text-3xl sm:text-4xl uppercase text-white tracking-wide leading-none">
             AINDA TEM DÚVIDAS SOBRE O SEU PRIMEIRO TREINO?
           </h3>
-          <p className="font-sans text-xs sm:text-sm text-zinc-400 max-w-md mx-auto">
+          <p className="font-sans text-xs sm:text-sm text-zinc-300 max-w-md mx-auto">
             Fale diretamente com o Mestre André e equipe da recepção na Av. Cula Mangabeira, 1497.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <button
               onClick={onStartTriage}
-              className="px-7 py-3.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-black rounded-none flex items-center gap-2 shadow-spotlight-sharp transition-all"
+              className="px-7 py-3.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-black rounded-none flex items-center gap-2 shadow-spotlight-sharp transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
             >
               <span>AGENDAR MINHA AULA EXPERIMENTAL</span>
               <ArrowRight className="w-4 h-4" />
@@ -116,7 +116,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider rounded-none flex items-center gap-2 border border-zinc-700 transition-colors"
+              className="px-6 py-3.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider rounded-none flex items-center gap-2 border border-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
             >
               <MessageCircle className="w-4 h-4 text-emerald-400" />
               <span>CHAMAR NO WHATSAPP</span>

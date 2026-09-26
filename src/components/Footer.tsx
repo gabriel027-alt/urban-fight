@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
                 href={URBAN_FIGHT_CONFIG.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-asphalt-900 border border-zinc-800 rounded-none flex items-center justify-center text-zinc-400 hover:text-blood-400 hover:border-blood-600 transition-colors"
+                className="w-9 h-9 bg-asphalt-900 border border-zinc-800 rounded-none flex items-center justify-center text-zinc-300 hover:text-blood-400 hover:border-blood-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
                 aria-label="Instagram da Urban Fight"
               >
                 <InstagramIcon className="w-4 h-4" />
@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
                 href={`https://wa.me/${URBAN_FIGHT_CONFIG.whatsappRaw}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-asphalt-900 border border-zinc-800 rounded-none flex items-center justify-center text-zinc-400 hover:text-emerald-400 hover:border-emerald-600 transition-colors"
+                className="w-9 h-9 bg-asphalt-900 border border-zinc-800 rounded-none flex items-center justify-center text-zinc-300 hover:text-emerald-400 hover:border-emerald-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
                 aria-label="WhatsApp da Urban Fight"
               >
                 <Send className="w-4 h-4" />
@@ -98,7 +98,7 @@ export const Footer: React.FC = () => {
                     e.preventDefault();
                     scrollToSection("modalidades", 80);
                   }}
-                  className="hover:text-blood-400 transition-colors"
+                  className="hover:text-blood-400 transition-colors text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
                 >
                   MODALIDADES
                 </a>
@@ -110,7 +110,7 @@ export const Footer: React.FC = () => {
                     e.preventDefault();
                     scrollToSection("metodo", 80);
                   }}
-                  className="hover:text-blood-400 transition-colors"
+                  className="hover:text-blood-400 transition-colors text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
                 >
                   MESTRE ANDRÉ
                 </a>
@@ -122,7 +122,7 @@ export const Footer: React.FC = () => {
                     e.preventDefault();
                     scrollToSection("estrutura", 80);
                   }}
-                  className="hover:text-blood-400 transition-colors"
+                  className="hover:text-blood-400 transition-colors text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
                 >
                   ESTRUTURA DA ARENA
                 </a>
@@ -134,7 +134,7 @@ export const Footer: React.FC = () => {
                     e.preventDefault();
                     scrollToSection("horarios", 80);
                   }}
-                  className="hover:text-blood-400 transition-colors"
+                  className="hover:text-blood-400 transition-colors text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
                 >
                   GRADE DE HORÁRIOS
                 </a>
@@ -146,7 +146,7 @@ export const Footer: React.FC = () => {
                     e.preventDefault();
                     scrollToSection("equipamentos", 80);
                   }}
-                  className="hover:text-blood-400 transition-colors"
+                  className="hover:text-blood-400 transition-colors text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
                 >
                   EQUIPAMENTOS DE LUTA
                 </a>
@@ -158,7 +158,7 @@ export const Footer: React.FC = () => {
                     e.preventDefault();
                     scrollToSection("duvidas", 80);
                   }}
-                  className="hover:text-blood-400 transition-colors"
+                  className="hover:text-blood-400 transition-colors text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
                 >
                   PERGUNTAS FREQUENTES
                 </a>
@@ -211,19 +211,19 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar: Copyright 2026 & Gabriel Batista Strategic Tech Signature */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-tactical uppercase tracking-wider text-zinc-400">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-tactical uppercase tracking-wider text-zinc-300">
           <div className="space-y-1 text-center md:text-left">
-            <p className="text-zinc-300 font-bold">
+            <p className="text-zinc-200 font-bold">
               © 2026 URBAN FIGHT MONTES CLAROS • DIRETOR GERAL: MESTRE ANDRÉ
             </p>
-            <p className="text-zinc-400 text-[11px] font-sans">
+            <p className="text-zinc-300 text-[11px] font-sans">
               Urban Fight Montes Claros • Arquitetura Digital &amp; Parceria Estratégica por Gabriel Batista
             </p>
           </div>
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 hover:text-white transition-colors text-zinc-300"
+            className="flex items-center gap-1.5 hover:text-white transition-colors text-zinc-300 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm py-1 px-2"
           >
             <span>VOLTAR AO TOPO</span>
             <ArrowUp className="w-3.5 h-3.5" />

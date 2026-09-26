@@ -84,7 +84,7 @@ export const Hero: React.FC<HeroProps> = ({
             <div className="pt-2 sm:pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <button
                 onClick={onStartTriage}
-                className="relative group overflow-hidden px-5 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-base sm:text-xl lg:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] rounded-none border border-blood-500/70 flex items-center justify-center gap-3"
+                className="relative group overflow-hidden px-5 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-base sm:text-xl lg:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] rounded-none border border-blood-500/70 flex items-center justify-center gap-3 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <span className="relative z-10 flex items-center gap-2 sm:gap-3">
                   <span>AGENDAR AULA EXPERIMENTAL</span>
@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({
 
               <button
                 onClick={onExploreModalities}
-                className="px-5 sm:px-7 py-3.5 sm:py-4 bg-black/80 hover:bg-asphalt-850 text-zinc-200 hover:text-white font-combat uppercase tracking-wider text-base sm:text-xl lg:text-2xl font-bold border border-zinc-700 hover:border-blood-600 transition-all rounded-none flex items-center justify-center gap-2 backdrop-blur-sm shadow-md"
+                className="px-5 sm:px-7 py-3.5 sm:py-4 bg-black/80 hover:bg-asphalt-850 text-zinc-200 hover:text-white font-combat uppercase tracking-wider text-base sm:text-xl lg:text-2xl font-bold border border-zinc-700 hover:border-blood-600 transition-all rounded-none flex items-center justify-center gap-2 backdrop-blur-sm shadow-md focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <Crosshair className="w-4 sm:w-5 h-4 sm:h-5 text-blood-500" />
                 <span>VER MODALIDADES</span>
@@ -113,7 +113,7 @@ export const Hero: React.FC<HeroProps> = ({
                 TURMAS DO ZERO AO AVANÇADO
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 bg-zinc-400 rounded-full" />
+                <span className="w-1.5 h-1.5 bg-zinc-300 rounded-full" />
                 TATAME LIVRE DE EGO
               </span>
             </div>
@@ -167,13 +167,13 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Card 1 */}
           <div className="p-3.5 sm:p-5 bg-asphalt-900/95 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate rounded-none hover:border-blood-500 transition-all group">
             <div className="flex items-center justify-between mb-1.5 sm:mb-2">
-              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500">PROGRAMAS</span>
+              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-300 font-bold">PROGRAMAS</span>
               <Flame className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-blood-500 group-hover:scale-110 transition-transform" />
             </div>
             <div className="font-combat text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-none">
               6 MODALIDADES OFICIAIS
             </div>
-            <p className="text-[11px] sm:text-xs text-zinc-400 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
+            <p className="text-[11px] sm:text-xs text-zinc-300 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
               Boxe, Muay Thai, Jiu-Jitsu, Krav Maga, Jeet Kune Do e Kids.
             </p>
           </div>
@@ -181,13 +181,13 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Card 2 */}
           <div className="p-3.5 sm:p-5 bg-asphalt-900/95 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate rounded-none hover:border-blood-500 transition-all group">
             <div className="flex items-center justify-between mb-1.5 sm:mb-2">
-              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500">INTENSIDADE</span>
+              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-300 font-bold">INTENSIDADE</span>
               <Activity className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-blood-500 group-hover:scale-110 transition-transform" />
             </div>
             <div className="font-combat text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-none">
               1000 KCAL/H
             </div>
-            <p className="text-[11px] sm:text-xs text-zinc-400 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
+            <p className="text-[11px] sm:text-xs text-zinc-300 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
               Queima calórica, tônus muscular e preparo cardiovascular.
             </p>
           </div>
@@ -195,13 +195,13 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Card 3 */}
           <div className="p-3.5 sm:p-5 bg-asphalt-900/95 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate rounded-none hover:border-blood-500 transition-all group">
             <div className="flex items-center justify-between mb-1.5 sm:mb-2">
-              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500">SEGURANÇA</span>
+              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-300 font-bold">SEGURANÇA</span>
               <ShieldCheck className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-blood-500 group-hover:scale-110 transition-transform" />
             </div>
             <div className="font-combat text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-none">
               ZERO EGO
             </div>
-            <p className="text-[11px] sm:text-xs text-zinc-400 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
+            <p className="text-[11px] sm:text-xs text-zinc-300 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
               Ambiente acolhedor. Iniciantes acompanhados em cada golpe.
             </p>
           </div>
@@ -209,13 +209,13 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Card 4 */}
           <div className="p-3.5 sm:p-5 bg-asphalt-900/95 border-l-2 border-blood-600 border-t border-r border-b border-zinc-800/80 shadow-combat-plate rounded-none hover:border-blood-500 transition-all group">
             <div className="flex items-center justify-between mb-1.5 sm:mb-2">
-              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500">LINHAGEM</span>
+              <span className="font-tactical text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-300 font-bold">LINHAGEM</span>
               <Trophy className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-blood-500 group-hover:scale-110 transition-transform" />
             </div>
             <div className="font-combat text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-none">
               MESTRE ANDRÉ
             </div>
-            <p className="text-[11px] sm:text-xs text-zinc-400 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
+            <p className="text-[11px] sm:text-xs text-zinc-300 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
               Supervisão de quem tem mais de 20 anos de tatame em Montes Claros.
             </p>
           </div>

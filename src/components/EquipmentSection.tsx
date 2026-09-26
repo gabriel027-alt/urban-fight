@@ -77,7 +77,7 @@ export const EquipmentSection: React.FC = () => {
             Equipe-se com padrão profissional para os treinos na Urban Fight.
           </p>
 
-          <p className="font-sans text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="font-sans text-zinc-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             Se você tem interesse em adquirir luvas de boxe/muay thai, bandagens, protetores bucais, caneleiras ou equipamentos específicos recomendados pelo Mestre André, entre em contato diretamente com nossa recepção para verificar indicações de marcas e disponibilidade.
           </p>
         </div>
@@ -107,7 +107,7 @@ export const EquipmentSection: React.FC = () => {
                     <h3 className="font-combat text-2xl sm:text-3xl uppercase text-white tracking-wide group-hover:text-blood-400 transition-colors leading-none">
                       {item.title}
                     </h3>
-                    <span className="font-tactical text-[10px] uppercase tracking-wider text-zinc-400 font-semibold block mt-1">
+                    <span className="font-tactical text-[10px] uppercase tracking-wider text-zinc-300 font-semibold block mt-1">
                       {item.subtitle}
                     </span>
                   </div>
@@ -120,7 +120,7 @@ export const EquipmentSection: React.FC = () => {
 
                 {/* Specs Pills */}
                 <div className="pt-5 mt-5 border-t border-zinc-800/80 space-y-1.5">
-                  <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-400 font-bold block mb-2">
+                  <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-300 font-bold block mb-2">
                     ESPECIFICAÇÕES TÉCNICAS:
                   </span>
                   {item.specs.map((spec, sIdx) => (
@@ -157,13 +157,13 @@ export const EquipmentSection: React.FC = () => {
 
               <div className="flex flex-wrap items-center gap-3 pt-1">
                 <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-300 bg-black/60 px-2.5 py-1 border border-zinc-800">
-                  ? Marcas Homologadas
+                  ✓ Marcas Homologadas
                 </span>
                 <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-300 bg-black/60 px-2.5 py-1 border border-zinc-800">
-                  ? Pronta Entrega na Sede
+                  ✓ Pronta Entrega na Sede
                 </span>
                 <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-300 bg-black/60 px-2.5 py-1 border border-zinc-800">
-                  ? Tamanhos Certos por Biotipo
+                  ✓ Tamanhos Certos por Biotipo
                 </span>
               </div>
             </div>
@@ -174,12 +174,12 @@ export const EquipmentSection: React.FC = () => {
                 href={whatsappEquipmentsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-none border border-blood-400/50 shadow-spotlight-sharp transition-all group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-none border border-blood-400/50 shadow-spotlight-sharp transition-all group focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <span>CONSULTAR EQUIPAMENTOS NO WHATSAPP</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
               </a>
-              <span className="block text-center lg:text-right text-[11px] font-tactical text-zinc-400 uppercase tracking-widest">
+              <span className="block text-center lg:text-right text-[11px] font-tactical text-zinc-300 uppercase tracking-widest">
                 Recepção Urban Fight • Santo Expedito
               </span>
             </div>

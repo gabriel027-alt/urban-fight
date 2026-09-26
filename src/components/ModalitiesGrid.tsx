@@ -88,7 +88,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
             </span>
           </h2>
 
-          <p className="font-sans text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="font-sans text-zinc-300 text-sm sm:text-base max-w-2xl mx-auto">
             Da nobreza clássica de Muhammad Ali à filosofia direta de Bruce Lee: metodologias consagradas adaptadas pelo Mestre André para a sua evolução física, autodefesa e queima extrema.
           </p>
 
@@ -98,10 +98,10 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2 text-xs sm:text-sm font-tactical uppercase tracking-wider font-bold transition-all ${
+                className={`px-4 py-2 text-xs sm:text-sm font-tactical uppercase tracking-wider font-bold transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black ${
                   activeCategory === cat.id
                     ? "bg-blood-600 text-white shadow-spotlight-sharp border-b-2 border-blood-400"
-                    : "bg-[#0a0a0c] text-zinc-400 hover:text-white hover:bg-zinc-900 border border-zinc-800"
+                    : "bg-[#0a0a0c] text-zinc-300 hover:text-white hover:bg-zinc-900 border border-zinc-800"
                 }`}
               >
                 {cat.label}
@@ -179,7 +179,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 {/* Tactical Metrics: Burn & Intensity */}
                 <div className="grid grid-cols-2 gap-2 mb-6 p-3 bg-zinc-950/80 border border-zinc-700 rounded-none shadow-inner">
                   <div>
-                    <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-400 font-bold block">
+                    <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-300 font-bold block">
                       GASTO CALÓRICO
                     </span>
                     <span className="font-tactical text-xs font-bold text-white flex items-center gap-1 mt-0.5">
@@ -188,7 +188,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                     </span>
                   </div>
                   <div>
-                    <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-400 font-bold block">
+                    <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-300 font-bold block">
                       INTENSIDADE
                     </span>
                     <span className="font-tactical text-xs font-bold text-blood-400 flex items-center gap-1 mt-0.5">
@@ -226,7 +226,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
               {/* Action Button */}
               <button
                 onClick={() => onSelectModality(item.name)}
-                className="relative z-10 w-full py-3.5 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-lg font-bold border border-zinc-600 hover:border-blood-500 rounded-none flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-spotlight-sharp"
+                className="relative z-10 w-full py-3.5 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-lg font-bold border border-zinc-600 hover:border-blood-500 rounded-none flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-spotlight-sharp focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <span>QUERO TREINAR ESSA MODALIDADE</span>
               </button>
@@ -278,12 +278,12 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-none border border-blood-400/50 shadow-spotlight-sharp transition-all group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-none border border-blood-400/50 shadow-spotlight-sharp transition-all group focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <span>CONSULTAR PLANOS COMBINADOS</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
               </a>
-              <span className="block text-center lg:text-right text-[11px] font-tactical text-zinc-400 uppercase tracking-widest mt-2">
+              <span className="block text-center lg:text-right text-[11px] font-tactical text-zinc-300 uppercase tracking-widest mt-2">
                 Atendimento direto com Mestre André
               </span>
             </div>

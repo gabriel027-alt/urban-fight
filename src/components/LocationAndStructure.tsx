@@ -69,7 +69,7 @@ export const LocationAndStructure: React.FC = () => {
             </span>
           </h2>
 
-          <p className="font-sans text-zinc-400 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="font-sans text-zinc-300 text-sm sm:text-base max-w-2xl mx-auto">
             Projetada para atletas de combate e acolhedora para famílias e iniciantes. Conheça as áreas especializadas da sede Santo Expedito: tatame, sacos pesados e circuito funcional marcial.
           </p>
         </div>
@@ -147,7 +147,7 @@ export const LocationAndStructure: React.FC = () => {
                 <h3 className="font-combat text-3xl sm:text-4xl text-white uppercase tracking-wider leading-none">
                   AV. CULA MANGABEIRA, 1497
                 </h3>
-                <p className="font-tactical text-xs text-zinc-400 mt-2 uppercase tracking-wide">
+                <p className="font-tactical text-xs text-zinc-300 mt-2 uppercase tracking-wide">
                   BAIRRO SANTO EXPEDITO • MONTES CLAROS - MG • CEP 39401-002
                 </p>
               </div>
@@ -163,9 +163,9 @@ export const LocationAndStructure: React.FC = () => {
                     <strong className="text-white block font-tactical uppercase text-xs">
                       Horários de Treino:
                     </strong>
-                    <span className="text-zinc-400">{URBAN_FIGHT_CONFIG.workingHours.weekdays}</span>
+                    <span className="text-zinc-300">{URBAN_FIGHT_CONFIG.workingHours.weekdays}</span>
                     <br />
-                    <span className="text-zinc-400">{URBAN_FIGHT_CONFIG.workingHours.saturday}</span>
+                    <span className="text-zinc-300">{URBAN_FIGHT_CONFIG.workingHours.saturday}</span>
                   </div>
                 </div>
 
@@ -187,7 +187,7 @@ export const LocationAndStructure: React.FC = () => {
                 href={URBAN_FIGHT_CONFIG.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-4 px-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl font-black rounded-none flex items-center justify-center gap-2 shadow-spotlight-sharp transition-all"
+                className="w-full py-4 px-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl font-black rounded-none flex items-center justify-center gap-2 shadow-spotlight-sharp transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <Navigation className="w-5 h-5" />
                 <span>TRAÇAR ROTA NO GOOGLE MAPS</span>
@@ -198,7 +198,7 @@ export const LocationAndStructure: React.FC = () => {
                 href="https://waze.com/ul?q=Av.+Cula+Mangabeira,+1497+-+Santo+Expedito,+Montes+Claros+-+MG"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider flex items-center justify-center gap-2 border border-zinc-700 rounded-none transition-colors"
+                className="w-full py-3 px-4 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider flex items-center justify-center gap-2 border border-zinc-700 rounded-none transition-colors focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <Navigation className="w-4 h-4 text-sky-400" />
                 <span>ABRIR NO APLICATIVO WAZE</span>

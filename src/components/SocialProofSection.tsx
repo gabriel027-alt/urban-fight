@@ -156,7 +156,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-blood-500 text-blood-500" />
                 ))}
-                <span className="ml-2 font-tactical text-xs text-zinc-400 font-bold uppercase tracking-wider hidden sm:inline">
+                <span className="ml-2 font-tactical text-xs text-zinc-300 font-bold uppercase tracking-wider hidden sm:inline">
                   5.0 • AVALIAÇÃO OFICIAL
                 </span>
               </div>
@@ -177,7 +177,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
                   <p className="font-combat text-xl sm:text-2xl text-white tracking-wider uppercase leading-none">
                     @whoami.dev
                   </p>
-                  <span className="font-tactical text-xs text-zinc-400 uppercase tracking-wider">
+                  <span className="font-tactical text-xs text-zinc-300 uppercase tracking-wider">
                     - @whoami.dev (via Instagram)
                   </span>
                 </div>
@@ -201,7 +201,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
           <div className="mt-12 text-center">
             <button
               onClick={onStartTriage}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] rounded-none border border-blood-400/50 group"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] rounded-none border border-blood-400/50 group focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
             >
               <Flame className="w-5 h-5 text-white" />
               <span>QUERO AGENDAR MINHA AULA EXPERIMENTAL</span>

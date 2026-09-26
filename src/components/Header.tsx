@@ -106,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
           {/* Brand Logo with Official Emblem */}
           <a
             href="#"
-            className="flex items-center gap-3 group focus:outline-none"
+            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
           >
             <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-blood-500 shadow-spotlight-sharp group-hover:scale-105 transition-transform bg-black flex-shrink-0">
               <Image
@@ -124,7 +124,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
                   URBAN <span className="text-blood-500">FIGHT</span>
                 </span>
               </div>
-              <p className="font-tactical text-[9px] uppercase tracking-[0.25em] text-zinc-400 font-bold -mt-0.5">
+              <p className="font-tactical text-[9px] uppercase tracking-[0.25em] text-zinc-300 font-bold -mt-0.5">
                 MONTES CLAROS • MG
               </p>
             </div>
@@ -140,7 +140,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
                   e.preventDefault();
                   scrollToSection(link.href, 80);
                 }}
-                className="font-tactical text-xs uppercase tracking-widest text-zinc-300 hover:text-white hover:border-b-2 hover:border-blood-600 py-1 transition-all duration-150 font-bold"
+                className="font-tactical text-xs uppercase tracking-widest text-zinc-300 hover:text-white hover:border-b-2 hover:border-blood-600 py-1 transition-all duration-150 font-bold focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
               >
                 {link.name}
               </a>
@@ -151,7 +151,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={handleCtaClick}
-              className="px-5 py-2.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-lg font-bold transition-all rounded-none border border-blood-500/70 flex items-center gap-2"
+              className="px-5 py-2.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-lg font-bold transition-all rounded-none border border-blood-500/70 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
             >
               <span>AULA EXPERIMENTAL</span>
               <ArrowRight className="w-4 h-4" />
@@ -161,7 +161,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 bg-asphalt-900 border border-zinc-800 text-zinc-300 hover:text-white rounded-md"
+            className="lg:hidden p-2 bg-asphalt-900 border border-zinc-800 text-zinc-300 hover:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
             aria-label="Menu de navegação"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu-drawer"
@@ -188,7 +188,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
                 <button
                   key={link.name}
                   onClick={() => handleAction(link.href)}
-                  className="text-left py-2.5 px-3 font-tactical text-sm uppercase tracking-wider font-bold text-zinc-200 hover:bg-asphalt-800 hover:text-blood-400 transition-colors rounded-md"
+                  className="text-left py-2.5 px-3 font-tactical text-sm uppercase tracking-wider font-bold text-zinc-200 hover:bg-asphalt-800 hover:text-blood-400 transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
                 >
                   {link.name}
                 </button>
@@ -198,7 +198,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
             <div className="pt-2 border-t border-zinc-800">
               <button
                 onClick={handleCtaClick}
-                className="w-full py-3.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 font-combat uppercase tracking-wider text-xl font-black text-white flex items-center justify-center gap-2 rounded-none border border-blood-500/70 transition-all"
+                className="w-full py-3.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 font-combat uppercase tracking-wider text-xl font-black text-white flex items-center justify-center gap-2 rounded-none border border-blood-500/70 transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <span>AGENDAR AULA EXPERIMENTAL GRATUITA</span>
                 <ArrowRight className="w-4 h-4" />

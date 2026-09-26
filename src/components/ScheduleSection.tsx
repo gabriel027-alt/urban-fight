@@ -127,7 +127,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               <button
                 key={tab.id}
                 onClick={() => setFilterModality(tab.id)}
-                className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold transition-all ${
+                className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black ${
                   filterModality === tab.id
                     ? "bg-blood-600 text-white shadow-spotlight-sharp border-b-2 border-blood-400"
                     : "bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-800 border border-zinc-700"
@@ -184,7 +184,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               <div className="pt-6 mt-6 border-t border-zinc-800">
                 <button
                   onClick={() => onScheduleSlot(item.name)}
-                  className="w-full py-3 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-base font-bold rounded-none flex items-center justify-center gap-2 border border-zinc-600 hover:border-blood-500 transition-all shadow-md group-hover:shadow-spotlight-sharp"
+                  className="w-full py-3 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-base font-bold rounded-none flex items-center justify-center gap-2 border border-zinc-600 hover:border-blood-500 transition-all shadow-md group-hover:shadow-spotlight-sharp focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
                 >
                   <span>AGENDAR NESTA MODALIDADE</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -209,7 +209,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
                   SINTA A VIBRAÇÃO DOS TREINOS NA URBAN FIGHT
                 </h3>
               </div>
-              <span className="font-tactical text-xs text-zinc-400 uppercase tracking-wider">
+              <span className="font-tactical text-xs text-zinc-300 uppercase tracking-wider font-semibold">
                 GRAVADO AO VIVO NA SEDE SANTO EXPEDITO
               </span>
             </div>
@@ -232,13 +232,13 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               </video>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-zinc-400">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-zinc-300">
               <p>
                 Confira como nossos alunos se preparam, a intensidade dos exercícios aeróbicos e o suporte técnico em cada golpe.
               </p>
               <button
                 onClick={() => onScheduleSlot("Aula Experimental")}
-                className="shrink-0 px-6 py-3 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-none transition-all shadow-spotlight-sharp"
+                className="shrink-0 px-6 py-3 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-none transition-all shadow-spotlight-sharp focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 EXPERIMENTAR ESTE TREINO
               </button>

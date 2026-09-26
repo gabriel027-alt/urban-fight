@@ -145,7 +145,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                   </video>
                 </div>
 
-                <p className="font-sans text-xs text-zinc-400 text-center sm:text-left">
+                <p className="font-sans text-xs text-zinc-300 text-center sm:text-left">
                   Dê o play para ouvir diretamente do Mestre André sobre a metodologia e acolhimento da Urban Fight.
                 </p>
               </div>
@@ -171,7 +171,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
 
             {/* Graphic Martial Belt Ranks & Lineage */}
             <div className="space-y-3">
-              <span className="font-tactical text-xs uppercase tracking-widest text-zinc-400 font-bold block">
+              <span className="font-tactical text-xs uppercase tracking-widest text-zinc-300 font-bold block">
                 GRADE DE FORMAÇÃO & LINHAGEM TÉCNICA:
               </span>
 
@@ -190,7 +190,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                           {rank.rank}
                         </span>
                       </div>
-                      <p className="text-xs text-zinc-400 font-sans">
+                      <p className="text-xs text-zinc-300 font-sans">
                         {rank.details}
                       </p>
                     </div>
@@ -209,7 +209,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
             <div className="pt-2">
               <button
                 onClick={onStartTriage}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl font-black shadow-spotlight-sharp transition-all rounded-none flex items-center justify-center gap-3 border border-blood-500/50"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl font-black shadow-spotlight-sharp transition-all rounded-none flex items-center justify-center gap-3 border border-blood-500/50 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <span>TREINAR COM O MESTRE ANDRÉ</span>
                 <ArrowRight className="w-5 h-5" />
@@ -299,7 +299,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
             <div className="mt-8 text-center">
               <button
                 onClick={onStartTriage}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 bg-zinc-900 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-xl font-bold border border-zinc-700 hover:border-blood-500 rounded-none transition-all duration-300 shadow-combat-plate group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 bg-zinc-900 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-xl font-bold border border-zinc-700 hover:border-blood-500 rounded-none transition-all duration-300 shadow-combat-plate group focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <span>FAZER PARTE DESSA HISTÓRIA</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
