@@ -21,6 +21,107 @@ import {
 } from "lucide-react";
 import { URBAN_FIGHT_CONFIG } from "@/lib/utils";
 
+interface ModalityStyle {
+  badgeBg: string;
+  badgeText: string;
+  badgeBorder: string;
+  badgeDot: string;
+  iconBorder: string;
+  iconBg: string;
+  iconColor: string;
+  hoverBorder: string;
+  taglineColor: string;
+  categoryTag: string;
+}
+
+const MODALITY_STYLES: Record<string, ModalityStyle> = {
+  "boxe-tradicional": {
+    badgeBg: "bg-red-500/15",
+    badgeText: "text-red-300",
+    badgeBorder: "border-red-500/30",
+    badgeDot: "bg-red-500",
+    iconBorder: "border-red-500/30 group-hover:border-red-500/70",
+    iconBg: "bg-red-950/50",
+    iconColor: "text-red-500",
+    hoverBorder: "hover:border-red-500/70",
+    taglineColor: "text-red-400",
+    categoryTag: "Nobre Arte • 900 kcal/h",
+  },
+  "kickboxing-muaythai": {
+    badgeBg: "bg-amber-500/15",
+    badgeText: "text-amber-300",
+    badgeBorder: "border-amber-500/30",
+    badgeDot: "bg-amber-500",
+    iconBorder: "border-amber-500/30 group-hover:border-amber-500/70",
+    iconBg: "bg-amber-950/50",
+    iconColor: "text-amber-400",
+    hoverBorder: "hover:border-amber-500/70",
+    taglineColor: "text-amber-400",
+    categoryTag: "8 Armas • 1000 kcal/h",
+  },
+  "jiu-jitsu": {
+    badgeBg: "bg-sky-500/15",
+    badgeText: "text-sky-300",
+    badgeBorder: "border-sky-500/30",
+    badgeDot: "bg-sky-500",
+    iconBorder: "border-sky-500/30 group-hover:border-sky-500/70",
+    iconBg: "bg-sky-950/50",
+    iconColor: "text-sky-400",
+    hoverBorder: "hover:border-sky-500/70",
+    taglineColor: "text-sky-400",
+    categoryTag: "Arte Suave • Solo & Submissão",
+  },
+  "jeet-kune-do-defesa": {
+    badgeBg: "bg-zinc-400/15",
+    badgeText: "text-zinc-200",
+    badgeBorder: "border-zinc-500/30",
+    badgeDot: "bg-zinc-300",
+    iconBorder: "border-zinc-500/30 group-hover:border-zinc-400/70",
+    iconBg: "bg-zinc-900/60",
+    iconColor: "text-zinc-200",
+    hoverBorder: "hover:border-zinc-400/70",
+    taglineColor: "text-zinc-300",
+    categoryTag: "Tática & Sobrevivência Urbana",
+  },
+  "krav-maga": {
+    badgeBg: "bg-orange-500/15",
+    badgeText: "text-orange-300",
+    badgeBorder: "border-orange-500/30",
+    badgeDot: "bg-orange-500",
+    iconBorder: "border-orange-500/30 group-hover:border-orange-500/70",
+    iconBg: "bg-orange-950/50",
+    iconColor: "text-orange-400",
+    hoverBorder: "hover:border-orange-500/70",
+    taglineColor: "text-orange-400",
+    categoryTag: "Defesa Militar • Instintivo",
+  },
+  "taekwondo-kids": {
+    badgeBg: "bg-emerald-500/15",
+    badgeText: "text-emerald-300",
+    badgeBorder: "border-emerald-500/30",
+    badgeDot: "bg-emerald-500",
+    iconBorder: "border-emerald-500/30 group-hover:border-emerald-500/70",
+    iconBg: "bg-emerald-950/50",
+    iconColor: "text-emerald-400",
+    hoverBorder: "hover:border-emerald-500/70",
+    taglineColor: "text-emerald-400",
+    categoryTag: "Turma Kids • Disciplina & Família",
+  },
+};
+
+const defaultStyle: ModalityStyle = {
+  badgeBg: "bg-blood-600/20",
+  badgeText: "text-blood-300",
+  badgeBorder: "border-blood-500/30",
+  badgeDot: "bg-blood-500",
+  iconBorder: "border-blood-500/30 group-hover:border-blood-500/70",
+  iconBg: "bg-blood-950/50",
+  iconColor: "text-blood-400",
+  hoverBorder: "hover:border-blood-500/70",
+  taglineColor: "text-blood-400",
+  categoryTag: "Treino Especializado",
+};
+
 interface ModalitiesGridProps {
   onSelectModality: (modalityName: string) => void;
 }
@@ -56,22 +157,21 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
     e.currentTarget.style.transform = "rotateX(0deg) rotateY(0deg)";
   };
 
-
-
-  const renderIcon = (iconName: Modality["iconName"]) => {
+  const renderIcon = (iconName: Modality["iconName"], customClass?: string) => {
+    const iconCls = `w-6 h-6 stroke-[2.2] ${customClass || "text-blood-500"}`;
     switch (iconName) {
       case "Flame":
-        return <Flame className="w-6 h-6 stroke-red-500 text-blood-500" />;
+        return <Flame className={iconCls} />;
       case "Zap":
-        return <Zap className="w-6 h-6 stroke-red-500 text-blood-500" />;
+        return <Zap className={iconCls} />;
       case "Swords":
-        return <Swords className="w-6 h-6 stroke-red-500 text-blood-500" />;
+        return <Swords className={iconCls} />;
       case "Shield":
-        return <Shield className="w-6 h-6 stroke-red-500 text-blood-500" />;
+        return <Shield className={iconCls} />;
       case "Sparkles":
-        return <Sparkles className="w-6 h-6 stroke-red-500 text-blood-500" />;
+        return <Sparkles className={iconCls} />;
       default:
-        return <Activity className="w-6 h-6 stroke-red-500 text-blood-500" />;
+        return <Activity className={iconCls} />;
     }
   };
 
@@ -116,121 +216,123 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
 
         {/* 3D Tilt Modalities Grid with Background Images & Specular Glare */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredModalities.map((item) => (
-            <div key={item.id} className="tilt-perspective h-full">
-              <div
-                onMouseMove={handleMouseMove}
-                onMouseLeave={handleMouseLeave}
-                className="tilt-card tilt-card-inner relative bg-zinc-950 border border-zinc-800 hover:border-blood-500/80 rounded-xl overflow-hidden p-6 sm:p-7 flex flex-col justify-between group shadow-xl transition-all duration-300 h-full"
-              >
-                {/* Photo Background with Next.js Image & group-hover:scale-105 zoom */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                  <Image
-                    src={item.imageUrl}
-                    alt={item.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-40 brightness-[0.4] contrast-125"
-                  />
-                </div>
+          {filteredModalities.map((item) => {
+            const style = MODALITY_STYLES[item.id] || defaultStyle;
 
-                {/* Dark Combat Luxury Depth Gradient Overlay for Legibility & Contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/55 pointer-events-none" />
-
-                {/* Specular Glare Effect */}
-                <div className="tilt-glare" />
-
-                {/* Content Header */}
-                <div className="relative z-10">
-                  <div className="flex items-start justify-between gap-3 mb-5">
-                    <div className="w-12 h-12 bg-black/90 border border-zinc-800 flex items-center justify-center rounded-xl group-hover:border-blood-500/80 transition-colors shadow-md">
-                      {renderIcon(item.iconName)}
-                    </div>
-                    {item.badge && (
-                      <span className="px-2.5 py-1 text-[10px] font-tactical font-bold tracking-wider uppercase bg-blood-600/30 border border-blood-500/50 text-blood-300 rounded-lg shadow-sm">
-                        {item.badge}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Title and Tagline */}
-                  <div className="space-y-1 mb-4">
-                    {item.legendTribute && (
-                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 mb-1 bg-zinc-900/90 border border-blood-500/60 text-[10px] font-tactical uppercase tracking-wider text-blood-300 rounded-md shadow-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse" />
-                        <span>{item.legendTribute}</span>
-                      </div>
-                    )}
-                    <h3 className="font-combat text-3xl sm:text-4xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-none">
-                      {item.name}
-                    </h3>
-                    <p className="font-tactical text-xs text-zinc-300 tracking-wider italic pt-1 uppercase">
-                      &ldquo;{item.tagline}&rdquo;
-                    </p>
-                  </div>
-
-                  {/* Description: high readability text-zinc-100 */}
-                  <p className="font-sans text-sm text-zinc-100 leading-relaxed mb-6">
-                    {item.description}
-                  </p>
-
-                  {/* Tactical Metrics: Burn & Intensity */}
-                  <div className="grid grid-cols-2 gap-2 mb-6 p-3 bg-black/80 border border-zinc-800/90 rounded-lg shadow-inner">
-                    <div>
-                      <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-300 font-bold block">
-                        GASTO CALÓRICO
-                      </span>
-                      <span className="font-tactical text-xs font-bold text-white flex items-center gap-1 mt-0.5">
-                        <Flame className="w-3.5 h-3.5 text-blood-500" />
-                        {item.caloriesBurn}
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-300 font-bold block">
-                        INTENSIDADE
-                      </span>
-                      <span className="font-tactical text-xs font-bold text-blood-400 flex items-center gap-1 mt-0.5">
-                        <Activity className="w-3.5 h-3.5 text-blood-400" />
-                        {item.intensity}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Benefits checklist */}
-                  <div className="space-y-2 mb-6">
-                    <span className="font-tactical text-[10px] uppercase tracking-wider text-zinc-300 font-bold block">
-                      VANTAGENS IMEDIATAS:
-                    </span>
-                    {item.benefits.slice(0, 3).map((b, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-zinc-200 font-sans">
-                        <Check className="w-3.5 h-3.5 text-blood-500 shrink-0 mt-0.5" />
-                        <span>{b}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Audience */}
-                  <div className="border-t border-zinc-800/80 pt-3 mb-6">
-                    <div className="flex items-center gap-1.5 font-tactical text-[10px] uppercase tracking-wider text-zinc-300 mb-1 font-bold">
-                      <UserCheck className="w-3 h-3 text-blood-400" />
-                      <span>PERFIL DO ALUNO:</span>
-                    </div>
-                    <p className="text-xs text-zinc-200 font-sans">
-                      {item.targetAudience.join(" • ")}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Action Button (48px Touch Target & Focus Rings) */}
-                <button
-                  onClick={() => onSelectModality(item.name)}
-                  className="relative z-10 w-full min-h-[48px] py-3.5 px-4 bg-zinc-900/90 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-lg font-bold border border-zinc-700 hover:border-blood-500 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-spotlight-sharp focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
+            return (
+              <div key={item.id} className="tilt-perspective h-full">
+                <div
+                  onMouseMove={handleMouseMove}
+                  onMouseLeave={handleMouseLeave}
+                  className={`tilt-card tilt-card-inner relative bg-zinc-950/80 border border-zinc-800 ${style.hoverBorder} rounded-xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-xl transition-all duration-300 h-full`}
                 >
-                  <span>QUERO TREINAR ESSA MODALIDADE</span>
-                </button>
+                  {/* Photo Background with Next.js Image & group-hover:scale-105 zoom */}
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <Image
+                      src={item.imageUrl}
+                      alt={item.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80 brightness-[0.85] contrast-105"
+                    />
+                  </div>
+
+                  {/* Gradiente inteligente: topo translúcido para exibição nítida das fotos e base escura para contraste do texto */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/65 to-black/15 pointer-events-none" />
+
+                  {/* Specular Glare Effect */}
+                  <div className="tilt-glare" />
+
+                  {/* Content Header */}
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between gap-3 mb-6">
+                      <div className={`w-12 h-12 ${style.iconBg} backdrop-blur-md border ${style.iconBorder} flex items-center justify-center rounded-xl shadow-lg transition-colors`}>
+                        {renderIcon(item.iconName, style.iconColor)}
+                      </div>
+
+                      {/* Micro-badge único e refinado */}
+                      <div className={`inline-flex items-center gap-1.5 px-3 py-1 ${style.badgeBg} border ${style.badgeBorder} ${style.badgeText} font-tactical text-[11px] font-bold uppercase tracking-wider rounded-lg backdrop-blur-md shadow-sm`}>
+                        <span className={`w-1.5 h-1.5 rounded-full ${style.badgeDot} animate-pulse`} />
+                        <span>{item.badge || style.categoryTag}</span>
+                      </div>
+                    </div>
+
+                    {/* Title and Category Tag */}
+                    <div className="space-y-1.5 mb-4">
+                      <span className={`font-tactical text-[10px] uppercase tracking-widest ${style.taglineColor} font-bold block`}>
+                        {style.categoryTag}
+                      </span>
+                      <h3 className="font-combat text-3xl sm:text-4xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-none drop-shadow-md">
+                        {item.name}
+                      </h3>
+                      <p className="font-sans text-xs text-zinc-300 italic pt-0.5 line-clamp-1">
+                        &ldquo;{item.tagline}&rdquo;
+                      </p>
+                    </div>
+
+                    {/* Description: caixa baixa, natural e legível com alto contraste */}
+                    <p className="font-sans text-sm text-zinc-200 leading-relaxed mb-6 font-normal">
+                      {item.description}
+                    </p>
+
+                    {/* Tactical Metrics: Burn & Intensity */}
+                    <div className="grid grid-cols-2 gap-2 mb-6 p-3 bg-black/60 backdrop-blur-md border border-white/10 rounded-xl shadow-inner">
+                      <div>
+                        <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-400 font-bold block">
+                          GASTO CALÓRICO
+                        </span>
+                        <span className="font-tactical text-xs font-bold text-white flex items-center gap-1 mt-0.5">
+                          <Flame className="w-3.5 h-3.5 text-blood-500" />
+                          {item.caloriesBurn}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-400 font-bold block">
+                          INTENSIDADE
+                        </span>
+                        <span className="font-tactical text-xs font-bold text-zinc-200 flex items-center gap-1 mt-0.5">
+                          <Activity className="w-3.5 h-3.5 text-blood-400" />
+                          {item.intensity}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Benefits checklist */}
+                    <div className="space-y-2 mb-6">
+                      <span className="font-tactical text-[10px] uppercase tracking-wider text-zinc-300 font-bold block">
+                        VANTAGENS IMEDIATAS:
+                      </span>
+                      {item.benefits.slice(0, 3).map((b, i) => (
+                        <div key={i} className="flex items-start gap-2 text-xs text-zinc-200 font-sans leading-snug">
+                          <Check className="w-3.5 h-3.5 text-blood-500 shrink-0 mt-0.5" />
+                          <span>{b}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Audience */}
+                    <div className="border-t border-white/10 pt-3 mb-6">
+                      <div className="flex items-center gap-1.5 font-tactical text-[10px] uppercase tracking-wider text-zinc-400 mb-1 font-bold">
+                        <UserCheck className="w-3 h-3 text-blood-400" />
+                        <span>PERFIL DO ALUNO:</span>
+                      </div>
+                      <p className="text-xs text-zinc-300 font-sans">
+                        {item.targetAudience.join(" • ")}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Action Button (48px Touch Target & Focus Rings) */}
+                  <button
+                    onClick={() => onSelectModality(item.name)}
+                    className="relative z-10 w-full min-h-[48px] py-3.5 px-4 bg-black/80 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-lg font-bold border border-white/15 hover:border-blood-500 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-spotlight-sharp focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
+                  >
+                    <span>QUERO TREINAR ESSA MODALIDADE</span>
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Highlight Banner: Multi-Modalities / Cross-Training Package */}
