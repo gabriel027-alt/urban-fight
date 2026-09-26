@@ -133,7 +133,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                     controls
                     playsInline
                     preload="metadata"
-                    poster="/mestre-andre.jpg"
+                    poster="/logo-urban-fight.jpg"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
                     }}
@@ -247,7 +247,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
               {/* Top Video Header Tag */}
               <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
                 <div className="flex items-center gap-2 text-zinc-300">
-                  <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse motion-reduce:animate-none" />
                   <span className="font-bold uppercase tracking-wider">DOCUMENTÁRIO INSTITUCIONAL</span>
                 </div>
                 <span className="text-zinc-500 hidden sm:inline-block uppercase tracking-widest text-[11px]">
@@ -259,10 +259,13 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
               <div className="relative aspect-video w-full bg-black flex items-center justify-center">
                 <video
                   src="/video-mestre-historia.mp4"
-                  poster="/mestre-andre.jpg"
+                  poster="/logo-urban-fight.jpg"
                   controls
                   playsInline
                   preload="metadata"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
                   className="w-full h-full object-contain bg-black"
                 >
                   Seu navegador não suporta a reprodução deste vídeo.

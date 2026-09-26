@@ -220,7 +220,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
                 controls
                 playsInline
                 preload="metadata"
-                poster="/estrutura-tatame.jpg"
+                poster="/logo-urban-fight.jpg"
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
                 }}

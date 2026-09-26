@@ -23,7 +23,7 @@ export const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <section className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-24 border-b border-zinc-900 bg-[#030303] w-full max-w-[100vw]">
-      {/* Background Video in Absolute Position: Crystal Clear, Bright, with onError fallback and HD Poster */}
+      {/* Background Video in Absolute Position: Crystal Clear, Bright, Zero Poster */}
       <video
         src="/publichero-bg.mp4"
         autoPlay
@@ -31,7 +31,6 @@ export const Hero: React.FC<HeroProps> = ({
         loop
         playsInline
         preload="auto"
-        poster="/logo-urban-fight.jpg"
         onError={(e) => {
           e.currentTarget.style.display = "none";
         }}
