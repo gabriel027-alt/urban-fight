@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
+import React, { useRef, useEffect } from "react";
 import { 
   ArrowRight, 
   MapPin, 
@@ -21,20 +20,34 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({
   onStartTriage,
 }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // Autoplay may be deferred by browser power settings
+      });
+    }
+  }, []);
+
   return (
     <section className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-24 border-b border-zinc-900 bg-[#030303] w-full max-w-[100vw]">
-      {/* Background Static Image: Instant High Performance WebP with priority & Zero Autoplay Lag */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <Image
-          src="/hero-bg-optimized.webp"
-          alt="Tatame e Arena de Artes Marciais Urban Fight Montes Claros"
-          fill
-          priority
-          quality={90}
-          sizes="100vw"
-          className="object-cover object-center brightness-[0.45] contrast-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/45 to-[#030303]" />
+      {/* Background Video: Dynamic Viewport Responsive (480p mobile, 1080p desktop) */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover object-center brightness-[0.55] contrast-110"
+        >
+          <source src="/hero-bg-480p.mp4" type="video/mp4" media="(max-width: 768px)" />
+          <source src="/hero-bg-1080p.mp4" type="video/mp4" media="(min-width: 769px)" />
+          <source src="/publichero-bg.mp4" type="video/mp4" />
+        </video>
+        {/* Dark Gradient Overlay for Absolute Contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/70" />
       </div>
 
       {/* Main Content Container */}
