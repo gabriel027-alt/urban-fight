@@ -107,10 +107,10 @@ export const Hero: React.FC<HeroProps> = ({
             <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-start gap-4">
               <button
                 onClick={onStartTriage}
-                className="w-full sm:w-auto px-8 sm:px-12 py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-2xl sm:text-3xl font-black rounded-xl shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-blood-400/80 flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
+                className="w-full sm:w-auto px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl sm:text-2xl md:text-3xl font-black rounded-xl shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-blood-400/80 flex items-center justify-center gap-2.5 sm:gap-3 focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
               >
-                <span>AGENDE AGORA - 0 CUSTO</span>
-                <ArrowRight className="w-6 h-6" />
+                <span>AGENDE AGORA - É 0 CUSTO</span>
+                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
               </button>
             </div>
 
