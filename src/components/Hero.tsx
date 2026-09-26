@@ -62,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({
             </span>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-asphalt-900/95 border border-amber-500/50 rounded-xl text-[11px] sm:text-xs font-tactical shadow-sm">
+          <div className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 bg-asphalt-900/95 border border-amber-500/50 rounded-xl text-[11px] sm:text-xs font-tactical shadow-sm">
             <div className="flex items-center text-amber-400 gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
