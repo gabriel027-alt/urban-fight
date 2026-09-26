@@ -57,10 +57,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
       <div className="bg-[#030303] border-b border-zinc-900 text-xs py-1.5 px-4 hidden sm:block">
         <div className="max-w-7xl mx-auto flex items-center justify-between font-tactical text-zinc-300">
           <div className="flex items-center gap-2">
-            <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blood-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blood-600"></span>
-            </span>
+            <span className="w-2 h-2 rounded-full bg-blood-600 shrink-0" />
             <span className="text-zinc-200 font-bold uppercase tracking-wider">
               MATRÍCULAS ABERTAS • TURMAS INICIANTES & KIDS
             </span>

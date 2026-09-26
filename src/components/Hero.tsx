@@ -55,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({
         {/* Top Badges */}
         <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3 mb-6">
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 bg-asphalt-900/90 border border-blood-700/60 rounded-xl">
-            <span className="w-2 h-2 rounded-full bg-blood-500 animate-ping motion-reduce:animate-none" />
+            <span className="w-2 h-2 rounded-full bg-blood-500" />
             <span className="font-tactical text-[11px] sm:text-xs uppercase tracking-widest text-blood-400 font-bold">
               QG OFICIAL • MESTRE ANDRÉ
             </span>

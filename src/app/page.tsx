@@ -53,31 +53,31 @@ export default function Home() {
         {/* 4. 3D Tilt Modalities Grid with Specular Glare & Fighter Photos */}
         <ModalitiesGrid onSelectModality={(modality) => scrollToTriage(modality)} />
 
-        {/* 4.1. Modalities Guidance Video by Mestre André */}
-        <ModalitiesGuidanceVideo onStartTriage={() => scrollToTriage()} />
-
-        {/* 5. Reverse Asphalt Combat Tape Marquee */}
-        <MarqueeTicker reverse angle="rotate-1 sm:rotate-1.5" theme="asphalt" />
-
-        {/* 6. Asymmetric Editorial Poster of Mestre André (Lineage & Manifesto) */}
-        <MasterAndreSection onStartTriage={() => scrollToTriage()} />
-
-        {/* 7. Fight Gym Tour Photographic Mosaic & Dark Map */}
-        <LocationAndStructure />
-
-        {/* 7.1. Tactical Social Proof & Student Validation Card */}
-        <SocialProofSection onStartTriage={() => scrollToTriage()} />
-
-        {/* 8. Operational Class Schedule (Shifts & Times) */}
-        <ScheduleSection onScheduleSlot={(modality) => scrollToTriage(modality)} />
-
-        {/* 9. Tactical Combat Gear & Official Supplies */}
-        <EquipmentSection />
-
-        {/* 10. 3-Step Tactical Triage Funnel directly to WhatsApp */}
+        {/* 5. 3-Step Tactical Triage Funnel directly to WhatsApp */}
         <TrialTriage initialModality={selectedModalityForTriage} />
 
-        {/* 10. Objection Breaker FAQ */}
+        {/* 6. Modalities Guidance Video by Mestre André */}
+        <ModalitiesGuidanceVideo onStartTriage={() => scrollToTriage()} />
+
+        {/* 7. Reverse Asphalt Combat Tape Marquee */}
+        <MarqueeTicker reverse angle="rotate-1 sm:rotate-1.5" theme="asphalt" />
+
+        {/* 8. Asymmetric Editorial Poster of Mestre André (Lineage & Manifesto) */}
+        <MasterAndreSection onStartTriage={() => scrollToTriage()} />
+
+        {/* 9. Fight Gym Tour Photographic Mosaic & Dark Map */}
+        <LocationAndStructure />
+
+        {/* 10. Tactical Social Proof & Student Validation Card */}
+        <SocialProofSection onStartTriage={() => scrollToTriage()} />
+
+        {/* 11. Operational Class Schedule (Shifts & Times) */}
+        <ScheduleSection onScheduleSlot={(modality) => scrollToTriage(modality)} />
+
+        {/* 12. Tactical Combat Gear & Official Supplies */}
+        <EquipmentSection />
+
+        {/* 13. Objection Breaker FAQ */}
         <FAQ onStartTriage={() => scrollToTriage()} />
       </main>
 

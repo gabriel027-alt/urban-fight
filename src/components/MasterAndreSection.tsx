@@ -122,7 +122,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                     VÍDEO PRINCIPAL • PALAVRA DO MESTRE
                   </span>
                   <span className="font-tactical text-[10px] tracking-wider text-blood-400 bg-blood-950/80 border border-blood-600/50 px-2 py-0.5 flex items-center gap-1 rounded-md">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse motion-reduce:animate-none" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-blood-500" />
                     ASSISTA AO VÍDEO
                   </span>
                 </div>
@@ -247,7 +247,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
               {/* Top Video Header Tag */}
               <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
                 <div className="flex items-center gap-2 text-zinc-300">
-                  <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse motion-reduce:animate-none" />
+                  <span className="w-2 h-2 rounded-full bg-blood-500" />
                   <span className="font-bold uppercase tracking-wider">DOCUMENTÁRIO INSTITUCIONAL</span>
                 </div>
                 <span className="text-zinc-300 hidden sm:inline-block uppercase tracking-widest text-[11px]">

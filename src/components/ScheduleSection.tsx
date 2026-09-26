@@ -41,7 +41,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
           key={idx}
           className="inline-flex items-center gap-1.5 px-3 py-1 bg-blood-950 border border-blood-500/80 text-blood-200 font-tactical text-xs font-bold shadow-sm"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-blood-500" />
           <span>{h.time} (Fem)</span>
         </span>
       );

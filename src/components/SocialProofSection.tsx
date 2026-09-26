@@ -59,7 +59,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
             {/* Video Header Bar */}
             <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
               <div className="flex items-center gap-2 text-zinc-300">
-                <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-blood-500" />
                 <span className="font-bold uppercase tracking-wider">DEPOIMENTO DO ALUNO</span>
               </div>
               <span className="text-blood-400 uppercase tracking-widest text-[11px] font-bold">
@@ -101,7 +101,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
             {/* Video Header Bar */}
             <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
               <div className="flex items-center gap-2 text-zinc-300">
-                <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse motion-reduce:animate-none" />
+                <span className="w-2 h-2 rounded-full bg-blood-500" />
                 <span className="font-bold uppercase tracking-wider">DEPOIMENTO DO IGOR</span>
               </div>
               <span className="text-blood-400 uppercase tracking-widest text-[11px] font-bold">

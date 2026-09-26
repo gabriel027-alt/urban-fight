@@ -34,9 +34,6 @@ export const FloatingWhatsApp: React.FC = () => {
         aria-label="Falar com Mestre André e recepção no WhatsApp"
         className="group relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-2xl shadow-emerald-950/60 border border-emerald-300/40 hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400"
       >
-        {/* Subtle green pulse ring */}
-        <span className="absolute -inset-1 rounded-full bg-emerald-500/35 animate-ping motion-reduce:animate-none pointer-events-none" />
-
         {/* WhatsApp Official SVG Icon */}
         <svg
           className="w-7 h-7 sm:w-8 sm:h-8 fill-current relative z-10 drop-shadow-md"

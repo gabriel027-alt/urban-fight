@@ -49,7 +49,7 @@ export const ModalitiesGuidanceVideo: React.FC<ModalitiesGuidanceVideoProps> = (
           {/* Top Video Header Tag */}
           <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
             <div className="flex items-center gap-2 text-zinc-300">
-              <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse motion-reduce:animate-none" />
+              <span className="w-2 h-2 rounded-full bg-blood-500" />
               <span className="font-bold uppercase tracking-wider">VÍDEO OFICIAL • GUIA DE ESCOLHA MARCIAL</span>
             </div>
             <span className="text-zinc-300 hidden sm:inline-block uppercase tracking-widest text-[11px]">

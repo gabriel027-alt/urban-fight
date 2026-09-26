@@ -219,7 +219,7 @@ export const LocationAndStructure: React.FC = () => {
             />
             {/* Map Overlay Badge */}
             <div className="absolute bottom-4 left-4 bg-black/90 backdrop-blur-md border border-zinc-700 px-3.5 py-2 flex items-center gap-2 pointer-events-none rounded-lg">
-              <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-blood-500" />
               <span className="font-tactical text-xs font-bold uppercase tracking-wider text-white">
                 URBAN FIGHT • SANTO EXPEDITO
               </span>

@@ -224,7 +224,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 <div
                   onMouseMove={handleMouseMove}
                   onMouseLeave={handleMouseLeave}
-                  className={`tilt-card tilt-card-inner relative bg-zinc-950/80 border border-zinc-800 ${style.hoverBorder} rounded-xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-xl transition-all duration-300 h-full`}
+                  className={`tilt-card tilt-card-inner relative bg-zinc-950/60 border border-zinc-800 ${style.hoverBorder} rounded-xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between group shadow-xl transition-all duration-300 h-full`}
                 >
                   {/* Photo Background with Next.js Image & group-hover:scale-105 zoom */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -233,12 +233,12 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                       alt={item.name}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80 brightness-[0.85] contrast-105"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90 brightness-[0.9] contrast-105"
                     />
                   </div>
 
                   {/* Gradiente inteligente: topo translúcido para exibição nítida das fotos e base escura para contraste do texto */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/65 to-black/15 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
 
                   {/* Specular Glare Effect */}
                   <div className="tilt-glare" />
@@ -250,19 +250,16 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                         {renderIcon(item.iconName, style.iconColor)}
                       </div>
 
-                      {/* Micro-badge único e refinado */}
+                      {/* Tag única e limpa por card */}
                       <div className={`inline-flex items-center gap-1.5 px-3 py-1 ${style.badgeBg} border ${style.badgeBorder} ${style.badgeText} font-tactical text-[11px] font-bold uppercase tracking-wider rounded-lg backdrop-blur-md shadow-sm`}>
-                        <span className={`w-1.5 h-1.5 rounded-full ${style.badgeDot} animate-pulse`} />
-                        <span>{item.badge || style.categoryTag}</span>
+                        <span className={`w-1.5 h-1.5 rounded-full ${style.badgeDot}`} />
+                        <span>{style.categoryTag}</span>
                       </div>
                     </div>
 
-                    {/* Title and Category Tag */}
+                    {/* Title */}
                     <div className="space-y-1.5 mb-4">
-                      <span className={`font-tactical text-[10px] uppercase tracking-widest ${style.taglineColor} font-bold block`}>
-                        {style.categoryTag}
-                      </span>
-                      <h3 className="font-combat text-3xl sm:text-4xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-none drop-shadow-md">
+                      <h3 className="font-combat text-3xl sm:text-4xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-tight drop-shadow-md">
                         {item.name}
                       </h3>
                       <p className="font-sans text-xs text-zinc-300 italic pt-0.5 line-clamp-1">
