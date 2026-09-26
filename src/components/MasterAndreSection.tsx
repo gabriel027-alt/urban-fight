@@ -21,17 +21,17 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
   const martialRanks = [
     {
       title: "Jiu-Jitsu Brasileiro (BJJ)",
-      rank: "Faixa Preta 4º Grau",
-      details: "Linhagem direta de grandes mestres, especialista em alavancas e defesa pessoal no solo.",
-      beltVisual: "bg-black border-y border-zinc-700 relative overflow-hidden flex items-center justify-end px-2",
-      badgeText: "BJJ BLACK BELT",
+      rank: "Liderança Técnica & Head Coach",
+      details: "Especialista em alavancas, controle posicional e defesa pessoal no solo com vasta experiência prática.",
+      beltVisual: "bg-zinc-900 border-y border-zinc-700 relative overflow-hidden flex items-center justify-end px-2",
+      badgeText: "HEAD COACH BJJ",
     },
     {
       title: "Muay Thai & Kickboxing",
-      rank: "Grau Preto / Kru Especialista",
-      details: "Formação técnica em trocação pesada tailandesa e biomecânica do golpe com as 8 armas.",
+      rank: "Treinador Especialista",
+      details: "Formação técnica em trocação tailandesa e biomecânica do golpe com as 8 armas.",
       beltVisual: "bg-blood-950 border-y border-blood-800 relative overflow-hidden flex items-center justify-end px-2",
-      badgeText: "KRU / TRADICIONAL",
+      badgeText: "TROCAÇÃO DE ELITE",
     },
     {
       title: "Boxe Tradicional (Nobre Arte)",
@@ -107,7 +107,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                       Santo Expedito • Montes Claros
                     </span>
                     <span>•</span>
-                    <span className="text-zinc-200 font-bold">Faixa Preta 4º Grau BJJ</span>
+                    <span className="text-zinc-200 font-bold">+20 Anos de Tatame & Liderança Técnica</span>
                   </div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
             {/* Graphic Martial Belt Ranks & Lineage */}
             <div className="space-y-3">
               <span className="font-tactical text-xs uppercase tracking-widest text-zinc-300 font-bold block">
-                GRADE DE FORMAÇÃO & LINHAGEM TÉCNICA:
+                EXPERIÊNCIA DE TATAME & LIDERANÇA TÉCNICA:
               </span>
 
               <div className="space-y-3">

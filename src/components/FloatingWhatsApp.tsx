@@ -25,7 +25,7 @@ export const FloatingWhatsApp: React.FC = () => {
   return (
     <aside
       aria-label="Contato direto via WhatsApp"
-      className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 sm:z-50 pb-[env(safe-area-inset-bottom)]"
+      className="hidden sm:block fixed sm:bottom-6 right-4 sm:right-6 z-40 sm:z-50 pb-[env(safe-area-inset-bottom)]"
     >
       <a
         href={whatsappUrl}

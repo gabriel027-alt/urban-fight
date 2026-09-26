@@ -38,8 +38,8 @@ export const MethodSection: React.FC<MethodSectionProps> = ({ onStartTriage }) =
     },
     {
       icon: Trophy,
-      title: "Evolução Técnica & Graduação",
-      desc: "Currículo estruturado de faixas e graduações baseado em assiduidade, biomecânica e conduta ética. Você enxerga com clareza o seu progresso a cada treino concluído.",
+      title: "Evolução Técnica & Metodologia",
+      desc: "Currículo técnico estruturado baseado em assiduidade, biomecânica e conduta ética. Você enxerga com clareza o seu progresso a cada treino concluído.",
       badge: "Resultados Reais",
     },
   ];

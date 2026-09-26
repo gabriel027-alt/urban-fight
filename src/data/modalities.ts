@@ -108,7 +108,7 @@ export const MODALITIES: Modality[] = [
       "Homens e mulheres de qualquer biotipo físico ou idade",
     ],
     equipmentNeeded: ["Kimono trançado oficial", "Faixa", "Rashguard (opcional)"],
-    instructor: "Professores Faixas Pretas sob supervisão do Mestre André",
+    instructor: "Instrutores especializados sob supervisão direta do Mestre André",
     iconName: "Swords",
     accentColor: "from-blue-600/30 to-blood-950/80",
     imageUrl: "/jiujitsu1.jpg",

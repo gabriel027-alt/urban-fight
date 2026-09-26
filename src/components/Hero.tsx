@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
+import Image from "next/image";
 import { 
   ArrowRight, 
   MapPin, 
@@ -67,54 +68,98 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
         </div>
 
-        {/* Central High-Impact Content (Hick's Law & Clear Visual Hierarchy) */}
-        <div className="max-w-4xl mx-auto text-center sm:text-left space-y-5 sm:space-y-6 mb-10 sm:mb-14">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-blood-950/80 border border-blood-600/50 text-blood-300 font-tactical text-xs font-bold uppercase tracking-wider mb-4 rounded-xl">
-              <Flame className="w-3.5 h-3.5 text-blood-500" />
-              <span>1ª AULA 100% GRATUITA • DO ZERO AO AVANÇADO</span>
+        {/* Main Grid: Left Content (7 cols) + Right Circular Logo with Red LED Glow (5 cols) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-10 sm:mb-14">
+          <div className="lg:col-span-7 text-center sm:text-left space-y-5 sm:space-y-6">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blood-950/80 border border-blood-600/50 text-blood-300 font-tactical text-xs font-bold uppercase tracking-wider mb-4 rounded-xl">
+                <Flame className="w-3.5 h-3.5 text-blood-500" />
+                <span>1ª AULA 100% GRATUITA • DO ZERO AO AVANÇADO</span>
+              </div>
+              
+              <h1 className="font-combat text-5xl sm:text-7xl md:text-8xl xl:text-9xl uppercase font-black text-white tracking-tight leading-[0.9] sm:leading-[0.88] drop-shadow-2xl">
+                FORJE SEU CORPO. <br />
+                <span className="text-blood-600">BLINDE SUA MENTE.</span>
+              </h1>
             </div>
-            
-            <h1 className="font-combat text-5xl sm:text-7xl md:text-8xl xl:text-9xl uppercase font-black text-white tracking-tight leading-[0.9] sm:leading-[0.88] drop-shadow-2xl">
-              FORJE SEU CORPO. <br />
-              <span className="text-blood-500">BLINDE SUA MENTE.</span>
-            </h1>
+
+            {/* Subtitle */}
+            <p className="font-sans text-lg sm:text-2xl text-zinc-50 font-semibold max-w-2xl leading-snug drop-shadow-md">
+              Agende sua aula experimental gratuita em Montes Claros e comece hoje mesmo sob a tutela direta do Mestre André.
+            </p>
+
+            <p className="font-sans text-sm sm:text-base md:text-lg text-zinc-200 max-w-2xl leading-relaxed font-normal">
+              O maior centro de artes marciais de Montes Claros: Boxe, Muay Thai, Jiu-Jitsu, Krav Maga, Jeet Kune Do e Turmas Kids. Tatame profissional, acolhedor e 100% livre de ego.
+            </p>
+
+            {/* Unified Primary CTA: Zero Hick's Law Friction */}
+            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-start gap-4">
+              <button
+                onClick={onStartTriage}
+                className="w-full sm:w-auto px-8 sm:px-12 py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-2xl sm:text-3xl font-black rounded-xl shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-blood-400/80 flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
+              >
+                <span>AGENDE AGORA - 0 CUSTO</span>
+                <ArrowRight className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Micro-guarantees */}
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-5 gap-y-2 text-xs font-tactical uppercase tracking-wider text-zinc-300 pt-1">
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 bg-blood-500 rounded-full" />
+                1ª Aula 100% Gratuita
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 bg-blood-500 rounded-full" />
+                Turmas do Zero ao Avançado
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 bg-zinc-300 rounded-full" />
+                Tatame Sem Ego
+              </span>
+            </div>
           </div>
 
-          {/* New Clean High-Contrast Subtitle (WCAG 2.2 text-zinc-50) */}
-          <p className="font-sans text-lg sm:text-2xl text-zinc-50 font-semibold max-w-3xl leading-snug drop-shadow-md">
-            Agende sua aula experimental gratuita em Montes Claros e comece hoje mesmo sob a tutela direta do Mestre André.
-          </p>
+          {/* Right Column: Pristine Circular Official Logo with Red LED Pulse Glow */}
+          <div className="lg:col-span-5 flex items-center justify-center py-4 sm:py-0">
+            <div className="relative w-full max-w-[220px] sm:max-w-sm lg:max-w-md aspect-square flex items-center justify-center my-2 sm:my-0">
+              {/* Red LED Glow Halos in multiple layers (pulsing exclusively around the logo) */}
+              <div className="absolute inset-0 bg-blood-600/35 rounded-full blur-[50px] sm:blur-[90px] animate-pulse pointer-events-none" />
+              <div className="absolute w-40 h-40 sm:w-72 sm:h-72 bg-blood-700/40 rounded-full blur-[35px] sm:blur-[60px] pointer-events-none" />
+              
+              {/* Outer Combat Ring */}
+              <div className="relative z-10 w-48 h-48 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full p-2 bg-gradient-to-b from-blood-600 via-blood-900 to-black shadow-spotlight-red border-2 border-blood-500/80 flex items-center justify-center group">
+                {/* Inner Bezel */}
+                <div className="w-full h-full rounded-full overflow-hidden bg-black p-2 border border-zinc-700 relative shadow-inner">
+                  {/* Official Logo Image */}
+                  <Image
+                    src="/logo-urban-fight.jpg"
+                    alt="Logo Oficial Urban Fight Montes Claros"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500"
+                    priority
+                  />
+                  {/* Subtle red spotlight sweep */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blood-950/40 via-transparent to-blood-500/20 pointer-events-none rounded-full" />
+                </div>
+              </div>
 
-          <p className="font-sans text-sm sm:text-base md:text-lg text-zinc-200 max-w-2xl leading-relaxed font-normal">
-            O maior centro de artes marciais de Montes Claros: Boxe, Muay Thai, Jiu-Jitsu, Krav Maga, Jeet Kune Do e Turmas Kids. Tatame profissional, acolhedor e 100% livre de ego.
-          </p>
+              {/* Floating Tactical Badges */}
+              <div className="hidden sm:flex absolute -top-2 left-4 z-20 bg-asphalt-900/95 border border-blood-600 px-3 py-1 rounded-md shadow-spotlight-sharp">
+                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider text-white flex items-center gap-1">
+                  <Flame className="w-3 h-3 text-blood-500" />
+                  QG MONTES CLAROS
+                </span>
+              </div>
 
-          {/* Unified Primary CTA: Zero Hick's Law Friction */}
-          <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-start gap-4">
-            <button
-              onClick={onStartTriage}
-              className="w-full sm:w-auto px-8 sm:px-12 py-5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-2xl sm:text-3xl font-black rounded-xl shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-blood-400/80 flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
-            >
-              <span>AGENDE AGORA - 0 CUSTO</span>
-              <ArrowRight className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Micro-guarantees */}
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-5 gap-y-2 text-xs font-tactical uppercase tracking-wider text-zinc-300 pt-1">
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 bg-blood-500 rounded-full" />
-              1ª Aula 100% Gratuita
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 bg-blood-500 rounded-full" />
-              Turmas do Zero ao Avançado
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 bg-zinc-300 rounded-full" />
-              Tatame Sem Ego
-            </span>
+              <div className="hidden sm:flex absolute -bottom-2 right-4 z-20 bg-[#09090b] border border-blood-600/80 px-3 py-1 rounded-md shadow-spotlight-sharp">
+                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider text-zinc-200 flex items-center gap-1">
+                  <ShieldCheck className="w-3 h-3 text-blood-500" />
+                  ALTA PERFORMANCE
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
