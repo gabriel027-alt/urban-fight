@@ -45,7 +45,7 @@ const MODALITY_STYLES: Record<string, ModalityStyle> = {
     iconColor: "text-red-500",
     hoverBorder: "hover:border-red-500/70",
     taglineColor: "text-red-400",
-    categoryTag: "Nobre Arte • 900 kcal/h",
+    categoryTag: "Condicionamento & Força",
   },
   "kickboxing-muaythai": {
     badgeBg: "bg-amber-500/15",
@@ -57,7 +57,7 @@ const MODALITY_STYLES: Record<string, ModalityStyle> = {
     iconColor: "text-amber-400",
     hoverBorder: "hover:border-amber-500/70",
     taglineColor: "text-amber-400",
-    categoryTag: "8 Armas • 1000 kcal/h",
+    categoryTag: "8 Armas • Potência & Agilidade",
   },
   "jiu-jitsu": {
     badgeBg: "bg-sky-500/15",
@@ -166,6 +166,8 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
         return <Zap className={iconCls} />;
       case "Swords":
         return <Swords className={iconCls} />;
+      case "Crosshair":
+        return <Crosshair className={iconCls} />;
       case "Shield":
         return <Shield className={iconCls} />;
       case "Sparkles":

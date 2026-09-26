@@ -12,7 +12,7 @@ export interface Modality {
   targetAudience: string[];
   equipmentNeeded: string[];
   instructor: string;
-  iconName: "Swords" | "Flame" | "Shield" | "Zap" | "Sparkles" | "Activity";
+  iconName: "Swords" | "Flame" | "Shield" | "Zap" | "Sparkles" | "Activity" | "Crosshair";
   accentColor: string;
   imageUrl: string;
 }
@@ -31,12 +31,12 @@ export const MODALITIES: Modality[] = [
     name: "Boxe Tradicional (Nobre Arte)",
     category: "striking",
     categoryLabel: "Trocação & Queima",
-    tagline: "Agilidade felina, potência no golpe e queima calórica brutal.",
+    tagline: "Agilidade felina, biomecânica precisa de punhos e footwork de elite.",
     description:
       "A nobre arte focada na mecânica perfeita do soco, esquivas elusivas, footwork implacável e condicionamento cardiovascular de nível elite. Ideal para quem busca perder peso rápido, aliviar o estresse da rotina e dominar o combate de punhos.",
     intensity: "Alta",
     caloriesBurn: "Até 900 kcal/h",
-    badge: "Alta Queima Calórica",
+    badge: "Condicionamento & Força",
     legendTribute: "Inspiração Muhammad Ali • P&B Clássico",
     benefits: [
       "Queima extrema de gordura e definição de braços, core e ombros",
@@ -60,12 +60,12 @@ export const MODALITIES: Modality[] = [
     name: "Muay Thai & Kickboxing",
     category: "striking",
     categoryLabel: "Trocação & Queima",
-    tagline: "A arte das oito armas: caneladas devastadoras, socos e joelhadas.",
+    tagline: "Combinações contundentes, caneladas potentes e reflexos afiados.",
     description:
       "Treinamento contundente que une o ritmo tradicional do Muay Thai tailandês e a fluidez do Kickboxing. Desenvolva pernas e glúteos de aço, resistência pulmonar inabalável e a capacidade de golpear com máxima potência.",
     intensity: "Muito Alta",
     caloriesBurn: "Até 1000 kcal/h",
-    badge: "Mais Procurada",
+    badge: "Potência & Agilidade",
     legendTribute: "Tradição Tailandesa • Chutes Altos & 8 Armas",
     benefits: [
       "Condicionamento aeróbico extremo e queima muscular uniforme",
@@ -118,7 +118,7 @@ export const MODALITIES: Modality[] = [
     name: "Jeet Kune Do & Defesa Urbana",
     category: "defense",
     categoryLabel: "Defesa Pessoal & Tática",
-    tagline: "A essência de Bruce Lee: economia de movimento e eficácia letal.",
+    tagline: "A essência de Bruce Lee: economia de movimento e eficácia marcial.",
     description:
       "Sistema marcial moderno e direto, desprovido de regras esportivas limitantes. Focado 100% em sobrevivência urbana, leitura de ambiente, desarmamento de ameaças, saída de agarrões violentos e neutralização rápida.",
     intensity: "Média",
@@ -138,7 +138,7 @@ export const MODALITIES: Modality[] = [
     ],
     equipmentNeeded: ["Roupas confortáveis de treino", "Tênis limpo de tatame"],
     instructor: "Mestre André (Especialista em Combate Prático)",
-    iconName: "Shield",
+    iconName: "Crosshair",
     accentColor: "from-amber-600/30 to-blood-950/80",
     imageUrl: "/jeetkunedo.jpg",
   },

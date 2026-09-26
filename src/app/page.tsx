@@ -53,29 +53,29 @@ export default function Home() {
         {/* 4. 3D Tilt Modalities Grid with Specular Glare & Fighter Photos */}
         <ModalitiesGrid onSelectModality={(modality) => scrollToTriage(modality)} />
 
-        {/* 5. 3-Step Tactical Triage Funnel directly to WhatsApp */}
-        <TrialTriage initialModality={selectedModalityForTriage} />
-
-        {/* 6. Modalities Guidance Video by Mestre André */}
+        {/* 5. Modalities Guidance Video by Mestre André */}
         <ModalitiesGuidanceVideo onStartTriage={() => scrollToTriage()} />
 
-        {/* 7. Reverse Asphalt Combat Tape Marquee */}
-        <MarqueeTicker reverse angle="rotate-1 sm:rotate-1.5" theme="asphalt" />
-
-        {/* 8. Asymmetric Editorial Poster of Mestre André (Lineage & Manifesto) */}
-        <MasterAndreSection onStartTriage={() => scrollToTriage()} />
-
-        {/* 9. Fight Gym Tour Photographic Mosaic & Dark Map */}
-        <LocationAndStructure />
-
-        {/* 10. Tactical Social Proof & Student Validation Card */}
+        {/* 6. Tactical Social Proof & Student Validation (Immediate Proof after Guidance) */}
         <SocialProofSection onStartTriage={() => scrollToTriage()} />
 
-        {/* 11. Operational Class Schedule (Shifts & Times) */}
+        {/* 7. Fight Gym Tour Photographic Mosaic & Dark Google Map */}
+        <LocationAndStructure />
+
+        {/* 8. Reverse Asphalt Combat Tape Marquee */}
+        <MarqueeTicker reverse angle="rotate-1 sm:rotate-1.5" theme="asphalt" />
+
+        {/* 9. Asymmetric Editorial Poster of Mestre André (Lineage & Manifesto) */}
+        <MasterAndreSection onStartTriage={() => scrollToTriage()} />
+
+        {/* 10. Operational Class Schedule (Shifts & Times) */}
         <ScheduleSection onScheduleSlot={(modality) => scrollToTriage(modality)} />
 
-        {/* 12. Tactical Combat Gear & Official Supplies */}
+        {/* 11. Tactical Combat Gear & Official Supplies */}
         <EquipmentSection />
+
+        {/* 12. 3-Step Tactical Triage Funnel directly to WhatsApp */}
+        <TrialTriage initialModality={selectedModalityForTriage} />
 
         {/* 13. Objection Breaker FAQ */}
         <FAQ onStartTriage={() => scrollToTriage()} />
