@@ -127,9 +127,9 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               <button
                 key={tab.id}
                 onClick={() => setFilterModality(tab.id)}
-                className={`px-4 py-2 font-tactical text-xs uppercase tracking-wider font-bold transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black ${
+                className={`min-h-[48px] px-5 py-2.5 font-tactical text-xs uppercase tracking-wider font-bold rounded-xl transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] ${
                   filterModality === tab.id
-                    ? "bg-blood-600 text-white shadow-spotlight-sharp border-b-2 border-blood-400"
+                    ? "bg-blood-600 text-white shadow-spotlight-sharp border border-blood-400"
                     : "bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-800 border border-zinc-700"
                 }`}
               >
@@ -144,13 +144,13 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
           {displayedModalities.map((item) => (
             <div
               key={item.id}
-              className="bg-zinc-900/95 border border-zinc-700 hover:border-blood-500 rounded-none p-6 sm:p-7 flex flex-col justify-between shadow-2xl transition-all group"
+              className="bg-zinc-900/95 border border-zinc-700 hover:border-blood-500 rounded-xl p-6 sm:p-7 flex flex-col justify-between shadow-2xl transition-all group"
             >
               <div className="space-y-5">
                 {/* Header */}
                 <div className="border-b border-zinc-800 pb-4">
                   <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 bg-blood-600/25 border border-blood-500/50 text-blood-300">
+                    <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 bg-blood-600/25 border border-blood-500/50 text-blood-300 rounded-lg">
                       {item.badge}
                     </span>
                     <span className="font-tactical text-[11px] text-zinc-300 flex items-center gap-1">
@@ -184,7 +184,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               <div className="pt-6 mt-6 border-t border-zinc-800">
                 <button
                   onClick={() => onScheduleSlot(item.name)}
-                  className="w-full py-3 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-base font-bold rounded-none flex items-center justify-center gap-2 border border-zinc-600 hover:border-blood-500 transition-all shadow-md group-hover:shadow-spotlight-sharp focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                  className="w-full min-h-[48px] py-3.5 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-base font-bold rounded-xl flex items-center justify-center gap-2 border border-zinc-600 hover:border-blood-500 transition-all shadow-md group-hover:shadow-spotlight-sharp focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
                 >
                   <span>AGENDAR NESTA MODALIDADE</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -195,13 +195,13 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
         </div>
 
         {/* Featured Presentation Video: Gym Atmosphere & Dynamics */}
-        <div className="mt-16 bg-asphalt-900 border border-zinc-800 rounded-none p-6 sm:p-8 shadow-combat-plate relative overflow-hidden">
+        <div className="mt-16 bg-asphalt-900 border border-zinc-800 rounded-xl p-6 sm:p-8 shadow-combat-plate relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-blood-600/10 rounded-full blur-3xl pointer-events-none" />
           
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-800 pb-4">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-black border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest mb-1.5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-black border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest mb-1.5 rounded-lg">
                   <Flame className="w-3.5 h-3.5 text-blood-500" />
                   <span>VÍDEO DE APRESENTAÇÃO • ENERGIA DO TATAME</span>
                 </div>
@@ -215,7 +215,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
             </div>
 
             {/* Video Player: Container adjusted to display full video fluidly and centered with object-contain */}
-            <div className="relative w-full max-w-4xl mx-auto rounded-none overflow-hidden bg-black border-2 border-zinc-800 shadow-spotlight-sharp aspect-video flex items-center justify-center">
+            <div className="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden bg-black border-2 border-zinc-800 shadow-spotlight-sharp aspect-video flex items-center justify-center">
               <video
                 controls
                 playsInline
@@ -238,7 +238,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
               </p>
               <button
                 onClick={() => onScheduleSlot("Aula Experimental")}
-                className="shrink-0 px-6 py-3 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-none transition-all shadow-spotlight-sharp focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                className="shrink-0 min-h-[48px] px-6 py-3 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-xl transition-all shadow-spotlight-sharp focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
               >
                 EXPERIMENTAR ESTE TREINO
               </button>

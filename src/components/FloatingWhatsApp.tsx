@@ -47,7 +47,7 @@ export const FloatingWhatsApp: React.FC = () => {
         </svg>
 
         {/* Desktop Hover Label */}
-        <span className="hidden lg:block absolute right-full mr-3.5 px-3 py-1.5 bg-[#09090b] text-zinc-100 text-xs font-tactical uppercase tracking-wider font-bold whitespace-nowrap rounded-none border border-zinc-800 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        <span className="hidden lg:block absolute right-full mr-3.5 px-3 py-1.5 bg-[#09090b] text-zinc-100 text-xs font-tactical uppercase tracking-wider font-bold whitespace-nowrap rounded-xl border border-zinc-800 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
           Falar com Mestre André
         </span>
       </a>

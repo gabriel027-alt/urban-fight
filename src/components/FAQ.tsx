@@ -50,7 +50,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
             return (
               <div
                 key={index}
-                className={`border transition-all duration-200 rounded-none ${
+                className={`border transition-all duration-200 rounded-xl overflow-hidden ${
                   isOpen
                     ? "bg-black border-blood-600 shadow-spotlight-sharp"
                     : "bg-asphalt-900/90 border-zinc-800 hover:border-zinc-700"
@@ -59,7 +59,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
                 <button
                   id={`faq-question-${index}`}
                   onClick={() => toggleAccordion(index)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                  className="w-full min-h-[48px] p-5 sm:p-6 text-left flex items-center justify-between gap-4 rounded-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                 >
@@ -67,7 +67,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
                     {item.question}
                   </span>
                   <div
-                    className={`w-8 h-8 flex items-center justify-center shrink-0 rounded-none transition-transform duration-200 ${
+                    className={`w-8 h-8 flex items-center justify-center shrink-0 rounded-lg transition-transform duration-200 ${
                       isOpen
                         ? "bg-blood-600 text-white rotate-180"
                         : "bg-asphalt-800 text-zinc-300"
@@ -82,7 +82,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
                     id={`faq-answer-${index}`}
                     role="region"
                     aria-labelledby={`faq-question-${index}`}
-                    className="px-5 sm:px-6 pb-6 pt-1 text-sm text-zinc-300 font-sans leading-relaxed border-t border-zinc-900 animate-in fade-in duration-150"
+                    className="px-5 sm:px-6 pb-6 pt-1 text-sm text-zinc-200 font-sans leading-relaxed border-t border-zinc-900 animate-in fade-in duration-150"
                   >
                     <p>{item.answer}</p>
                   </div>
@@ -93,18 +93,18 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
         </div>
 
         {/* Objection Breaker Footer CTA */}
-        <div className="mt-12 p-6 sm:p-8 bg-asphalt-900 border border-zinc-800 rounded-none text-center space-y-4 shadow-combat-plate">
+        <div className="mt-12 p-6 sm:p-8 bg-asphalt-900 border border-zinc-800 rounded-xl text-center space-y-4 shadow-combat-plate">
           <h3 className="font-combat text-3xl sm:text-4xl uppercase text-white tracking-wide leading-none">
             AINDA TEM DÚVIDAS SOBRE O SEU PRIMEIRO TREINO?
           </h3>
-          <p className="font-sans text-xs sm:text-sm text-zinc-300 max-w-md mx-auto">
+          <p className="font-sans text-xs sm:text-sm text-zinc-200 max-w-md mx-auto">
             Fale diretamente com o Mestre André e equipe da recepção na Av. Cula Mangabeira, 1497.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <button
               onClick={onStartTriage}
-              className="px-7 py-3.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-black rounded-none flex items-center gap-2 shadow-spotlight-sharp transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+              className="min-h-[48px] px-7 py-3.5 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-black rounded-xl flex items-center gap-2 shadow-spotlight-sharp transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
             >
               <span>AGENDAR MINHA AULA EXPERIMENTAL</span>
               <ArrowRight className="w-4 h-4" />
@@ -116,7 +116,7 @@ export const FAQ: React.FC<FAQProps> = ({ onStartTriage }) => {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider rounded-none flex items-center gap-2 border border-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+              className="min-h-[48px] px-6 py-3.5 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider rounded-xl flex items-center gap-2 border border-zinc-700 transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
             >
               <MessageCircle className="w-4 h-4 text-emerald-400" />
               <span>CHAMAR NO WHATSAPP</span>

@@ -33,6 +33,19 @@ const config: Config = {
           900: "#7f1d1d",
           950: "#450a0a",
         },
+        zinc: {
+          50: "#fafafa",
+          100: "#f4f4f5",
+          200: "#e4e4e7",
+          300: "#d4d4d8",
+          400: "#e4e4e7", // elevated to zinc-200 for WCAG 2.2 AA contrast
+          500: "#d4d4d8", // elevated to zinc-300 for WCAG 2.2 AA contrast
+          600: "#52525b",
+          700: "#3f3f46",
+          800: "#27272a",
+          900: "#18181b",
+          950: "#09090b",
+        },
         hazard: {
           300: "#fde047",
           400: "#facc15",

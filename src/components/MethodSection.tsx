@@ -49,7 +49,7 @@ export const MethodSection: React.FC<MethodSectionProps> = ({ onStartTriage }) =
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-none bg-red-600/10 border border-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-red-600/10 border border-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider">
             <Award className="w-3.5 h-3.5" />
             <span>O Método Mestre André</span>
           </div>
@@ -69,11 +69,11 @@ export const MethodSection: React.FC<MethodSectionProps> = ({ onStartTriage }) =
         {/* Master Profile & Pillars Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Mestre Andre Highlight Card */}
-          <div className="lg:col-span-5 rounded-none bg-gradient-to-b from-zinc-900 via-zinc-900/90 to-combat-950 border border-zinc-800 p-8 relative overflow-hidden group">
+          <div className="lg:col-span-5 rounded-xl bg-gradient-to-b from-zinc-900 via-zinc-900/90 to-combat-950 border border-zinc-800 p-8 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-48 h-48 bg-red-600/15 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-none bg-red-600/20 border border-red-500/30 text-red-400 text-xs font-bold uppercase">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-red-600/20 border border-red-500/30 text-red-400 text-xs font-bold uppercase">
                 <Flame className="w-3.5 h-3.5" />
                 <span>Liderança Técnica</span>
               </div>
@@ -107,7 +107,7 @@ export const MethodSection: React.FC<MethodSectionProps> = ({ onStartTriage }) =
               <div className="pt-4">
                 <button
                   onClick={onStartTriage}
-                  className="w-full py-3.5 px-5 rounded-none bg-red-600 hover:bg-red-500 text-white text-sm font-bold flex items-center justify-center gap-2 shadow-combat-glow transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                  className="w-full min-h-[48px] py-3.5 px-5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-sm font-bold flex items-center justify-center gap-2 shadow-combat-glow transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
                 >
                   <span>Conhecer o Mestre André no Tatame</span>
                   <ArrowRight className="w-4 h-4" />
@@ -123,13 +123,13 @@ export const MethodSection: React.FC<MethodSectionProps> = ({ onStartTriage }) =
               return (
                 <div
                   key={idx}
-                  className="p-6 rounded-none bg-zinc-900/70 border border-zinc-800/80 hover:border-red-500/40 transition-all duration-200 group relative"
+                  className="p-6 rounded-xl bg-zinc-900/70 border border-zinc-800/80 hover:border-red-500/40 transition-all duration-200 group relative"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-none bg-zinc-800/90 border border-zinc-700/60 flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 rounded-lg bg-zinc-800/90 border border-zinc-700/60 flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-300 bg-zinc-800/80 px-2.5 py-1 rounded-none">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-300 bg-zinc-800/80 px-2.5 py-1 rounded">
                       {item.badge}
                     </span>
                   </div>

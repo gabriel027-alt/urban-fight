@@ -89,15 +89,15 @@ export const EquipmentSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-zinc-900/90 border border-zinc-800 hover:border-blood-600 rounded-none p-6 flex flex-col justify-between group transition-all duration-300 shadow-combat-plate"
+                className="bg-zinc-900/90 border border-zinc-800 hover:border-blood-600 rounded-xl p-6 flex flex-col justify-between group transition-all duration-300 shadow-combat-plate"
               >
                 <div className="space-y-4">
                   {/* Card Header & Badge */}
                   <div className="flex items-start justify-between gap-2">
-                    <div className="w-10 h-10 bg-asphalt-800 border border-zinc-700 rounded-none flex items-center justify-center group-hover:border-blood-500 transition-colors">
+                    <div className="w-10 h-10 bg-asphalt-800 border border-zinc-700 rounded-lg flex items-center justify-center group-hover:border-blood-500 transition-colors">
                       <Icon className="w-5 h-5 text-blood-500" />
                     </div>
-                    <span className="px-2 py-0.5 text-[9px] font-tactical font-bold uppercase tracking-wider bg-blood-600/20 border border-blood-500/40 text-blood-300">
+                    <span className="px-2 py-0.5 text-[9px] font-tactical font-bold uppercase tracking-wider bg-blood-600/20 border border-blood-500/40 text-blood-300 rounded-md">
                       {item.badge}
                     </span>
                   </div>
@@ -136,13 +136,13 @@ export const EquipmentSection: React.FC = () => {
         </div>
 
         {/* Master André Protocol Box & Direct Reception CTA */}
-        <div className="bg-gradient-to-r from-asphalt-900 via-zinc-900 to-asphalt-900 border-2 border-blood-600/60 rounded-none p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        <div className="bg-gradient-to-r from-asphalt-900 via-zinc-900 to-asphalt-900 border-2 border-blood-600/60 rounded-xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
           {/* Subtle Ambient Glow */}
           <div className="absolute right-0 top-0 w-80 h-80 bg-blood-600/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/80 border border-blood-500/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/80 border border-blood-500/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-wider rounded-md">
                 <Award className="w-3.5 h-3.5 text-blood-500" />
                 <span>ORIENTAÇÃO DO MESTRE ANDRÉ</span>
               </div>
@@ -156,13 +156,13 @@ export const EquipmentSection: React.FC = () => {
               </p>
 
               <div className="flex flex-wrap items-center gap-3 pt-1">
-                <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-300 bg-black/60 px-2.5 py-1 border border-zinc-800">
+                <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-300 bg-black/60 px-2.5 py-1 border border-zinc-800 rounded">
                   ✓ Marcas Homologadas
                 </span>
-                <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-300 bg-black/60 px-2.5 py-1 border border-zinc-800">
+                <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-300 bg-black/60 px-2.5 py-1 border border-zinc-800 rounded">
                   ✓ Pronta Entrega na Sede
                 </span>
-                <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-300 bg-black/60 px-2.5 py-1 border border-zinc-800">
+                <span className="font-tactical text-[11px] uppercase tracking-wider text-zinc-300 bg-black/60 px-2.5 py-1 border border-zinc-800 rounded">
                   ✓ Tamanhos Certos por Biotipo
                 </span>
               </div>
@@ -174,7 +174,7 @@ export const EquipmentSection: React.FC = () => {
                 href={whatsappEquipmentsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-none border border-blood-400/50 shadow-spotlight-sharp transition-all group focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                className="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center gap-3 px-8 py-4 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-xl border border-blood-400/50 shadow-spotlight-sharp transition-all group focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
               >
                 <span>CONSULTAR EQUIPAMENTOS NO WHATSAPP</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />

@@ -79,7 +79,7 @@ export const LocationAndStructure: React.FC = () => {
           {gymSpaces.map((space, idx) => (
             <div
               key={idx}
-              className={`${space.colSpan} relative min-h-[320px] sm:min-h-[360px] bg-zinc-900 border border-zinc-800 hover:border-blood-600/70 rounded-none overflow-hidden group shadow-combat-plate flex flex-col justify-end p-6 sm:p-8`}
+              className={`${space.colSpan} relative min-h-[320px] sm:min-h-[360px] bg-zinc-900 border border-zinc-800 hover:border-blood-600/70 rounded-xl overflow-hidden group shadow-combat-plate flex flex-col justify-end p-6 sm:p-8`}
             >
               {/* Photo background - Next.js HD Optimized (Quality 100) */}
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -99,7 +99,7 @@ export const LocationAndStructure: React.FC = () => {
 
               {/* Tactical Badge */}
               <div className="absolute top-4 right-4 z-10">
-                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-black/90 border border-blood-600/50 text-white">
+                <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 bg-black/90 border border-blood-600/50 text-white rounded-md">
                   {space.badge}
                 </span>
               </div>
@@ -120,7 +120,7 @@ export const LocationAndStructure: React.FC = () => {
                   {space.highlights.map((h, i) => (
                     <span
                       key={i}
-                      className="font-tactical text-[9px] uppercase tracking-wider px-2 py-0.5 bg-black/90 border border-zinc-700/90 text-zinc-200 shadow-sm"
+                      className="font-tactical text-[9px] uppercase tracking-wider px-2 py-0.5 bg-black/90 border border-zinc-700/90 text-zinc-200 shadow-sm rounded"
                     >
                       {h}
                     </span>
@@ -132,11 +132,11 @@ export const LocationAndStructure: React.FC = () => {
         </div>
 
         {/* Physical Address, Hours & Dark Map Embed */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-asphalt-900 border border-zinc-800 rounded-none p-6 sm:p-10 shadow-combat-plate">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-asphalt-900 border border-zinc-800 rounded-xl p-6 sm:p-10 shadow-combat-plate">
           {/* Address Details & Action Buttons */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-asphalt-800 border border-zinc-700">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-asphalt-800 border border-zinc-700 rounded-md">
                 <MapPin className="w-3.5 h-3.5 text-blood-500" />
                 <span className="font-tactical text-xs uppercase tracking-wider text-zinc-300 font-bold">
                   LOCALIZAÇÃO OFICIAL
@@ -187,7 +187,7 @@ export const LocationAndStructure: React.FC = () => {
                 href={URBAN_FIGHT_CONFIG.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-4 px-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl font-black rounded-none flex items-center justify-center gap-2 shadow-spotlight-sharp transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                className="w-full min-h-[48px] py-4 px-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-xl font-black rounded-xl flex items-center justify-center gap-2 shadow-spotlight-sharp transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
               >
                 <Navigation className="w-5 h-5" />
                 <span>TRAÇAR ROTA NO GOOGLE MAPS</span>
@@ -198,7 +198,7 @@ export const LocationAndStructure: React.FC = () => {
                 href="https://waze.com/ul?q=Av.+Cula+Mangabeira,+1497+-+Santo+Expedito,+Montes+Claros+-+MG"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 px-4 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider flex items-center justify-center gap-2 border border-zinc-700 rounded-none transition-colors focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                className="w-full min-h-[48px] py-3 px-4 bg-asphalt-800 hover:bg-asphalt-750 text-zinc-200 font-tactical uppercase text-xs font-bold tracking-wider flex items-center justify-center gap-2 border border-zinc-700 rounded-xl transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
               >
                 <Navigation className="w-4 h-4 text-sky-400" />
                 <span>ABRIR NO APLICATIVO WAZE</span>
@@ -207,7 +207,7 @@ export const LocationAndStructure: React.FC = () => {
           </div>
 
           {/* Stylized Dark Theme Map Embed */}
-          <div className="lg:col-span-7 min-h-[380px] sm:min-h-[460px] bg-black border border-zinc-800 rounded-none overflow-hidden relative shadow-inner">
+          <div className="lg:col-span-7 min-h-[380px] sm:min-h-[460px] bg-black border border-zinc-800 rounded-xl overflow-hidden relative shadow-inner">
             <iframe
               title="Localização Urban Fight Montes Claros"
               src="https://maps.google.com/maps?q=Av.+Cula+Mangabeira,+1497+-+Santo+Expedito,+Montes+Claros+-+MG&t=&z=16&ie=UTF8&iwloc=&output=embed"
@@ -218,7 +218,7 @@ export const LocationAndStructure: React.FC = () => {
               referrerPolicy="no-referrer-when-downgrade"
             />
             {/* Map Overlay Badge */}
-            <div className="absolute bottom-4 left-4 bg-black/90 backdrop-blur-md border border-zinc-700 px-3.5 py-2 flex items-center gap-2 pointer-events-none">
+            <div className="absolute bottom-4 left-4 bg-black/90 backdrop-blur-md border border-zinc-700 px-3.5 py-2 flex items-center gap-2 pointer-events-none rounded-lg">
               <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse" />
               <span className="font-tactical text-xs font-bold uppercase tracking-wider text-white">
                 URBAN FIGHT • SANTO EXPEDITO

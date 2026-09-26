@@ -106,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
           {/* Brand Logo with Official Emblem */}
           <a
             href="#"
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
+            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] rounded-md"
           >
             <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-blood-500 shadow-spotlight-sharp group-hover:scale-105 transition-transform bg-black flex-shrink-0">
               <Image
@@ -140,7 +140,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
                   e.preventDefault();
                   scrollToSection(link.href, 80);
                 }}
-                className="font-tactical text-xs uppercase tracking-widest text-zinc-300 hover:text-white hover:border-b-2 hover:border-blood-600 py-1 transition-all duration-150 font-bold focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-none"
+                className="min-h-[48px] inline-flex items-center px-2 font-tactical text-xs uppercase tracking-widest text-zinc-300 hover:text-white hover:border-b-2 hover:border-blood-600 py-1 transition-all duration-150 font-bold rounded-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
               >
                 {link.name}
               </a>
@@ -151,7 +151,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={handleCtaClick}
-              className="px-5 py-2.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-lg font-bold transition-all rounded-none border border-blood-500/70 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+              className="min-h-[48px] px-6 py-2.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-lg font-bold transition-all rounded-xl border border-blood-500/70 flex items-center gap-2 focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
             >
               <span>AULA EXPERIMENTAL</span>
               <ArrowRight className="w-4 h-4" />
@@ -161,7 +161,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
           {/* Mobile Menu Toggle Button (48x48px accessible touch target) */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden min-w-[48px] min-h-[48px] p-3 bg-asphalt-900 border border-zinc-800 text-zinc-200 hover:text-white rounded-none flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+            className="lg:hidden min-w-[48px] min-h-[48px] p-3 bg-asphalt-900 border border-zinc-800 text-zinc-200 hover:text-white rounded-xl flex items-center justify-center focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
             aria-label="Menu de navegação"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu-drawer"
@@ -178,7 +178,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
             aria-label="Menu móvel de navegação"
             className="lg:hidden bg-[#070709] border-b border-zinc-800 px-4 pt-3 pb-6 space-y-4 animate-in fade-in duration-150"
           >
-            <div className="p-2.5 bg-asphalt-900 border border-zinc-800 text-xs font-tactical text-zinc-300 flex items-center gap-2 rounded-none">
+            <div className="p-2.5 bg-asphalt-900 border border-zinc-800 text-xs font-tactical text-zinc-300 flex items-center gap-2 rounded-xl">
               <MapPin className="w-4 h-4 text-blood-500 shrink-0" />
               <span>Av. Cula Mangabeira, 1497 - Santo Expedito, Montes Claros</span>
             </div>
@@ -188,7 +188,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
                 <button
                   key={link.name}
                   onClick={() => handleAction(link.href)}
-                  className="text-left py-2.5 px-3 font-tactical text-sm uppercase tracking-wider font-bold text-zinc-200 hover:bg-asphalt-800 hover:text-blood-400 transition-colors rounded-none focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                  className="min-h-[48px] text-left py-2.5 px-3 font-tactical text-sm uppercase tracking-wider font-bold text-zinc-200 hover:bg-asphalt-800 hover:text-blood-400 transition-colors rounded-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
                 >
                   {link.name}
                 </button>
@@ -198,7 +198,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
             <div className="pt-2 border-t border-zinc-800">
               <button
                 onClick={handleCtaClick}
-                className="w-full py-3.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 font-combat uppercase tracking-wider text-xl font-black text-white flex items-center justify-center gap-2 rounded-none border border-blood-500/70 transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                className="w-full min-h-[52px] py-3.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 font-combat uppercase tracking-wider text-xl font-black text-white flex items-center justify-center gap-2 rounded-xl border border-blood-500/70 transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
               >
                 <span>AGENDAR AULA EXPERIMENTAL GRATUITA</span>
                 <ArrowRight className="w-4 h-4" />

@@ -28,7 +28,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
       <div className="flex items-center gap-2">
         <button
           onClick={onTriggerTriage}
-          className="flex-1 py-3 px-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 text-white font-combat uppercase tracking-wider text-lg font-black rounded-none border border-blood-500/70 flex items-center justify-center gap-2 shadow-spotlight-sharp active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+          className="flex-1 min-h-[48px] py-3 px-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 text-white font-combat uppercase tracking-wider text-lg font-black rounded-xl border border-blood-500/70 flex items-center justify-center gap-2 shadow-spotlight-sharp active:scale-95 transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
         >
           <Flame className="w-4 h-4 text-white" />
           <span>AGENDAR AULA GRÁTIS</span>
@@ -41,7 +41,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-12 h-12 bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-lg rounded-none border border-emerald-400/60 active:scale-95 transition-transform shrink-0 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
+          className="w-12 h-12 bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-lg rounded-xl border border-emerald-400/60 active:scale-95 transition-transform shrink-0 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
           aria-label="Chamar no WhatsApp"
         >
           <Send className="w-5 h-5" />

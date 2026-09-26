@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { 
   MODALITIES, 
   MODALITIES_CATEGORIES, 
@@ -34,40 +33,22 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
     ? MODALITIES
     : MODALITIES.filter((m) => m.category === activeCategory);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = ((y - centerY) / centerY) * -8;
-    const rotateY = ((x - centerX) / centerX) * 8;
 
-    e.currentTarget.style.setProperty("--rotate-x", `${rotateX}deg`);
-    e.currentTarget.style.setProperty("--rotate-y", `${rotateY}deg`);
-    e.currentTarget.style.setProperty("--mouse-x", `${x}px`);
-    e.currentTarget.style.setProperty("--mouse-y", `${y}px`);
-  };
-
-  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.currentTarget.style.setProperty("--rotate-x", "0deg");
-    e.currentTarget.style.setProperty("--rotate-y", "0deg");
-  };
 
   const renderIcon = (iconName: Modality["iconName"]) => {
     switch (iconName) {
       case "Flame":
-        return <Flame className="w-5 h-5 text-blood-500" />;
+        return <Flame className="w-6 h-6 stroke-red-500 text-blood-500" />;
       case "Zap":
-        return <Zap className="w-5 h-5 text-blood-500" />;
+        return <Zap className="w-6 h-6 stroke-red-500 text-blood-500" />;
       case "Swords":
-        return <Swords className="w-5 h-5 text-zinc-300" />;
+        return <Swords className="w-6 h-6 stroke-red-500 text-blood-500" />;
       case "Shield":
-        return <Shield className="w-5 h-5 text-blood-500" />;
+        return <Shield className="w-6 h-6 stroke-red-500 text-blood-500" />;
       case "Sparkles":
-        return <Sparkles className="w-5 h-5 text-zinc-300" />;
+        return <Sparkles className="w-6 h-6 stroke-red-500 text-blood-500" />;
       default:
-        return <Activity className="w-5 h-5 text-blood-500" />;
+        return <Activity className="w-6 h-6 stroke-red-500 text-blood-500" />;
     }
   };
 
@@ -76,7 +57,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest rounded-xl">
             <Crosshair className="w-3.5 h-3.5 text-blood-500" />
             <span>ARSENAL DE COMBATE & LINHAGEM LENDÁRIA</span>
           </div>
@@ -88,20 +69,20 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
             </span>
           </h2>
 
-          <p className="font-sans text-zinc-300 text-sm sm:text-base max-w-2xl mx-auto">
-            Da nobreza clássica de Muhammad Ali à filosofia direta de Bruce Lee: metodologias consagradas adaptadas pelo Mestre André para a sua evolução física, autodefesa e queima extrema.
+          <p className="font-sans text-zinc-200 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            Metodologias consagradas de artes marciais adaptadas pelo Mestre André para a sua evolução física, autodefesa eficiente e queima calórica acelerada.
           </p>
 
-          {/* Tactical Filter Pills */}
+          {/* Tactical Filter Pills (48px Touch Target & Focus Rings) */}
           <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
             {MODALITIES_CATEGORIES.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2 text-xs sm:text-sm font-tactical uppercase tracking-wider font-bold transition-all focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black ${
+                className={`min-h-[48px] px-5 py-2.5 text-xs sm:text-sm font-tactical uppercase tracking-wider font-bold rounded-xl transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] ${
                   activeCategory === cat.id
-                    ? "bg-blood-600 text-white shadow-spotlight-sharp border-b-2 border-blood-400"
-                    : "bg-[#0a0a0c] text-zinc-300 hover:text-white hover:bg-zinc-900 border border-zinc-800"
+                    ? "bg-blood-600 text-white shadow-spotlight-sharp border border-blood-400"
+                    : "bg-[#0a0a0c] text-zinc-200 hover:text-white hover:bg-zinc-900 border border-zinc-800"
                 }`}
               >
                 {cat.label}
@@ -110,46 +91,21 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
           </div>
         </div>
 
-        {/* 3D Tilt Modalities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 tilt-perspective">
+        {/* Solid Asphalt-950 Modalities Grid: Zero Noise, High Contrast */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredModalities.map((item) => (
             <div
               key={item.id}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-              style={{
-                transform: "perspective(1000px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg))",
-                transition: "transform 0.15s ease-out, box-shadow 0.2s ease",
-              }}
-              className="tilt-card relative bg-zinc-900 border border-zinc-700 hover:border-blood-500 rounded-none p-6 sm:p-7 flex flex-col justify-between overflow-hidden group shadow-2xl transition-all"
+              className="relative bg-asphalt-950 border border-zinc-800 hover:border-blood-500/80 rounded-xl p-6 sm:p-7 flex flex-col justify-between group shadow-xl transition-all duration-300"
             >
-              {/* Dynamic Specular Glare Layer */}
-              <div className="tilt-glare" />
-
-              {/* Background Athlete Photo - Next.js HD Optimized (Quality 100) */}
-              <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <Image
-                  src={item.imageUrl}
-                  alt={item.name}
-                  fill
-                  quality={100}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  priority={item.id === "boxe-tradicional" || item.id === "kickboxing-muaythai"}
-                  loading={item.id === "boxe-tradicional" || item.id === "kickboxing-muaythai" ? "eager" : "lazy"}
-                />
-              </div>
-              {/* Gradiente suave e inteligente na base para máxima nitidez das fotos e leitura absoluta do texto */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none" />
-
               {/* Content Header */}
               <div className="relative z-10">
                 <div className="flex items-start justify-between gap-3 mb-5">
-                  <div className="w-11 h-11 bg-zinc-950 border border-zinc-600 flex items-center justify-center rounded-none group-hover:border-blood-500 transition-colors shadow-md">
+                  <div className="w-12 h-12 bg-black border border-zinc-800 flex items-center justify-center rounded-xl group-hover:border-blood-500/80 transition-colors shadow-md">
                     {renderIcon(item.iconName)}
                   </div>
                   {item.badge && (
-                    <span className="px-2.5 py-1 text-[10px] font-tactical font-bold tracking-wider uppercase bg-blood-600/30 border border-blood-500/50 text-blood-300 shadow-sm">
+                    <span className="px-2.5 py-1 text-[10px] font-tactical font-bold tracking-wider uppercase bg-blood-600/30 border border-blood-500/50 text-blood-300 rounded-lg shadow-sm">
                       {item.badge}
                     </span>
                   )}
@@ -158,7 +114,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 {/* Title and Tagline */}
                 <div className="space-y-1 mb-4">
                   {item.legendTribute && (
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 mb-1 bg-zinc-950/90 border border-blood-500/60 text-[10px] font-tactical uppercase tracking-wider text-blood-300 shadow-sm">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 mb-1 bg-zinc-900/90 border border-blood-500/60 text-[10px] font-tactical uppercase tracking-wider text-blood-300 rounded-md shadow-sm">
                       <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse" />
                       <span>{item.legendTribute}</span>
                     </div>
@@ -166,18 +122,18 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                   <h3 className="font-combat text-3xl sm:text-4xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-none">
                     {item.name}
                   </h3>
-                  <p className="font-tactical text-xs text-zinc-200 tracking-wider italic pt-1">
+                  <p className="font-tactical text-xs text-zinc-300 tracking-wider italic pt-1 normal-case">
                     &ldquo;{item.tagline}&rdquo;
                   </p>
                 </div>
 
-                {/* Description */}
-                <p className="font-sans text-xs sm:text-sm text-zinc-200 leading-relaxed line-clamp-3 mb-6">
+                {/* Description: normal-case with text-zinc-100 for high readability */}
+                <p className="font-sans text-sm text-zinc-100 leading-relaxed mb-6 normal-case">
                   {item.description}
                 </p>
 
                 {/* Tactical Metrics: Burn & Intensity */}
-                <div className="grid grid-cols-2 gap-2 mb-6 p-3 bg-zinc-950/80 border border-zinc-700 rounded-none shadow-inner">
+                <div className="grid grid-cols-2 gap-2 mb-6 p-3 bg-black/60 border border-zinc-800 rounded-lg shadow-inner">
                   <div>
                     <span className="font-tactical text-[9px] uppercase tracking-widest text-zinc-300 font-bold block">
                       GASTO CALÓRICO
@@ -217,16 +173,16 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                     <UserCheck className="w-3 h-3 text-blood-400" />
                     <span>PERFIL DO ALUNO:</span>
                   </div>
-                  <p className="text-xs text-zinc-300 font-sans">
+                  <p className="text-xs text-zinc-200 font-sans">
                     {item.targetAudience.join(" • ")}
                   </p>
                 </div>
               </div>
 
-              {/* Action Button */}
+              {/* Action Button (48px Touch Target & Focus Rings) */}
               <button
                 onClick={() => onSelectModality(item.name)}
-                className="relative z-10 w-full py-3.5 px-4 bg-zinc-800 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-lg font-bold border border-zinc-600 hover:border-blood-500 rounded-none flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-spotlight-sharp focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                className="relative z-10 w-full min-h-[48px] py-3.5 px-4 bg-zinc-900 hover:bg-blood-600 text-white font-combat uppercase tracking-wider text-lg font-bold border border-zinc-700 hover:border-blood-500 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md group-hover:shadow-spotlight-sharp focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303] cursor-pointer"
               >
                 <span>QUERO TREINAR ESSA MODALIDADE</span>
               </button>
@@ -235,14 +191,14 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
         </div>
 
         {/* Highlight Banner: Multi-Modalities / Cross-Training Package */}
-        <div className="mt-14 relative bg-gradient-to-b md:bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border-2 border-blood-600/70 rounded-none p-6 sm:p-10 shadow-2xl overflow-hidden">
+        <div className="mt-14 relative bg-gradient-to-b md:bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border border-blood-600/70 rounded-xl p-6 sm:p-10 shadow-2xl overflow-hidden">
           {/* Subtle Ambient Red Glow */}
           <div className="absolute -right-20 -top-20 w-80 h-80 bg-blood-600/15 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-blood-600/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div className="space-y-3 max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blood-600/20 border border-blood-500/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blood-600/20 border border-blood-500/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-wider rounded-lg">
                 <Flame className="w-3.5 h-3.5 text-blood-500" />
                 <span>COMBO DE ARTES MARCIAIS • CROSS-TRAINING</span>
               </div>
@@ -251,20 +207,20 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 QUER TREINAR MAIS DE UMA MODALIDADE?
               </h3>
 
-              <p className="font-sans text-sm sm:text-base text-zinc-300 leading-relaxed">
+              <p className="font-sans text-sm sm:text-base text-zinc-200 leading-relaxed">
                 Combine a contundência da <strong className="text-white font-semibold">Trocação</strong> (Boxe ou Muay Thai) com a inteligência de solo do <strong className="text-white font-semibold">Jiu-Jitsu</strong> ou a defesa urbana do <strong className="text-white font-semibold">Krav Maga & Jeet Kune Do</strong>. Fale diretamente com o Mestre André e nossa recepção para entender as condições especiais e montar um plano personalizado com múltiplos treinos na semana.
               </p>
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
-                <div className="inline-flex items-center gap-2 text-xs font-tactical text-zinc-300 bg-zinc-950/90 px-3 py-1.5 border border-zinc-800">
+                <div className="inline-flex items-center gap-2 text-xs font-tactical text-zinc-200 bg-zinc-950/90 px-3 py-1.5 border border-zinc-800 rounded-lg">
                   <Check className="w-3.5 h-3.5 text-blood-500 shrink-0" />
                   <span>Descontos Progressivos em Combos</span>
                 </div>
-                <div className="inline-flex items-center gap-2 text-xs font-tactical text-zinc-300 bg-zinc-950/90 px-3 py-1.5 border border-zinc-800">
+                <div className="inline-flex items-center gap-2 text-xs font-tactical text-zinc-200 bg-zinc-950/90 px-3 py-1.5 border border-zinc-800 rounded-lg">
                   <Check className="w-3.5 h-3.5 text-blood-500 shrink-0" />
                   <span>Grade Integrada Sem Choque de Horários</span>
                 </div>
-                <div className="inline-flex items-center gap-2 text-xs font-tactical text-zinc-300 bg-zinc-950/90 px-3 py-1.5 border border-zinc-800">
+                <div className="inline-flex items-center gap-2 text-xs font-tactical text-zinc-200 bg-zinc-950/90 px-3 py-1.5 border border-zinc-800 rounded-lg">
                   <Check className="w-3.5 h-3.5 text-blood-500 shrink-0" />
                   <span>Evolução Técnica & Condicionamento Completo</span>
                 </div>
@@ -278,7 +234,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-none border border-blood-400/50 shadow-spotlight-sharp transition-all group focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                className="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center gap-3 px-8 py-4 bg-blood-600 hover:bg-blood-500 text-white font-combat uppercase tracking-wider text-xl font-bold rounded-xl border border-blood-400/50 shadow-spotlight-sharp transition-all group focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
               >
                 <span>CONSULTAR PLANOS COMBINADOS</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
