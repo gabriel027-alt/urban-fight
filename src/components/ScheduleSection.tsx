@@ -153,7 +153,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onScheduleSlot
                     <span className="font-tactical text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 bg-blood-600/25 border border-blood-500/50 text-blood-300">
                       {item.badge}
                     </span>
-                    <span className="font-tactical text-[11px] text-zinc-400 flex items-center gap-1">
+                    <span className="font-tactical text-[11px] text-zinc-300 flex items-center gap-1">
                       <Users className="w-3 h-3 text-blood-500" />
                       {item.audience}
                     </span>

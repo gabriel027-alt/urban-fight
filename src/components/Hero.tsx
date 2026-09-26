@@ -47,14 +47,14 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         {/* Top Bar on Mobile/Desktop */}
         <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-3 mb-4 sm:mb-6">
-          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-asphalt-900/90 border border-blood-700/60 rounded-md">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 bg-asphalt-900/90 border border-blood-700/60 rounded-none">
             <span className="w-2 h-2 rounded-full bg-blood-500 animate-ping motion-reduce:animate-none" />
             <span className="font-tactical text-[11px] sm:text-xs uppercase tracking-widest text-blood-400 font-bold">
               QG OFICIAL • MESTRE ANDRÉ
             </span>
           </div>
 
-          <div className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-asphalt-900/80 border border-zinc-800 rounded-md text-[11px] sm:text-xs font-tactical text-zinc-400">
+          <div className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 bg-asphalt-900/80 border border-zinc-800 rounded-none text-[11px] sm:text-xs font-tactical text-zinc-300">
             <MapPin className="w-3.5 h-3.5 text-blood-500 shrink-0" />
             <span className="tracking-wide text-zinc-300 truncate">SANTO EXPEDITO • MONTES CLAROS</span>
           </div>
@@ -65,9 +65,10 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Left Column: Massive Headline, CTAs & Benefits */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-left">
             <div>
-              <span className="font-tactical text-[11px] sm:text-sm uppercase tracking-[0.25em] sm:tracking-[0.3em] text-blood-500 font-bold block mb-1.5 sm:mb-2">
-                [ CENTRO DE ALTO RENDIMENTO MARCIAL ]
-              </span>
+              <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-blood-950/60 border border-blood-600/40 text-blood-300 font-tactical text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-3">
+                <Flame className="w-3 h-3 text-blood-500" />
+                <span>1ª AULA 100% GRATUITA • DO ZERO AO AVANÇADO</span>
+              </div>
               <h1 className="font-combat text-4xl sm:text-7xl md:text-8xl xl:text-9xl uppercase font-black text-white tracking-tight leading-[0.9] sm:leading-[0.88] drop-shadow-2xl">
                 FORJE SEU CORPO. <br />
                 <span className="text-blood-600">
@@ -77,17 +78,17 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             <p className="font-sans text-sm sm:text-base md:text-lg text-zinc-200 max-w-2xl leading-relaxed font-normal text-balance drop-shadow-md">
-              O maior templo de artes marciais de Montes Claros. Focado em queima calórica devastadora, autodefesa real sem regras fúteis e disciplina militar sob a tutela direta do <strong className="text-white font-bold">Mestre André</strong>.
+              O maior centro de artes marciais de Montes Claros sob a tutela direta do <strong className="text-white font-bold">Mestre André</strong>. Boxe, Muay Thai, Jiu-Jitsu, Krav Maga, Jeet Kune Do e Turmas Kids. Queima de até 1.000 kcal/h, autodefesa real e evolução técnica em um tatame acolhedor e livre de ego.
             </p>
 
-            {/* Tactical Action Buttons (Dual CTAs with high contrast and smooth clean borders) */}
+            {/* Tactical Action Buttons (Dual CTAs with clear primary/secondary visual hierarchy) */}
             <div className="pt-2 sm:pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <button
                 onClick={onStartTriage}
-                className="relative group overflow-hidden px-5 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-base sm:text-xl lg:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] rounded-none border border-blood-500/70 flex items-center justify-center gap-3 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                className="relative group overflow-hidden px-6 sm:px-8 py-4 sm:py-4.5 bg-gradient-to-r from-blood-700 via-blood-600 to-blood-800 hover:from-blood-600 hover:to-blood-700 text-white font-combat uppercase tracking-wider text-lg sm:text-xl lg:text-2xl font-black shadow-spotlight-sharp transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] rounded-none border border-blood-500/70 flex items-center justify-center gap-3 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <span className="relative z-10 flex items-center gap-2 sm:gap-3">
-                  <span>AGENDAR AULA EXPERIMENTAL</span>
+                  <span>AGENDAR AULA EXPERIMENTAL GRATUITA</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-200" />
@@ -95,10 +96,10 @@ export const Hero: React.FC<HeroProps> = ({
 
               <button
                 onClick={onExploreModalities}
-                className="px-5 sm:px-7 py-3.5 sm:py-4 bg-black/80 hover:bg-asphalt-850 text-zinc-200 hover:text-white font-combat uppercase tracking-wider text-base sm:text-xl lg:text-2xl font-bold border border-zinc-700 hover:border-blood-600 transition-all rounded-none flex items-center justify-center gap-2 backdrop-blur-sm shadow-md focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                className="px-5 sm:px-6 py-3.5 sm:py-4 bg-zinc-950/80 hover:bg-zinc-900 text-zinc-300 hover:text-white font-combat uppercase tracking-wider text-base sm:text-lg font-bold border border-zinc-700/80 hover:border-zinc-500 transition-all rounded-none flex items-center justify-center gap-2 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
               >
-                <Crosshair className="w-4 sm:w-5 h-4 sm:h-5 text-blood-500" />
-                <span>VER MODALIDADES</span>
+                <Crosshair className="w-4 h-4 text-blood-500" />
+                <span>CONHECER MODALIDADES</span>
               </button>
             </div>
 
@@ -145,14 +146,14 @@ export const Hero: React.FC<HeroProps> = ({
               </div>
 
               {/* Floating Tactical Badges - Cleanly displayed on tablet/desktop */}
-              <div className="hidden sm:flex absolute -top-2 left-4 z-20 bg-asphalt-900/95 border border-blood-600 px-3 py-1 rounded-md">
+              <div className="hidden sm:flex absolute -top-2 left-4 z-20 bg-asphalt-900/95 border border-blood-600 px-3 py-1 rounded-none">
                 <span className="font-tactical text-[10px] font-bold uppercase tracking-wider text-white flex items-center gap-1">
                   <Flame className="w-3 h-3 text-blood-500" />
                   QG MONTES CLAROS
                 </span>
               </div>
 
-              <div className="hidden sm:flex absolute -bottom-2 right-4 z-20 bg-[#09090b] border border-blood-600/80 px-3 py-1 rounded-md">
+              <div className="hidden sm:flex absolute -bottom-2 right-4 z-20 bg-[#09090b] border border-blood-600/80 px-3 py-1 rounded-none">
                 <span className="font-tactical text-[10px] font-bold uppercase tracking-wider text-zinc-200 flex items-center gap-1">
                   <ShieldCheck className="w-3 h-3 text-blood-500" />
                   ALTA PERFORMANCE

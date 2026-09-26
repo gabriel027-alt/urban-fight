@@ -90,7 +90,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
                 <ShieldCheck className="w-4 h-4 text-blood-500 shrink-0" />
                 <span className="font-bold uppercase tracking-wider">Superação, Técnica e Confiança</span>
               </div>
-              <span className="text-zinc-500 uppercase tracking-widest text-[11px] hidden sm:inline">
+              <span className="text-zinc-300 uppercase tracking-widest text-[11px] hidden sm:inline">
                 URBAN FIGHT
               </span>
             </div>
@@ -132,7 +132,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
                 <ShieldCheck className="w-4 h-4 text-blood-500 shrink-0" />
                 <span className="font-bold uppercase tracking-wider">Comunidade Sem Ego & Acolhimento</span>
               </div>
-              <span className="text-zinc-500 uppercase tracking-widest text-[11px] hidden sm:inline">
+              <span className="text-zinc-300 uppercase tracking-widest text-[11px] hidden sm:inline">
                 URBAN FIGHT
               </span>
             </div>

@@ -166,7 +166,7 @@ export const ModalitiesGrid: React.FC<ModalitiesGridProps> = ({
                   <h3 className="font-combat text-3xl sm:text-4xl uppercase tracking-wide text-white group-hover:text-blood-400 transition-colors leading-none">
                     {item.name}
                   </h3>
-                  <p className="font-tactical text-xs text-zinc-200 uppercase tracking-wider italic pt-1">
+                  <p className="font-tactical text-xs text-zinc-200 tracking-wider italic pt-1">
                     &ldquo;{item.tagline}&rdquo;
                   </p>
                 </div>

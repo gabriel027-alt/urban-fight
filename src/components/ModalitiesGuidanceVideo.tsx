@@ -52,7 +52,7 @@ export const ModalitiesGuidanceVideo: React.FC<ModalitiesGuidanceVideoProps> = (
               <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse motion-reduce:animate-none" />
               <span className="font-bold uppercase tracking-wider">VÍDEO OFICIAL • GUIA DE ESCOLHA MARCIAL</span>
             </div>
-            <span className="text-zinc-500 hidden sm:inline-block uppercase tracking-widest text-[11px]">
+            <span className="text-zinc-300 hidden sm:inline-block uppercase tracking-widest text-[11px]">
               URBAN FIGHT • MONTES CLAROS
             </span>
           </div>

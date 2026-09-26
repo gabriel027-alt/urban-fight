@@ -187,7 +187,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                             : "bg-asphalt-850 border-zinc-800 text-zinc-300 hover:text-white"
                         }`}
                       >
-                        <Icon className={`w-4 h-4 shrink-0 ${isSelected ? "text-blood-400" : "text-zinc-400"}`} />
+                        <Icon className={`w-4 h-4 shrink-0 ${isSelected ? "text-blood-400" : "text-zinc-300"}`} />
                         <span className="font-tactical text-xs uppercase tracking-wider font-semibold truncate">
                           {item.title}
                         </span>
@@ -223,7 +223,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                         }`}
                       >
                         <div className="flex items-center gap-2">
-                          <ShiftIcon className={`w-4 h-4 ${isSelected ? "text-blood-400" : "text-zinc-400"}`} />
+                          <ShiftIcon className={`w-4 h-4 ${isSelected ? "text-blood-400" : "text-zinc-300"}`} />
                           <span className="font-combat text-base uppercase tracking-wide text-white">
                             {shift.label}
                           </span>
@@ -259,7 +259,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                       setFormData({ ...formData, name: e.target.value });
                       if (errors.name) setErrors({ ...errors, name: undefined });
                     }}
-                    className={`w-full bg-black border rounded-none px-4 py-3 text-white font-tactical text-sm placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black transition-colors ${
+                    className={`w-full bg-black border rounded-none px-4 py-3 text-white font-tactical text-sm placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black transition-colors ${
                       errors.name ? "border-blood-500 ring-1 ring-blood-500" : "border-zinc-700 focus:border-blood-500"
                     }`}
                   />
@@ -285,7 +285,7 @@ export const TrialTriage: React.FC<TrialTriageProps> = ({ initialModality }) => 
                       setFormData({ ...formData, phone: e.target.value });
                       if (errors.phone) setErrors({ ...errors, phone: undefined });
                     }}
-                    className={`w-full bg-black border rounded-none px-4 py-3 text-white font-tactical text-sm placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black transition-colors ${
+                    className={`w-full bg-black border rounded-none px-4 py-3 text-white font-tactical text-sm placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black transition-colors ${
                       errors.phone ? "border-blood-500 ring-1 ring-blood-500" : "border-zinc-700 focus:border-blood-500"
                     }`}
                   />

@@ -53,13 +53,13 @@ export const Footer: React.FC = () => {
                 <span className="font-combat text-2xl font-black uppercase text-white tracking-wider leading-none">
                   URBAN <span className="text-blood-500">FIGHT</span>
                 </span>
-                <p className="font-tactical text-[9px] uppercase tracking-[0.25em] text-zinc-400 font-bold -mt-0.5">
+                <p className="font-tactical text-[9px] uppercase tracking-[0.25em] text-zinc-300 font-bold -mt-0.5">
                   MONTES CLAROS • MG
                 </p>
               </div>
             </div>
 
-            <p className="font-sans text-xs text-zinc-400 leading-relaxed max-w-sm">
+            <p className="font-sans text-xs text-zinc-300 leading-relaxed max-w-sm">
               Centro de artes marciais de elite sob a liderança técnica do Mestre André. Transformando vidas por meio da disciplina, saúde, queima calórica e defesa pessoal real.
             </p>
 

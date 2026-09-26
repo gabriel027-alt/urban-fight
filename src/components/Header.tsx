@@ -55,17 +55,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
     <>
       {/* Top Micro-Bar (Fight Night style) */}
       <div className="bg-[#030303] border-b border-zinc-900 text-xs py-1.5 px-4 hidden sm:block">
-        <div className="max-w-7xl mx-auto flex items-center justify-between font-tactical text-zinc-400">
+        <div className="max-w-7xl mx-auto flex items-center justify-between font-tactical text-zinc-300">
           <div className="flex items-center gap-2">
             <span className="flex h-2 w-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blood-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blood-600"></span>
             </span>
-            <span className="text-zinc-300 font-bold uppercase tracking-wider">
+            <span className="text-zinc-200 font-bold uppercase tracking-wider">
               MATRÍCULAS ABERTAS • TURMAS INICIANTES & KIDS
             </span>
             <span className="text-zinc-600">|</span>
-            <span className="flex items-center gap-1 text-zinc-400">
+            <span className="flex items-center gap-1 text-zinc-300">
               <MapPin className="w-3 h-3 text-blood-500" />
               <span>SANTO EXPEDITO • MONTES CLAROS - MG</span>
             </span>
@@ -140,7 +140,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
                   e.preventDefault();
                   scrollToSection(link.href, 80);
                 }}
-                className="font-tactical text-xs uppercase tracking-widest text-zinc-300 hover:text-white hover:border-b-2 hover:border-blood-600 py-1 transition-all duration-150 font-bold focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
+                className="font-tactical text-xs uppercase tracking-widest text-zinc-300 hover:text-white hover:border-b-2 hover:border-blood-600 py-1 transition-all duration-150 font-bold focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black rounded-none"
               >
                 {link.name}
               </a>
@@ -158,10 +158,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
             </button>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu Toggle Button (48x48px accessible touch target) */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 bg-asphalt-900 border border-zinc-800 text-zinc-300 hover:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+            className="lg:hidden min-w-[48px] min-h-[48px] p-3 bg-asphalt-900 border border-zinc-800 text-zinc-200 hover:text-white rounded-none flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
             aria-label="Menu de navegação"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu-drawer"
@@ -178,7 +178,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
             aria-label="Menu móvel de navegação"
             className="lg:hidden bg-[#070709] border-b border-zinc-800 px-4 pt-3 pb-6 space-y-4 animate-in fade-in duration-150"
           >
-            <div className="p-2.5 bg-asphalt-900 border border-zinc-800 text-xs font-tactical text-zinc-300 flex items-center gap-2 rounded-md">
+            <div className="p-2.5 bg-asphalt-900 border border-zinc-800 text-xs font-tactical text-zinc-300 flex items-center gap-2 rounded-none">
               <MapPin className="w-4 h-4 text-blood-500 shrink-0" />
               <span>Av. Cula Mangabeira, 1497 - Santo Expedito, Montes Claros</span>
             </div>
@@ -188,7 +188,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
                 <button
                   key={link.name}
                   onClick={() => handleAction(link.href)}
-                  className="text-left py-2.5 px-3 font-tactical text-sm uppercase tracking-wider font-bold text-zinc-200 hover:bg-asphalt-800 hover:text-blood-400 transition-colors rounded-md focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
+                  className="text-left py-2.5 px-3 font-tactical text-sm uppercase tracking-wider font-bold text-zinc-200 hover:bg-asphalt-800 hover:text-blood-400 transition-colors rounded-none focus:outline-none focus:ring-2 focus:ring-blood-500 focus:ring-offset-2 focus:ring-offset-black"
                 >
                   {link.name}
                 </button>

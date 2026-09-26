@@ -66,7 +66,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
           <h2 className="font-combat text-4xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
             SOB A TUTELA DO <span className="text-blood-600">MESTRE ANDRÉ</span>
           </h2>
-          <p className="font-tactical text-xs sm:text-sm text-zinc-400 uppercase tracking-widest mt-2">
+          <p className="font-tactical text-xs sm:text-sm text-zinc-300 uppercase tracking-widest mt-2">
             MAIS DE 20 ANOS FORJANDO GUERREIROS, CAMPEÕES E CIDADÃOS EM MONTES CLAROS
           </p>
         </div>
@@ -101,7 +101,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                   <p className="font-sans text-xs text-zinc-300 leading-relaxed">
                     Referência absoluta no ensino de artes marciais no Norte de Minas. Formador de atletas e pioneiro no acolhimento ao iniciante sem ego.
                   </p>
-                  <div className="pt-1 flex flex-wrap items-center justify-center sm:justify-start gap-2 text-xs font-tactical text-zinc-400">
+                  <div className="pt-1 flex flex-wrap items-center justify-center sm:justify-start gap-2 text-xs font-tactical text-zinc-300">
                     <span className="flex items-center gap-1 text-blood-400">
                       <MapPin className="w-3.5 h-3.5 text-blood-500" />
                       Santo Expedito • Montes Claros
@@ -250,7 +250,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                   <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse motion-reduce:animate-none" />
                   <span className="font-bold uppercase tracking-wider">DOCUMENTÁRIO INSTITUCIONAL</span>
                 </div>
-                <span className="text-zinc-500 hidden sm:inline-block uppercase tracking-widest text-[11px]">
+                <span className="text-zinc-300 hidden sm:inline-block uppercase tracking-widest text-[11px]">
                   ORIGENS & DISCIPLINA • MONTES CLAROS
                 </span>
               </div>
