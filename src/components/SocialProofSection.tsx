@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Quote, Star, ShieldCheck, Flame, ArrowRight, Video } from "lucide-react";
+import { URBAN_FIGHT_CONFIG } from "@/lib/utils";
 
 const InstagramIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg
@@ -37,9 +38,20 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
-            <Video className="w-3.5 h-3.5 text-blood-500" />
-            <span>DEPOIMENTOS REAIS • A VOZ DO TATAME</span>
+          <div className="flex flex-wrap items-center justify-center gap-2.5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/50 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
+              <Video className="w-3.5 h-3.5 text-blood-500" />
+              <span>DEPOIMENTOS REAIS • A VOZ DO TATAME</span>
+            </div>
+
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-zinc-900/95 border border-amber-500/50 text-amber-400 font-tactical text-xs font-bold uppercase tracking-wider rounded-lg shadow-sm">
+              <div className="flex items-center gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <span className="text-white">5.0 • AVALIAÇÃO OFICIAL NO GOOGLE</span>
+            </div>
           </div>
 
           <h2 className="font-combat text-4xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
@@ -48,7 +60,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
           </h2>
 
           <p className="font-sans text-zinc-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            A transformação física, mental e técnica contada por quem treina, sua e evolui todos os dias na Urban Fight.
+            A transformação física, mental e técnica contada por quem treina, sua e evolui todos os dias na Urban Fight. Nota máxima 5.0 avaliada pelos alunos no Google.
           </p>
         </div>
 
@@ -151,13 +163,23 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
                 <Quote className="w-7 h-7 sm:w-8 sm:h-8 text-blood-600 fill-blood-600/20" />
               </div>
 
-              {/* Rating Stars */}
-              <div className="flex items-center gap-1 text-blood-500">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-blood-500 text-blood-500" />
-                ))}
-                <span className="ml-2 font-tactical text-xs text-zinc-300 font-bold uppercase tracking-wider hidden sm:inline">
-                  5.0 • AVALIAÇÃO OFICIAL
+              {/* Google Verified 5.0 Rating */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-zinc-900 border border-zinc-700/80 rounded-lg shadow-inner">
+                <div className="w-4 h-4 rounded-full bg-white flex items-center justify-center shrink-0 p-0.5 shadow-sm">
+                  <svg className="w-3 h-3" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                  </svg>
+                </div>
+                <div className="flex items-center gap-0.5 text-amber-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <span className="font-tactical text-xs text-white font-bold uppercase tracking-wider">
+                  5.0 • AVALIAÇÃO NO GOOGLE
                 </span>
               </div>
             </div>
@@ -194,6 +216,43 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Google Reviews Trust Strip */}
+        <div className="max-w-4xl mx-auto mt-8 bg-asphalt-900/90 border border-zinc-800 rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-combat-plate">
+          <div className="flex items-center gap-3 text-center sm:text-left">
+            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 shadow-md">
+              <svg className="w-5 h-5" viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+              </svg>
+            </div>
+            <div>
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                <span className="font-combat text-xl sm:text-2xl text-white uppercase tracking-wide">NOTA MÁXIMA 5.0 NO GOOGLE MAPS</span>
+                <div className="flex items-center text-amber-400 gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+              </div>
+              <p className="font-sans text-xs sm:text-sm text-zinc-300 mt-0.5">
+                Reconhecida com reputação impecável pelos alunos na Av. Cula Mangabeira, 1497 (Santo Expedito).
+              </p>
+            </div>
+          </div>
+
+          <a
+            href={URBAN_FIGHT_CONFIG.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 px-4 py-2.5 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-zinc-200 hover:text-white font-tactical text-xs font-bold uppercase tracking-wider rounded-lg transition-colors inline-flex items-center gap-2 focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
+          >
+            <span>CONFERIR AVALIAÇÕES</span>
+            <ArrowRight className="w-3.5 h-3.5 text-blood-400" />
+          </a>
         </div>
 
         {/* High Conversion CTA below Social Proof */}

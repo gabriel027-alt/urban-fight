@@ -9,7 +9,8 @@ import {
   Clock, 
   Phone, 
   ExternalLink,
-  Camera
+  Camera,
+  Star
 } from "lucide-react";
 
 export const StructureSection: React.FC = () => {
@@ -141,9 +142,20 @@ export const LocationSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
-            <MapPin className="w-3.5 h-3.5 text-blood-500" />
-            <span>LOCALIZAÇÃO ESTRATÉGICA • SEDE SANTO EXPEDITO</span>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-asphalt-900 border border-blood-600/40 text-blood-400 font-tactical text-xs font-bold uppercase tracking-widest">
+              <MapPin className="w-3.5 h-3.5 text-blood-500" />
+              <span>LOCALIZAÇÃO ESTRATÉGICA • SEDE SANTO EXPEDITO</span>
+            </div>
+
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-zinc-900 border border-amber-500/50 rounded-lg text-amber-400 text-xs font-tactical font-bold uppercase tracking-wider shadow-sm">
+              <div className="flex items-center gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <span className="text-white">5.0 • NOTA MÁXIMA NO GOOGLE</span>
+            </div>
           </div>
 
           <h2 className="font-combat text-4xl sm:text-6xl md:text-7xl uppercase font-black text-white tracking-tight leading-[0.9]">
@@ -152,7 +164,7 @@ export const LocationSection: React.FC = () => {
           </h2>
 
           <p className="font-sans text-zinc-300 text-sm sm:text-base max-w-2xl mx-auto">
-            Sede própria e acolhedora na principal avenida do bairro Santo Expedito. Estacionamento fácil, ambiente familiar e toda a estrutura para o seu treino.
+            Sede própria e acolhedora na principal avenida do bairro Santo Expedito. Estacionamento fácil, ambiente familiar, nota máxima no Google e toda a estrutura para o seu treino.
           </p>
         </div>
 
@@ -161,11 +173,22 @@ export const LocationSection: React.FC = () => {
           {/* Address Details & Action Buttons */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-asphalt-800 border border-zinc-700 rounded-md">
-                <MapPin className="w-3.5 h-3.5 text-blood-500" />
-                <span className="font-tactical text-xs uppercase tracking-wider text-zinc-300 font-bold">
-                  LOCALIZAÇÃO OFICIAL
-                </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-asphalt-800 border border-zinc-700 rounded-md">
+                  <MapPin className="w-3.5 h-3.5 text-blood-500" />
+                  <span className="font-tactical text-xs uppercase tracking-wider text-zinc-300 font-bold">
+                    LOCALIZAÇÃO OFICIAL
+                  </span>
+                </div>
+
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-zinc-950 border border-amber-500/50 rounded-md text-xs font-tactical shadow-sm">
+                  <div className="flex items-center text-amber-400 gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3 h-3 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                  <span className="text-zinc-200 font-bold">★ 5.0 NO GOOGLE MAPS</span>
+                </div>
               </div>
 
               <div>
@@ -243,11 +266,17 @@ export const LocationSection: React.FC = () => {
               referrerPolicy="no-referrer-when-downgrade"
             />
             {/* Map Overlay Badge */}
-            <div className="absolute bottom-4 left-4 bg-black/90 backdrop-blur-md border border-zinc-700 px-3.5 py-2 flex items-center gap-2 pointer-events-none rounded-lg">
-              <span className="w-2 h-2 rounded-full bg-blood-500" />
-              <span className="font-tactical text-xs font-bold uppercase tracking-wider text-white">
-                URBAN FIGHT • SANTO EXPEDITO
-              </span>
+            <div className="absolute bottom-4 left-4 bg-black/95 backdrop-blur-md border border-zinc-700 px-3.5 py-2.5 flex items-center gap-3 pointer-events-none rounded-lg shadow-2xl">
+              <span className="w-2.5 h-2.5 rounded-full bg-blood-500 shrink-0" />
+              <div className="flex flex-col">
+                <span className="font-tactical text-xs font-bold uppercase tracking-wider text-white">
+                  URBAN FIGHT • SANTO EXPEDITO
+                </span>
+                <span className="font-tactical text-[11px] text-amber-400 font-bold flex items-center gap-1">
+                  <span>★★★★★</span>
+                  <span className="text-zinc-200 font-normal">5.0 Nota Máxima no Google Maps</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>

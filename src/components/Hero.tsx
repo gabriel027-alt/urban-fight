@@ -62,6 +62,17 @@ export const Hero: React.FC<HeroProps> = ({
             </span>
           </div>
 
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-asphalt-900/95 border border-amber-500/50 rounded-xl text-[11px] sm:text-xs font-tactical shadow-sm">
+            <div className="flex items-center text-amber-400 gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+              ))}
+            </div>
+            <span className="text-white font-bold tracking-wider">
+              ★ 5.0 ESTRELAS NO GOOGLE MAPS
+            </span>
+          </div>
+
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-asphalt-900/80 border border-zinc-800 rounded-xl text-[11px] sm:text-xs font-tactical text-zinc-300">
             <MapPin className="w-3.5 h-3.5 text-blood-500 shrink-0" />
             <span className="tracking-wide text-zinc-300 truncate">SANTO EXPEDITO • MONTES CLAROS</span>
@@ -177,14 +188,14 @@ export const Hero: React.FC<HeroProps> = ({
                 </svg>
               </div>
               <div className="text-left">
-                <div className="flex items-center gap-1 text-hazard-400">
+                <div className="flex items-center gap-1 text-amber-400">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-hazard-400 text-hazard-400" />
+                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
-                  <span className="font-bold text-white text-sm ml-1 font-tactical">4.9/5</span>
+                  <span className="font-bold text-white text-sm ml-1 font-tactical">5.0 / 5.0</span>
                 </div>
-                <p className="font-tactical text-[11px] uppercase tracking-wider text-zinc-300">
-                  Avaliação 4.9/5 em Montes Claros
+                <p className="font-tactical text-[11px] uppercase tracking-wider text-zinc-200 font-bold">
+                  ★ NOTA MÁXIMA 5.0 PELOS ALUNOS NO GOOGLE
                 </p>
               </div>
             </div>

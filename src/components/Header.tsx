@@ -8,7 +8,8 @@ import {
   Menu, 
   X, 
   ArrowRight,
-  Phone
+  Phone,
+  Star
 } from "lucide-react";
 
 interface HeaderProps {
@@ -60,6 +61,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
             <span className="w-2 h-2 rounded-full bg-blood-600 shrink-0" />
             <span className="text-zinc-200 font-bold uppercase tracking-wider">
               MATRÍCULAS ABERTAS • TURMAS INICIANTES & KIDS
+            </span>
+            <span className="text-zinc-600">|</span>
+            <span className="inline-flex items-center gap-1 text-amber-400 font-bold">
+              <Star className="w-3 h-3 fill-amber-400 text-amber-400 shrink-0" />
+              <span>5.0 ESTRELAS NO GOOGLE MAPS</span>
             </span>
             <span className="text-zinc-600">|</span>
             <span className="flex items-center gap-1 text-zinc-300">
@@ -176,9 +182,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
             aria-label="Menu móvel de navegação"
             className="lg:hidden bg-[#070709] border-b border-zinc-800 px-4 pt-3 pb-6 space-y-4 animate-in fade-in duration-150"
           >
-            <div className="p-2.5 bg-asphalt-900 border border-zinc-800 text-xs font-tactical text-zinc-300 flex items-center gap-2 rounded-xl">
-              <MapPin className="w-4 h-4 text-blood-500 shrink-0" />
-              <span>Av. Cula Mangabeira, 1497 - Santo Expedito, Montes Claros</span>
+            <div className="p-2.5 bg-asphalt-900 border border-zinc-800 text-xs font-tactical text-zinc-300 flex items-center justify-between gap-2 rounded-xl">
+              <div className="flex items-center gap-2 truncate">
+                <MapPin className="w-4 h-4 text-blood-500 shrink-0" />
+                <span className="truncate">Av. Cula Mangabeira, 1497 - Santo Expedito</span>
+              </div>
+              <span className="inline-flex items-center gap-1 text-amber-400 font-bold shrink-0 bg-black/60 px-2 py-0.5 rounded border border-amber-500/30">
+                <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                5.0 Google
+              </span>
             </div>
 
             <nav className="flex flex-col space-y-2">

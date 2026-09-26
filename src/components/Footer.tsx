@@ -60,10 +60,13 @@ export const Footer: React.FC = () => {
               href="https://www.google.com/maps/search/?api=1&query=Av.+Cula+Mangabeira,+1497+-+Santo+Expedito,+Montes+Claros+-+MG"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700 hover:border-blood-500 rounded-xl text-zinc-200 hover:text-white transition-all text-xs sm:text-sm font-tactical focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
+              className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2.5 bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700 hover:border-blood-500 rounded-xl text-zinc-200 hover:text-white transition-all text-xs sm:text-sm font-tactical focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030303]"
             >
               <MapPin className="w-4 h-4 text-blood-500 shrink-0" />
               <span>Av. Cula Mangabeira, 1497 - Santo Expedito, Montes Claros - MG</span>
+              <span className="text-amber-400 font-bold flex items-center gap-1 sm:ml-1">
+                <span>★ 5.0 no Google Maps</span>
+              </span>
             </a>
           </div>
 
