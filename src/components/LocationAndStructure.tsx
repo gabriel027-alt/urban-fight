@@ -53,7 +53,7 @@ export const LocationAndStructure: React.FC = () => {
   ];
 
   return (
-    <section id="estrutura" className="py-20 sm:py-28 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-zinc-900">
+    <section id="estrutura" className="scroll-mt-20 md:scroll-mt-24 py-20 sm:py-28 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
@@ -91,6 +91,7 @@ export const LocationAndStructure: React.FC = () => {
                   sizes="(max-width: 1024px) 100vw, 66vw"
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   priority={idx < 2}
+                  loading={idx < 2 ? "eager" : "lazy"}
                 />
               </div>
               {/* Gradiente suave e inteligente na base para máxima nitidez das fotos e leitura absoluta do texto */}

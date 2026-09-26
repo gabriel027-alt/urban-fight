@@ -29,7 +29,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
   return (
     <section 
       id="prova-social" 
-      className="py-20 sm:py-28 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-b border-zinc-900"
+      className="scroll-mt-20 md:scroll-mt-24 py-20 sm:py-28 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-b border-zinc-900"
     >
       {/* Background Combat Radial Lighting */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blood-600/10 rounded-full blur-[140px] pointer-events-none" />
@@ -71,9 +71,13 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
             <div className="relative aspect-video w-full bg-black flex items-center justify-center">
               <video
                 src="/provasocial-urban1.mp4"
+                poster="/estrutura-sacos.jpg"
                 controls
                 playsInline
                 preload="metadata"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
                 className="w-full h-full object-contain bg-black"
               >
                 Seu navegador não suporta a reprodução deste vídeo.
@@ -97,7 +101,7 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
             {/* Video Header Bar */}
             <div className="flex items-center justify-between px-4 sm:px-6 py-2.5 bg-zinc-950/95 border-b border-zinc-800/80 text-xs font-tactical">
               <div className="flex items-center gap-2 text-zinc-300">
-                <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-blood-500 animate-pulse motion-reduce:animate-none" />
                 <span className="font-bold uppercase tracking-wider">DEPOIMENTO DO IGOR</span>
               </div>
               <span className="text-blood-400 uppercase tracking-widest text-[11px] font-bold">
@@ -109,9 +113,13 @@ export const SocialProofSection: React.FC<SocialProofSectionProps> = ({
             <div className="relative aspect-video w-full bg-black flex items-center justify-center">
               <video
                 src="/provasocial-urban2.mp4"
+                poster="/mestre-andre.jpg"
                 controls
                 playsInline
                 preload="metadata"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
                 className="w-full h-full object-contain bg-black"
               >
                 Seu navegador não suporta a reprodução deste vídeo.

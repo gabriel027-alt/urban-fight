@@ -27,33 +27,49 @@ export const URBAN_FIGHT_CONFIG = {
 
 export interface TrialBookingData {
   goal: string;
-  experience: string;
+  experience?: string;
   modality: string;
   shift: string;
-  name?: string;
-  phone?: string;
+  name: string;
+  phone: string;
+}
+
+export function scrollToSection(target: string, offset: number = 80) {
+  if (typeof window === "undefined") return;
+  const cleanId = target.replace(/^#/, "");
+  const el = document.getElementById(cleanId);
+  if (!el) return;
+  const elementPosition = el.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.pageYOffset - offset;
+  window.scrollTo({
+    top: Math.max(0, offsetPosition),
+    behavior: "smooth",
+  });
 }
 
 export function buildWhatsAppBookingUrl(data: TrialBookingData): string {
-  const intro = `🥊 *Olá, Mestre André e Equipe Urban Fight!*`;
-  const intent = `Gostaria de agendar minha *Aula Experimental Gratuita* na sede do Santo Expedito (Montes Claros).`;
-  
-  const details = [
-    `🎯 *Meu Objetivo:* ${data.goal || "Condicionamento & Defesa"}`,
-    `⚡ *Nível de Experiência:* ${data.experience || "Iniciante"}`,
-    `🥋 *Modalidade de Interesse:* ${data.modality || "Quero indicação"}`,
-    `⏰ *Turno Preferido:* ${data.shift || "Noite"}`,
-    data.name ? `👤 *Meu Nome:* ${data.name}` : null,
-    data.phone ? `📱 *Contato:* ${data.phone}` : null,
-  ]
-    .filter(Boolean)
-    .join("\n");
+  const cleanName = data.name?.trim() || "Não informado";
+  const cleanPhone = data.phone?.trim() || "Não informado";
+  const cleanGoal = data.goal?.trim() || "Condicionamento & Defesa";
+  const cleanModality = data.modality?.trim() || "Quero indicação do Mestre";
+  const cleanShift = data.shift?.trim() || "A definir";
 
-  const footer = `\nPodem me confirmar os dias e horários disponíveis para eu fazer minha aula esta semana? Obrigado!`;
+  const message = [
+    `🥊 *URBAN FIGHT MONTES CLAROS - AGENDAMENTO DE AULA EXPERIMENTAL*`,
+    ``,
+    `Olá, Mestre André e recepção! Preenchi a triagem no site e gostaria de confirmar minha aula experimental gratuita na sede do Santo Expedito.`,
+    ``,
+    `📋 *DADOS DO ALUNO:*`,
+    `• *Nome:* ${cleanName}`,
+    `• *WhatsApp:* ${cleanPhone}`,
+    `• *Objetivo Principal:* ${cleanGoal}`,
+    `• *Modalidade de Interesse:* ${cleanModality}`,
+    `• *Turno Preferido:* ${cleanShift}`,
+    ...(data.experience ? [`• *Nível:* ${data.experience}`] : []),
+    ``,
+    `Podem me confirmar os dias e horários disponíveis para o meu primeiro treino esta semana? Obrigado!`,
+  ].join("\n");
 
-  const fullMessage = `${intro}\n\n${intent}\n\n${details}${footer}`;
-
-  return `https://wa.me/${URBAN_FIGHT_CONFIG.whatsappRaw}?text=${encodeURIComponent(
-    fullMessage
-  )}`;
+  return `https://wa.me/${URBAN_FIGHT_CONFIG.whatsappRaw}?text=${encodeURIComponent(message)}`;
 }
+

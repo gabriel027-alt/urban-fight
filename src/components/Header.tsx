@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { URBAN_FIGHT_CONFIG } from "@/lib/utils";
+import { URBAN_FIGHT_CONFIG, scrollToSection } from "@/lib/utils";
 import { 
   MapPin, 
   Menu, 
@@ -38,10 +38,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
 
   const handleAction = (href: string) => {
     setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    scrollToSection(href, 80);
   };
 
   const handleCtaClick = () => {
@@ -49,12 +46,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
     if (onOpenTriage) {
       onOpenTriage();
     } else {
-      const triageElem = document.querySelector("#triagem-experimental");
-      if (triageElem) {
-        triageElem.scrollIntoView({ behavior: "smooth" });
-      }
+      scrollToSection("triagem-experimental", 80);
     }
   };
+
 
   return (
     <>
@@ -141,6 +136,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(link.href, 80);
+                }}
                 className="font-tactical text-xs uppercase tracking-widest text-zinc-300 hover:text-white hover:border-b-2 hover:border-blood-600 py-1 transition-all duration-150 font-bold"
               >
                 {link.name}
@@ -164,6 +163,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 bg-asphalt-900 border border-zinc-800 text-zinc-300 hover:text-white rounded-md"
             aria-label="Menu de navegação"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu-drawer"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -171,7 +172,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTriage }) => {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#070709] border-b border-zinc-800 px-4 pt-3 pb-6 space-y-4 animate-in fade-in duration-150">
+          <div
+            id="mobile-menu-drawer"
+            role="region"
+            aria-label="Menu móvel de navegação"
+            className="lg:hidden bg-[#070709] border-b border-zinc-800 px-4 pt-3 pb-6 space-y-4 animate-in fade-in duration-150"
+          >
             <div className="p-2.5 bg-asphalt-900 border border-zinc-800 text-xs font-tactical text-zinc-300 flex items-center gap-2 rounded-md">
               <MapPin className="w-4 h-4 text-blood-500 shrink-0" />
               <span>Av. Cula Mangabeira, 1497 - Santo Expedito, Montes Claros</span>

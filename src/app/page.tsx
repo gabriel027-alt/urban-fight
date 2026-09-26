@@ -15,6 +15,8 @@ import { TrialTriage } from "@/components/TrialTriage";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { scrollToSection } from "@/lib/utils";
 
 export default function Home() {
   const [selectedModalityForTriage, setSelectedModalityForTriage] = useState<string>(
@@ -25,18 +27,13 @@ export default function Home() {
     if (modality) {
       setSelectedModalityForTriage(modality);
     }
-    const triageElement = document.getElementById("triagem-experimental");
-    if (triageElement) {
-      triageElement.scrollIntoView({ behavior: "smooth" });
-    }
+    scrollToSection("triagem-experimental", 80);
   };
 
   const scrollToModalities = () => {
-    const modalitiesElement = document.getElementById("modalidades");
-    if (modalitiesElement) {
-      modalitiesElement.scrollIntoView({ behavior: "smooth" });
-    }
+    scrollToSection("modalidades", 80);
   };
+
 
   return (
     <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden flex flex-col bg-[#030303] text-zinc-100 selection:bg-blood-600 selection:text-white relative">
@@ -89,6 +86,9 @@ export default function Home() {
 
       {/* 12. Persistent Mobile Conversion CTA */}
       <StickyMobileCTA onTriggerTriage={() => scrollToTriage()} />
+
+      {/* 13. High-Priority Floating WhatsApp Widget */}
+      <FloatingWhatsApp />
     </div>
   );
 }

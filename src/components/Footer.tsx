@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { URBAN_FIGHT_CONFIG } from "@/lib/utils";
+import { URBAN_FIGHT_CONFIG, scrollToSection } from "@/lib/utils";
 import { 
   MapPin, 
   Phone, 
@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#030304] border-t border-zinc-900 pt-16 pb-24 sm:pb-16 text-zinc-400 text-sm overflow-hidden w-full max-w-[100vw]">
+    <footer className="bg-[#030303] border-t border-zinc-900 pt-16 pb-24 sm:pb-16 text-zinc-300 text-sm overflow-hidden w-full max-w-[100vw]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-zinc-900">
           {/* Brand & Manifesto */}
@@ -45,6 +45,7 @@ export const Footer: React.FC = () => {
                   alt="Logo Oficial Urban Fight"
                   width={40}
                   height={40}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -91,32 +92,74 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs font-tactical uppercase tracking-wide">
               <li>
-                <a href="#modalidades" className="hover:text-blood-400 transition-colors">
+                <a
+                  href="#modalidades"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("modalidades", 80);
+                  }}
+                  className="hover:text-blood-400 transition-colors"
+                >
                   MODALIDADES
                 </a>
               </li>
               <li>
-                <a href="#metodo" className="hover:text-blood-400 transition-colors">
+                <a
+                  href="#metodo"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("metodo", 80);
+                  }}
+                  className="hover:text-blood-400 transition-colors"
+                >
                   MESTRE ANDRÉ
                 </a>
               </li>
               <li>
-                <a href="#estrutura" className="hover:text-blood-400 transition-colors">
+                <a
+                  href="#estrutura"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("estrutura", 80);
+                  }}
+                  className="hover:text-blood-400 transition-colors"
+                >
                   ESTRUTURA DA ARENA
                 </a>
               </li>
               <li>
-                <a href="#horarios" className="hover:text-blood-400 transition-colors">
+                <a
+                  href="#horarios"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("horarios", 80);
+                  }}
+                  className="hover:text-blood-400 transition-colors"
+                >
                   GRADE DE HORÁRIOS
                 </a>
               </li>
               <li>
-                <a href="#equipamentos" className="hover:text-blood-400 transition-colors">
+                <a
+                  href="#equipamentos"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("equipamentos", 80);
+                  }}
+                  className="hover:text-blood-400 transition-colors"
+                >
                   EQUIPAMENTOS DE LUTA
                 </a>
               </li>
               <li>
-                <a href="#duvidas" className="hover:text-blood-400 transition-colors">
+                <a
+                  href="#duvidas"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("duvidas", 80);
+                  }}
+                  className="hover:text-blood-400 transition-colors"
+                >
                   PERGUNTAS FREQUENTES
                 </a>
               </li>
@@ -128,7 +171,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-tactical text-xs font-bold uppercase text-white tracking-wider">
               PROGRAMAS OFICIAIS
             </h4>
-            <ul className="space-y-2 text-xs font-tactical uppercase tracking-wide text-zinc-400">
+            <ul className="space-y-2 text-xs font-tactical uppercase tracking-wide text-zinc-300">
               <li>Boxe Tradicional (Nobre Arte)</li>
               <li>Muay Thai & Kickboxing</li>
               <li>Jiu-Jitsu Brasileiro (BJJ)</li>
@@ -143,7 +186,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-tactical text-xs font-bold uppercase text-white tracking-wider">
               SEDE SANTO EXPEDITO
             </h4>
-            <div className="space-y-2 text-xs font-sans">
+            <div className="space-y-2 text-xs font-sans text-zinc-300">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-blood-500 shrink-0 mt-0.5" />
                 <span>
@@ -167,15 +210,20 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-tactical uppercase tracking-wider text-zinc-500">
-          <p>
-            © {new Date().getFullYear()} URBAN FIGHT MONTES CLAROS • DIRETOR GERAL: MESTRE ANDRÉ
-          </p>
+        {/* Bottom Bar: Copyright 2026 & Gabriel Batista Strategic Tech Signature */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-tactical uppercase tracking-wider text-zinc-400">
+          <div className="space-y-1 text-center md:text-left">
+            <p className="text-zinc-300 font-bold">
+              © 2026 URBAN FIGHT MONTES CLAROS • DIRETOR GERAL: MESTRE ANDRÉ
+            </p>
+            <p className="text-zinc-400 text-[11px] font-sans">
+              Urban Fight Montes Claros • Arquitetura Digital &amp; Parceria Estratégica por Gabriel Batista
+            </p>
+          </div>
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 hover:text-white transition-colors text-zinc-300"
           >
             <span>VOLTAR AO TOPO</span>
             <ArrowUp className="w-3.5 h-3.5" />

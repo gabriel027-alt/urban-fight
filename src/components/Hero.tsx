@@ -23,14 +23,19 @@ export const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <section className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-24 border-b border-zinc-900 bg-[#030303] w-full max-w-[100vw]">
-      {/* Background Video in Absolute Position: Crystal Clear, Bright, and Centered */}
+      {/* Background Video in Absolute Position: Crystal Clear, Bright, with onError fallback and HD Poster */}
       <video
         src="/publichero-bg.mp4"
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none brightness-100 contrast-105 z-0"
+        preload="auto"
+        poster="/logo-urban-fight.jpg"
+        onError={(e) => {
+          e.currentTarget.style.display = "none";
+        }}
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none brightness-100 contrast-105 z-0 bg-[#030303]"
       >
         <source src="/publichero-bg.mp4" type="video/mp4" />
         <source src="/hero-bg.mp4" type="video/mp4" />
@@ -44,7 +49,7 @@ export const Hero: React.FC<HeroProps> = ({
         {/* Top Bar on Mobile/Desktop */}
         <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-3 mb-4 sm:mb-6">
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 bg-asphalt-900/90 border border-blood-700/60 rounded-md">
-            <span className="w-2 h-2 rounded-full bg-blood-500 animate-ping" />
+            <span className="w-2 h-2 rounded-full bg-blood-500 animate-ping motion-reduce:animate-none" />
             <span className="font-tactical text-[11px] sm:text-xs uppercase tracking-widest text-blood-400 font-bold">
               QG OFICIAL • MESTRE ANDRÉ
             </span>
@@ -119,7 +124,7 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="lg:col-span-5 flex items-center justify-center py-4 sm:py-0">
             <div className="relative w-full max-w-[220px] sm:max-w-sm lg:max-w-md aspect-square flex items-center justify-center my-2 sm:my-0">
               {/* Red LED Glow Halos in multiple layers */}
-              <div className="absolute inset-0 bg-blood-600/30 rounded-full blur-[50px] sm:blur-[90px] animate-pulse pointer-events-none" />
+              <div className="absolute inset-0 bg-blood-600/30 rounded-full blur-[50px] sm:blur-[90px] animate-pulse motion-reduce:animate-none pointer-events-none" />
               <div className="absolute w-40 h-40 sm:w-72 sm:h-72 bg-blood-700/35 rounded-full blur-[35px] sm:blur-[60px] pointer-events-none" />
               
               {/* Outer Combat Ring */}
@@ -167,7 +172,7 @@ export const Hero: React.FC<HeroProps> = ({
               <Flame className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-blood-500 group-hover:scale-110 transition-transform" />
             </div>
             <div className="font-combat text-2xl sm:text-4xl lg:text-5xl font-black text-white leading-none">
-              +6 MODALIDADES
+              6 MODALIDADES OFICIAIS
             </div>
             <p className="text-[11px] sm:text-xs text-zinc-400 mt-1.5 sm:mt-2 font-sans line-clamp-2 sm:line-clamp-none">
               Boxe, Muay Thai, Jiu-Jitsu, Krav Maga, Jeet Kune Do e Kids.

@@ -46,7 +46,9 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
         <div className="flex whitespace-nowrap overflow-hidden">
           <div
             className={`flex shrink-0 items-center font-combat uppercase text-xl sm:text-2xl md:text-3xl tracking-widest font-black ${
-              reverse ? "animate-marquee-right" : "animate-marquee-left"
+              reverse
+                ? "animate-marquee-right motion-reduce:animate-none"
+                : "animate-marquee-left motion-reduce:animate-none"
             }`}
           >
             <span className="px-4">{fullText}</span>
@@ -55,7 +57,9 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
           </div>
           <div
             className={`flex shrink-0 items-center font-combat uppercase text-xl sm:text-2xl md:text-3xl tracking-widest font-black ${
-              reverse ? "animate-marquee-right" : "animate-marquee-left"
+              reverse
+                ? "animate-marquee-right motion-reduce:animate-none"
+                : "animate-marquee-left motion-reduce:animate-none"
             }`}
             aria-hidden="true"
           >

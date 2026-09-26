@@ -50,7 +50,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
   ];
 
   return (
-    <section id="metodo" className="py-20 sm:py-28 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-b border-zinc-900">
+    <section id="metodo" className="scroll-mt-20 md:scroll-mt-24 py-20 sm:py-28 bg-[#030303] relative overflow-hidden w-full max-w-[100vw] border-t border-b border-zinc-900">
       {/* Background Lighting */}
       <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] bg-blood-600/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 -left-32 w-[500px] h-[500px] bg-blood-800/10 rounded-full blur-[140px] pointer-events-none" />
@@ -122,7 +122,7 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                     VÍDEO PRINCIPAL • PALAVRA DO MESTRE
                   </span>
                   <span className="font-tactical text-[10px] tracking-wider text-blood-400 bg-blood-950/80 border border-blood-600/50 px-2 py-0.5 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-blood-500 animate-pulse motion-reduce:animate-none" />
                     ASSISTA AO VÍDEO
                   </span>
                 </div>
@@ -133,7 +133,10 @@ export const MasterAndreSection: React.FC<MasterAndreSectionProps> = ({
                     controls
                     playsInline
                     preload="metadata"
-                    poster="/logo-urban-fight.jpg"
+                    poster="/mestre-andre.jpg"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
                     className="w-full h-full object-contain bg-black"
                     style={{ objectFit: "contain" }}
                   >
